@@ -1,0 +1,697 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chapter 11 - What&#x27;s wrong with Lucy?</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../chapter1/index.html"><strong aria-hidden="true">1.</strong> Chapter 1 - Jonathan Harker travels to Transylvania</a></li><li class="chapter-item expanded "><a href="../chapter2/index.html"><strong aria-hidden="true">2.</strong> Chapter 2 - At the Hotel in Bistritz</a></li><li class="chapter-item expanded "><a href="../chapter3/index.html"><strong aria-hidden="true">3.</strong> Chapter 3 - Jonathan goes to Castle Dracula</a></li><li class="chapter-item expanded "><a href="../chapter4/index.html"><strong aria-hidden="true">4.</strong> Chapter 4 - "What a strange man this Count Dracula is."</a></li><li class="chapter-item expanded "><a href="../chapter5/index.html"><strong aria-hidden="true">5.</strong> Chapter 5 - Jonathan tries to leave the castle</a></li><li class="chapter-item expanded "><a href="../chapter6/index.html"><strong aria-hidden="true">6.</strong> Chapter 6 - Still no escape</a></li><li class="chapter-item expanded "><a href="../chapter7/index.html"><strong aria-hidden="true">7.</strong> Chapter 7 - Jonathan finally "leaves" the castle</a></li><li class="chapter-item expanded "><a href="../chapter8/index.html"><strong aria-hidden="true">8.</strong> Chapter 8 - Dracula takes the boat to England</a></li><li class="chapter-item expanded "><a href="../chapter9/index.html"><strong aria-hidden="true">9.</strong> Chapter 9 - Strange events in England</a></li><li class="chapter-item expanded "><a href="../chapter10/index.html"><strong aria-hidden="true">10.</strong> Chapter 10 - Terrible events in Whitby</a></li><li class="chapter-item expanded "><a href="../chapter11/index.html" class="active"><strong aria-hidden="true">11.</strong> Chapter 11 - What's wrong with Lucy?</a></li><li class="chapter-item expanded "><a href="../chapter12/index.html"><strong aria-hidden="true">12.</strong> Chapter 12 - From bad to worse</a></li><li class="chapter-item expanded "><a href="../chapter13/index.html"><strong aria-hidden="true">13.</strong> Chapter 13 - Farewell, Lucy. Meet the new Lucy</a></li><li class="chapter-item expanded "><a href="../chapter14/index.html"><strong aria-hidden="true">14.</strong> Chapter 14 - Jonathan Harker returns</a></li><li class="chapter-item expanded "><a href="../chapter15/index.html"><strong aria-hidden="true">15.</strong> Chapter 15 - Time to start vampire hunting</a></li><li class="chapter-item expanded "><a href="../chapter16/index.html"><strong aria-hidden="true">16.</strong> Chapter 16 - Is Renfield telling the truth?</a></li><li class="chapter-item expanded "><a href="../chapter17/index.html"><strong aria-hidden="true">17.</strong> Chapter 17 - Poor Renfield. Poor Mina.</a></li><li class="chapter-item expanded "><a href="../chapter18/index.html"><strong aria-hidden="true">18.</strong> Chapter 18 - Using Dracula's own weapon against him</a></li><li class="chapter-item expanded "><a href="../chapter19/index.html"><strong aria-hidden="true">19.</strong> Chapter 19 - Dracula escapes</a></li><li class="chapter-item expanded "><a href="../chapter20/index.html"><strong aria-hidden="true">20.</strong> Chapter 20 - The final battle</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2 id="tags-writing-functions-multiplication-coalescing-grouping"><a class="header" href="#tags-writing-functions-multiplication-coalescing-grouping">tags: Writing Functions, Multiplication, Coalescing, Grouping</a></h2>
+<h1 id="chapter-11---whats-wrong-with-lucy"><a class="header" href="#chapter-11---whats-wrong-with-lucy">Chapter 11 - What's wrong with Lucy?</a></h1>
+<blockquote>
+<p>Dr. Van Helsing thinks that Lucy is being visited by a vampire. He doesn't tell the others yet because they won't believe him, but says they should close the windows and place garlic flowers everywhere in Lucy's room. They are confused, but Dr. Seward tells them to listen: Dr. Van Helsing is the smartest person he knows. It works, and Lucy gets better.</p>
+<p>But one night Lucy's mother walks into the room and thinks: &quot;This place smells terrible! I'll open the windows for some fresh air.&quot; The next day Lucy wakes up pale and sick again. Every time someone makes a mistake like this Dracula gets in her room, and every time the men give Lucy their blood to help her get better. But Lucy is getting weaker and weaker as the days go by.</p>
+<p>Meanwhile, Renfield continues to try to eat living things and Dr. Seward can't understand him. Then one day Renfield doesn't want to talk at all, only saying: “I don’t want to talk to you: you don’t count now; the Master is at hand.”</p>
+</blockquote>
+<p>We are starting to see more and more events in the book with various characters. Some events have the three men and Dr. Van Helsing together, others have just Lucy and Dracula. Previous events had Jonathan Harker and Dracula, Jonathan Harker and the three women, and so on. In our game, we could use a sort of <code>Event</code> type to group everything together: the people, the time, the place, and so on.</p>
+<p>This <code>Event</code> type is a bit long, but it could be the main type for our events in the game so it needs to be detailed. We can put it together like this:</p>
+<pre><code class="language-sdl">type Event {
+  required description: str;
+  required start_time: cal::local_datetime;
+  required end_time: cal::local_datetime;
+  required multi place: Place;
+  required multi people: Person;
+  location: tuple&lt;float64, float64&gt;;
+  property ns_suffix := '_N_' if .location.0 &gt; 0.0 else '_S_';
+  property ew_suffix := '_E' if .location.1 &gt; 0.0 else '_W';
+  property url := 'https://geohack.toolforge.org/geohack.php?params=' 
+    ++ &lt;str&gt;(math::abs(.location.0)) ++ .ns_suffix 
+    ++ &lt;str&gt;(math::abs(.location.1)) ++ .ew_suffix;
+}
+</code></pre>
+<p>You can see that most of the properties are <code>required</code>, because an <code>Event</code> type is not useful if it doesn't have all the information we need. It will always need a description, a time, place, and people participating. The interesting part is the <code>url</code> property: it's a computed property that gives us an exact url for the location if we want, which can then be looked up on the Geohack tool used by Wikipedia. This property is not <code>required</code> because not every event in the book is in a perfectly known location.</p>
+<p>The url that we are generating needs to know whether a location is east or west of Greenwich, and also whether they are north or south. Here is the url for Bistritz, for example (modern name Bistrița):</p>
+<pre><code>https://geohack.toolforge.org/geohack.php?params=47.8_N_24.30_E
+</code></pre>
+<p>The <code>ns_suffix</code> property is either <code>_N_</code> or <code>_S_</code> depending on whether the latitute is greater than or less than zero. And <code>ew_suffix</code> is either <code>_E</code> or <code>_W</code> depending on whether the longitute is greater than or less than zero. The events in the book all take place in the north half of the planet, but we might as well give the possibility of exploring the south part of the globe. Who knows where the <code>PC</code> objects might end up exploring!</p>
+<p>The <code>url</code> property is then computed using the two suffixes, plus the absolute values of the locations so that they show up as positive numbers in the url. EdgeDB just happens to have a function called <code>math::abs()</code> that will let us turn any number into an absolute number. So Whitby, which is located at 54.4858 and -0.6206, should show up as <code>54.4858_N_0.6206_W</code> in the url: both absolute numbers, but with a <code>W</code> to represent that Whitby is at 0.6206 degrees to the <em>west</em>.</p>
+<p><img src="Lat_long.svg" alt="An image showing how latitude and longitude are divided into north and south, and east and west" /></p>
+<p>Let's do a migration to add this <code>Event</code> type, and then insert two of the events from the story that we are familiar with.</p>
+<p>One event takes place on the night of September 11th when Dr. Van Helsing is trying to help Lucy. The other event takes place when the Demeter left the Black Sea, entered the Bosphorous and was boarded by Turkish customs officials on its long and tragic journey to England. We aren't sure exactly where the boarding took place, but the lighthouse called Rumeli Feneri looks like a good place for Turkish government officials to notice a ship, so let's insert that as an <code>OtherPlace</code> as we insert the <code>Event</code>. And the <code>people</code> involved in this <code>Event</code> are all the sailors on the ship, plus Dracula. To join them together we can use the <code>union</code> keyword in a few places: once to join the <code>Ship.sailors</code> with the <code>Ship.crew</code>, and then finally to join them with the <code>Vampire</code> object named 'Count Dracula'.</p>
+<p>You can see that the <code>description</code> property in the <code>Event</code> type is just a string to make it easy to search later on. It can be as long or as short as we like, and we can even outright paste in parts of the book.</p>
+<p>Here are the inserts for these two <code>Event</code>s:</p>
+<pre><code class="language-edgeql">insert Event {
+  description := &quot;Dr. Seward gives Lucy garlic flowers to help her sleep. She falls asleep and the others leave the room.&quot;,
+  start_time := cal::to_local_datetime(1893, 9, 11, 18, 0, 0),
+  end_time := cal::to_local_datetime(1893, 9, 11, 23, 0, 0),
+  place := (select Place filter .name = 'Whitby'),
+  people := (select Person filter .name ilike 
+    {'%helsing%', '%westenra%', '%seward%'}),
+  location := (54.4858, -0.6206),
+};
+
+with 
+  ship_people := (select Ship.sailors union Ship.crew filter Ship .name = 'The Demeter'),
+  dracula := (select Vampire filter .name = 'Count Dracula'),
+insert Event {
+  description := &quot;On 11 July at dawn entered Bosphorus. Boarded by Turkish Customs officers. Backsheesh. All correct. Under way at 4 p.m.&quot;,
+  start_time := cal::to_local_datetime(1893, 7, 11, 7, 0, 0),
+  end_time := cal::to_local_datetime(1893, 7, 11, 16, 0, 0),
+  place := (insert OtherPlace {name := 'Rumeli Feneri'}),
+  people := ship_people union dracula,
+  location := (41.2350, 29.1100)
+};
+</code></pre>
+<p>Let's do a query to show the location, place names, person names, and description for our events so far.</p>
+<pre><code class="language-edgeql">select Event { 
+  place_name := .place.name,
+  map_url := .url,
+  people_names := .people.name,
+  description,
+  };
+</code></pre>
+<p>It generates a nice output that shows us everything about the event:</p>
+<pre><code>{
+  default::Event {
+    place_name: {'Whitby'},
+    map_url: 'https://geohack.toolforge.org/geohack.php?params=54.4858_N_0.6206_W',
+    people_names: {'John Seward', 'Abraham Van Helsing', 'Lucy Westenra'},
+    description: 'Dr. Seward gives Lucy garlic flowers to help her sleep. She falls asleep and the others leave the room.',
+  },
+  default::Event {
+    place_name: {'Rumeli Feneri'},
+    map_url: 'https://geohack.toolforge.org/geohack.php?params=41.235_N_29.11_E',
+    people_names: {
+      'The Captain',
+      'Petrofsky',
+      'The First Mate',
+      'The Cook',
+      'Crewman 1',
+      'Crewman 2',
+      'Crewman 3',
+      'Crewman 4',
+      'Crewman 5',
+      'Count Dracula',
+    },
+    description: 'On 11 July at dawn entered Bosphorus. Boarded by Turkish Customs officers. Backsheesh. All correct. Under way at 4 p.m.',
+  },
+}
+</code></pre>
+<p>The urls work nicely too. Here is one of them: <a href="https://geohack.toolforge.org/geohack.php?params=54.4858_N_0.6206_W">https://geohack.toolforge.org/geohack.php?params=54.4858_N_0.6206_W</a> Clicking on it takes you directly to the city of Whitby.</p>
+<h2 id="writing-our-own-functions"><a class="header" href="#writing-our-own-functions">Writing our own functions</a></h2>
+<p>We have seen quite a few functions in EdgeDB so far, but the number of functions is actually unlimited because you can also write your own! Similar to other languages, functions in EdgeDB take an input, apply some logic, and generate an output. But EdgeQL is strongly typed, so it won't accept just anything as is the case with languages like Javascript. That means that you have to indicate both the input type and the return type in the signature.</p>
+<p>A function that takes an <code>int16</code> and returns a <code>float64</code> for example would have this signature:</p>
+<pre><code class="language-sdl">function does_something(input: int16) -&gt; float64
+</code></pre>
+<p>The <code>-&gt;</code> skinny arrow is used to show the return value.</p>
+<p>For the body of the function we do the following:</p>
+<ul>
+<li>Write <code>using</code> and then follow it up with <code>()</code> brackets,</li>
+<li>Write the function inside it,</li>
+<li>Finish with a semicolon.</li>
+</ul>
+<p>Here's a very simple function that takes a number and returns a string from it:</p>
+<pre><code class="language-sdl">function make_string(input: int64) -&gt; str
+  using (&lt;str&gt;input);
+</code></pre>
+<p>That's all there is to it! If you put this into your schema and do a migration then you will now be able to use this function.</p>
+<p>Now let's make something a little more useful: a quick function to make our <code>Event</code> type a little nicer to read. Instead of putting <code>'https://geohack.toolforge.org/geohack.php?params='</code> inside the <code>Event</code> type, we can make a function called <code>get_url()</code> that simply returns this <code>str</code> for us. With that, our <code>url</code> property definition can be 42 characters shorter. Let's add this function to the schema and change the <code>url</code> in the <code>Event</code> type to use it:</p>
+<pre><code class="language-sdl">function get_url() -&gt; str
+  using (&lt;str&gt;'https://geohack.toolforge.org/geohack.php?params=');
+
+type Event {
+  required description: str;
+  required start_time: cal::local_datetime;
+  required end_time: cal::local_datetime;
+  required multi place: Place;
+  required multi people: Person;
+  location: tuple&lt;float64, float64&gt;;
+  property ns_suffix := '_N_' if .location.0 &gt; 0.0 else '_S_';
+  property ew_suffix := '_E' if .location.1 &gt; 0.0 else '_W';
+  property url := get_url() 
+    ++ &lt;str&gt;(math::abs(.location.0)) ++ .ns_suffix 
+    ++ &lt;str&gt;(math::abs(.location.1)) ++ .ew_suffix;
+}
+</code></pre>
+<p>Next, let's write a function that's less useful but more fun and which will teach us some interesting concepts in EdgeDB. The function will have two <code>Person</code> objects fight each other, so we'll call it <code>fight()</code>. We will make it as simple as possible: the character with more strength wins, and if their strength is the same then the second player wins.</p>
+<p>You might be tempted to write this function as follows, but it doesn't quite work!</p>
+<pre><code class="language-sdl">function fight(one: Person, two: Person) -&gt; str
+  using (
+    one.name ++ ' wins!'
+    if one.strength &gt; two.strength
+    else two.name ++ ' wins!'
+  );
+</code></pre>
+<p>The function <em>looks</em> good, but when you try to create it, you'll get an error. The line at the bottom of the error is the one to pay attention to.</p>
+<pre><code>error: return cardinality mismatch in function declared to return exactly one value
+    ┌─ C:\rust\easy-edgedb\dbschema\default.esdl:118:9
+    │
+118 │     using (
+    │ ╭─────────^
+119 │ │     one.name ++ ' wins!'
+120 │ │     if one.strength &gt; two.strength
+121 │ │     else two.name ++ ' wins!'
+122 │ │   );
+    │ ╰───^ error
+    │
+    = Function may return an empty set.
+</code></pre>
+<p>This happens because <code>strength</code> is not required on our <code>Person</code> type. That means that we might pass in one or two <code>Person</code> objects that have an empty set for <code>strength</code>, and then the function will return an empty set instead of a <code>str</code>. EdgeDB doesn't like this because we've told it in the function definition that the function will return a string.</p>
+<p>We could go back and make <code>strength</code> a <code>required</code> property, but we would need to decide on values for all of our <code>Person</code> objects already in the database. That's a lot of trouble, and it's not something we're ready to do right now.</p>
+<h2 id="providing-fallbacks-with-the-coalescing-operator"><a class="header" href="#providing-fallbacks-with-the-coalescing-operator">Providing fallbacks with the coalescing operator</a></h2>
+<p>The easiest way to fix our function would be to provide some sort of fallback for the properties that might not be set. If someone doesn't have a strength, we could just default their strength to <code>0</code>.</p>
+<p>To do that we can use the {eql:op}<code>coalescing operator &lt;docs:coalesce&gt;</code>, which is written <code>??</code>. It evaluates to whatever is on the left if that's not empty. Otherwise, it evaluates to whatever is on the right.</p>
+<p>Here is a quick example of an empty set when the coalescing operator is not used:</p>
+<pre><code class="language-edgeql">select &lt;str&gt;{} ++ 'Count Dracula is now in Whitby';
+</code></pre>
+<p>Interestingly, the output is <code>{}</code>! An empty set combined with anything else is an empty set. But if we change <code>++</code> to <code>??</code> for the coalescing operator, we can return a default value even if there is an empty set to the left.</p>
+<pre><code class="language-edgeql">select &lt;str&gt;{} ?? 'Count Dracula is now in Whitby';
+</code></pre>
+<p>Since the set on the left is empty, the coalescing operator turns its attention to the set on the right and returns that: <code>{'Count Dracula is now in Whitby'}</code> If neither side of the operator is the empty set, the coalescing operator will produce whatever is on the left. If <em>both</em> sides are the empty set, it will produce the empty set.</p>
+<p>Here's how we can use the coalescing operator to fix our function:</p>
+<pre><code class="language-sdl">function fight(one: Person, two: Person) -&gt; str
+  using (
+    one.name ++ ' wins!' if (one.strength ?? 0) &gt; (two.strength ?? 0)
+    else two.name ++ ' wins!'
+  );
+</code></pre>
+<p>With this change, EdgeDB now has fallbacks in the event that a <code>Person</code> object has an empty set for its <code>strength</code> property: it will return a 0 instead of an empty set. This ensures that the function can always return the string response we promised.</p>
+<p>Now that our function works, let's do a migration.</p>
+<p>So far only Jonathan and Renfield have the property <code>strength</code>, so let's put them up against each other in this new <code>fight()</code> function:</p>
+<pre><code class="language-edgeql">with
+  renfield := (select Person filter .name = 'Renfield'),
+  jonathan := (select Person filter .name = 'Jonathan Harker')
+select (
+  fight(jonathan, renfield)
+);
+</code></pre>
+<p>It prints what we wanted to see: <code>{'Renfield wins!'}</code></p>
+<p>It might also be a good idea to add <code>assert_single()</code> when doing a filter for this function. Because EdgeDB returns sets, if it gets multiple results then it will use the function against each one for each possible combination. The way EdgeDB handles this is through Cartesian multiplication, so let's learn about that now.</p>
+<h2 id="cartesian-multiplication"><a class="header" href="#cartesian-multiplication">Cartesian multiplication</a></h2>
+<p>Cartesian multiplication is a key concept in EdgeDB. The name sounds intimidating but it really just means &quot;evaluate every item in one set with every item in the other set&quot;. It's easiest to understand when viewed as an illustration, which fortunately Wikipedia has already made for us. When you do operations on multiple sets in EdgeDB you are given the Cartesian product, which looks like this:</p>
+<p><img src="cartesian_product.svg" alt="A chart displaying the Cartesian product of 1, 2, 3 multiplied by x, y, and z" /></p>
+<p>Source: <a href="https://en.wikipedia.org/wiki/Cartesian_product#/media/File:Cartesian_Product_qtl1.svg">user quartl on Wikipedia</a></p>
+<p>Here is a quick example of a query that operates on two sets. Since it will &quot;evaluate every item in one set with every item in the other set&quot;, what do you think the output will be?</p>
+<pre><code>select { 'Jonathan', 'Lucy' } ++ ' ' ++ { 'Harker', 'Westenra'};
+</code></pre>
+<p>That's right, it is using <code>++</code> to concatenate and will concatenate every item in one set with every item in the other. So that will return a set of four strings:</p>
+<pre><code>{'Jonathan Harker', 'Jonathan Westenra', 'Lucy Harker', 'Lucy Westenra'}
+</code></pre>
+<p>The extra <code>' '</code> in the middle doesn't increase the number of items in the set because it is just one item, and one multiplied by four is still four.</p>
+<p>And if you add 'Mina' to the first set of names and 'Murray' to the second, the output will be a set of nine strings:</p>
+<pre><code>{
+  'Jonathan Harker',
+  'Jonathan Westenra',
+  'Jonathan Murray',
+  'Lucy Harker',
+  'Lucy Westenra',
+  'Lucy Murray',
+  'Mina Harker',
+  'Mina Westenra',
+  'Mina Murray',
+}
+</code></pre>
+<p>This means that if we do a <code>select</code> on <code>Person</code> for our <code>fight()</code> function, it will run the function following this formula:</p>
+<pre><code>{number of items in the first set}` \* `{number of items in the second set}
+</code></pre>
+<p>So if there are two in the first set, and three in the second, it will run the function six times.</p>
+<p>To demonstrate, let's put three objects in for each side of our function. We'll be testing our <code>fight</code> function, so we'll just give all the characters strength value 5 if they don't already have some other value:</p>
+<pre><code class="language-edgeql">update Person filter not exists .strength
+set {
+  strength := 5
+};
+</code></pre>
+<p>We'll also make the output a little more clear:</p>
+<pre><code class="language-edgeql">with
+  first_group := (select Person filter .name in 
+    {'Jonathan Harker', 'Count Dracula', 'Arthur Holmwood'}),
+  second_group := (select Person filter .name in 
+    {'Renfield', 'Mina Murray', 'The innkeeper'}),
+select (
+  first_group.name ++ ' fights against ' ++ second_group.name 
+    ++ '. ' ++ fight(first_group, second_group)
+);
+</code></pre>
+<p>Here is the output. It's a total of nine fights, where each person in Set 1 fights once against each person in Set 2.</p>
+<pre><code>{
+  'Jonathan Harker fights against Renfield. Renfield wins!',
+  'Jonathan Harker fights against The innkeeper. The innkeeper wins!',
+  'Jonathan Harker fights against Mina Murray. Mina Murray wins!',
+  'Arthur Holmwood fights against Renfield. Renfield wins!',
+  'Arthur Holmwood fights against The innkeeper. The innkeeper wins!',
+  'Arthur Holmwood fights against Mina Murray. Mina Murray wins!',
+  'Count Dracula fights against Renfield. Renfield wins!',
+  'Count Dracula fights against The innkeeper. The innkeeper wins!',
+  'Count Dracula fights against Mina Murray. Mina Murray wins!',
+}
+</code></pre>
+<p>And if you take out the filter and just write <code>select Person</code> for the function, you will get well over 100 results. EdgeDB by default will only show the first 100, eventually displaying this after the first 100 results:</p>
+<pre><code># First 98 results...
+'Count Dracula wins!',
+'Fighter 2 wins!',
+ ... (further results hidden `\set limit 100`)
+</code></pre>
+<p>If you want to display more or less than a maximum of 100 (the default), just type <code>\set limit</code> followed by whichever number you like.</p>
+<h2 id="grouping"><a class="header" href="#grouping">Grouping</a></h2>
+<p>In the last chapter we learned how to use <code>order by</code> to order the results of a query, which produces a single set in a certain order. Let's do a quick query to ensure that we remember how to do this:</p>
+<pre><code class="language-edgeql">select City {
+  name, 
+  population
+} order by .population;
+</code></pre>
+<p>The result is a single set with the <code>City</code> objects ordered by population in ascending order (going up). If we had written <code>order by .population desc</code>, it would have gone in descending order.</p>
+<pre><code>{
+  default::City {name: 'Bistritz', population: 9100},
+  default::City {name: 'Whitby', population: 14400},
+  default::City {name: 'Munich', population: 230023},
+  default::City {name: 'Buda-Pesth', population: 402706},
+  default::City {name: 'London', population: 3500000},
+}
+</code></pre>
+<p>Now let's say we want to do a similar query to see which NPCs are single and which are not. Looks a bit weird, doesn't it? After all, <code>.is_single</code> only returns <code>true</code> or <code>false</code>.</p>
+<pre><code class="language-edgeql">select NPC {
+  name, 
+  is_single
+} order by .is_single;
+</code></pre>
+<p>The output is indeed a bit weird:</p>
+<pre><code>{
+  default::NPC {name: 'Jonathan Harker', is_single: false},
+  default::NPC {name: 'Mina Murray', is_single: false},
+  default::NPC {name: 'Lucy Westenra', is_single: false},
+  default::NPC {name: 'Arthur Holmwood', is_single: false},
+  default::NPC {name: 'Abraham Van Helsing', is_single: true},
+  default::NPC {name: 'John Seward', is_single: true},
+  default::NPC {name: 'Renfield', is_single: true},
+  default::NPC {name: 'The innkeeper', is_single: true},
+  default::NPC {name: 'Quincey Morris', is_single: true},
+}
+</code></pre>
+<p>The objects returning <code>false</code> do come before those that return <code>true</code>, but this isn't really an ordering. A true ordering would be more along the lines of single<em>ness</em> (let's say from 0 to 100) where a singleness of 0 represents one extreme (someone who is married and never ever has time alone), and a singleness of 100 the other extreme (someone who is absolutely always alone). And most people would have a number somewhere in between.</p>
+<p>So what we are looking for here with <code>is_single</code> is not an ordering, but a grouping: one group of NPC objects that are single, and another group of NPC objects that are not. EdgeDB has an operator called <code>group</code> which does just that! To do a <code>group</code> query, just change <code>select</code> to <code>group</code>:</p>
+<pre><code class="language-edgeql">group NPC {
+  name, 
+  is_single
+} by .is_single;
+</code></pre>
+<p>The output for the <code>group</code> operator is quite nice, as each set includes two extra parameters:</p>
+<ul>
+<li><code>grouping</code> to show how the set has been grouped,</li>
+<li><code>key</code> to show which group the set belongs to.</li>
+</ul>
+<pre><code>{
+  {
+    key: {is_single: false},
+    grouping: {'is_single'},
+    elements: {
+      default::NPC {name: 'Jonathan Harker', is_single: false},
+      default::NPC {name: 'Mina Murray', is_single: false},
+      default::NPC {name: 'Lucy Westenra', is_single: false},
+      default::NPC {name: 'Arthur Holmwood', is_single: false},
+    },
+  },
+  {
+    key: {is_single: true},
+    grouping: {'is_single'},
+    elements: {
+      default::NPC {name: 'Abraham Van Helsing', is_single: true},
+      default::NPC {name: 'John Seward', is_single: true},
+      default::NPC {name: 'Renfield', is_single: true},
+      default::NPC {name: 'The innkeeper', is_single: true},
+      default::NPC {name: 'Quincey Morris', is_single: true},
+    },
+  },
+}
+</code></pre>
+<p>Grouping can be a lot more complex than adding <code>by</code> and a property name. For reference, here is what the full syntax looks like.</p>
+<pre><code>[ with with-item [, ...] ]
+
+group [alias := ] expr
+
+[ using using-alias := expr, [, ...] ]
+
+by grouping-element, ... ;
+</code></pre>
+<p>You don't need to memorize the syntax, but a quick read shows us that the keyword <code>with</code> can be used before writing <code>group</code>, and the keyword <code>using</code> can be used after <code>group</code> to create our name for a grouping.</p>
+<p>Take our <code>City</code> objects for example. Each one has a different population, so if we were to use this query we would simply get a big list of groups containing one <code>City</code> object each:</p>
+<pre><code class="language-edgeql">group City { population } by .population;
+</code></pre>
+<p>Instead, we can make up a grouping called <code>is_big</code> that we define as a population greater than 50,000:</p>
+<pre><code>group City {name, population}
+  using is_big := .population &gt; 50000,
+  by is_big;
+</code></pre>
+<p>With that, we now have our cities divided into big and small while displaying their names and populations.</p>
+<pre><code>{
+  {
+    key: {is_big: false},
+    grouping: {'is_big'},
+    elements: {
+      default::City {name: 'Whitby', population: 14400},
+      default::City {name: 'Bistritz', population: 9100},
+    },
+  },
+  {
+    key: {is_big: true},
+    grouping: {'is_big'},
+    elements: {
+      default::City {name: 'Munich', population: 230023},
+      default::City {name: 'Buda-Pesth', population: 402706},
+      default::City {name: 'London', population: 3500000},
+    },
+  },
+}
+</code></pre>
+<p>We can define as many of these as we like. The query below defines <code>big</code> as any population greater than 50,000, <code>small</code> as any population less than 10,000, and <code>medium</code> as any population that is neither <code>big</code> nor <code>small</code>.</p>
+<pre><code class="language-edgeql">group City {name, population}
+  using big := .population &gt; 50000,
+  small := .population &lt; 10000,
+  medium := not big and not small,
+  by big, medium, small;
+</code></pre>
+<p>The output now shows three groups:</p>
+<pre><code>{
+  {
+    key: {big: false, small: false, medium: true},
+    grouping: {'big', 'medium', 'small'},
+    elements: {default::City {name: 'Whitby', population: 14400}},
+  },
+  {
+    key: {big: false, small: true, medium: false},
+    grouping: {'big', 'medium', 'small'},
+    elements: {default::City {name: 'Bistritz', population: 9100}},
+  },
+  {
+    key: {big: true, small: false, medium: false},
+    grouping: {'big', 'medium', 'small'},
+    elements: {
+      default::City {name: 'Munich', population: 230023},
+      default::City {name: 'Buda-Pesth', population: 402706},
+      default::City {name: 'London', population: 3500000},
+    },
+  },
+}
+</code></pre>
+<p>And because an expression comes right after the <code>group</code> keyword, we can use <code>with</code> and <code>select</code> to create an expression before typing <code>group</code>. This way we can filter an expression before we group it. Let's use this method to group our <code>NPC</code> objects to see who is still single and who has a title (perhaps for a dating app). But we want to make sure that they are alive first! To make sure that they are alive, we can filter by <code>not exists .last_appearance</code>. Here is the full query:</p>
+<pre><code class="language-edgeql">with still_alive := (select NPC filter not exists .last_appearance),
+  group still_alive { name, title } using
+  has_title := exists .title,
+  by .is_single, has_title;
+</code></pre>
+<p>Note that <code>.is_single</code> has a <code>.</code> because it is a property on <code>NPC</code> while <code>has_title</code> does not because it is a name that we defined inside the query.</p>
+<p>The result is three groups of people. Interestingly, the NPCs that are doctors are both single!</p>
+<pre><code class="language-edgeql">{
+  {
+    key: {has_title: false, is_single: false},
+    grouping: {'is_single', 'has_title'},
+    elements: {
+      default::NPC {name: 'Jonathan Harker', title: {}},
+      default::NPC {name: 'Mina Murray', title: {}},
+      default::NPC {name: 'Lucy Westenra', title: {}},
+      default::NPC {name: 'Arthur Holmwood', title: {}},
+    },
+  },
+  {
+    key: {has_title: false, is_single: true},
+    grouping: {'is_single', 'has_title'},
+    elements: {
+      default::NPC {name: 'Quincey Morris', title: {}},
+      default::NPC {name: 'Renfield', title: {}},
+      default::NPC {name: 'The innkeeper', title: {}},
+    },
+  },
+  {
+    key: {has_title: true, is_single: true},
+    grouping: {'is_single', 'has_title'},
+    elements: {
+      default::NPC {name: 'Abraham Van Helsing', title: 'Dr.'},
+      default::NPC {name: 'John Seward', title: 'Dr.'},
+    },
+  },
+}
+</code></pre>
+<p>Abraham van Helsing, however, is single because he is a widower. Our schema doesn't include that status so he has been grouped along with John Seward who has never been married. Sometimes a database query doesn't tell you the full story!</p>
+<p><a href="code.html">Here is all our code so far up to Chapter 11.</a></p>
+<!-- quiz-start -->
+<h2 id="time-to-practice"><a class="header" href="#time-to-practice">Time to practice</a></h2>
+<ol>
+<li>
+<p>How would you write a function called <code>lucy()</code> that just returns all the <code>NPC</code> types matching the name 'Lucy Westenra'?</p>
+</li>
+<li>
+<p>How would you write a function that takes two strings and returns <code>Person</code> objects with names that match each string?</p>
+<p>Hint: try using <code>set of Person</code> as the return type.</p>
+</li>
+<li>
+<p>What will the output of this be?</p>
+<pre><code class="language-edgeql">select {'Jonathan', 'Arthur'} ++ {' loves '} 
+  ++ {'Mina', 'Lucy'} ++ {' but '} ++ {'Dracula', 'The inkeeper'} 
+  ++ {' doesn\'t love '} ++ {'Mina', 'Jonathan'};
+</code></pre>
+</li>
+<li>
+<p>How would you make a function that tells you how many times larger one city is than another?</p>
+</li>
+<li>
+<p>Will <code>select (City.population + City.population)</code> and <code>select ((select City.population) + (select City.population))</code> produce different results?</p>
+</li>
+</ol>
+<p><a href="answers.html">See the answers here.</a></p>
+<!-- quiz-end -->
+<p><strong>Up next:</strong> <em>Lucy one night: &quot;What's that flapping against the window? Sounds like a bat or something...&quot;</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter10/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter12/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter10/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter12/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

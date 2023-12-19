@@ -1,0 +1,915 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chapter 13 - Farewell, Lucy. Meet the new Lucy</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../chapter1/index.html"><strong aria-hidden="true">1.</strong> Chapter 1 - Jonathan Harker travels to Transylvania</a></li><li class="chapter-item expanded "><a href="../chapter2/index.html"><strong aria-hidden="true">2.</strong> Chapter 2 - At the Hotel in Bistritz</a></li><li class="chapter-item expanded "><a href="../chapter3/index.html"><strong aria-hidden="true">3.</strong> Chapter 3 - Jonathan goes to Castle Dracula</a></li><li class="chapter-item expanded "><a href="../chapter4/index.html"><strong aria-hidden="true">4.</strong> Chapter 4 - "What a strange man this Count Dracula is."</a></li><li class="chapter-item expanded "><a href="../chapter5/index.html"><strong aria-hidden="true">5.</strong> Chapter 5 - Jonathan tries to leave the castle</a></li><li class="chapter-item expanded "><a href="../chapter6/index.html"><strong aria-hidden="true">6.</strong> Chapter 6 - Still no escape</a></li><li class="chapter-item expanded "><a href="../chapter7/index.html"><strong aria-hidden="true">7.</strong> Chapter 7 - Jonathan finally "leaves" the castle</a></li><li class="chapter-item expanded "><a href="../chapter8/index.html"><strong aria-hidden="true">8.</strong> Chapter 8 - Dracula takes the boat to England</a></li><li class="chapter-item expanded "><a href="../chapter9/index.html"><strong aria-hidden="true">9.</strong> Chapter 9 - Strange events in England</a></li><li class="chapter-item expanded "><a href="../chapter10/index.html"><strong aria-hidden="true">10.</strong> Chapter 10 - Terrible events in Whitby</a></li><li class="chapter-item expanded "><a href="../chapter11/index.html"><strong aria-hidden="true">11.</strong> Chapter 11 - What's wrong with Lucy?</a></li><li class="chapter-item expanded "><a href="../chapter12/index.html"><strong aria-hidden="true">12.</strong> Chapter 12 - From bad to worse</a></li><li class="chapter-item expanded "><a href="../chapter13/index.html" class="active"><strong aria-hidden="true">13.</strong> Chapter 13 - Farewell, Lucy. Meet the new Lucy</a></li><li class="chapter-item expanded "><a href="../chapter14/index.html"><strong aria-hidden="true">14.</strong> Chapter 14 - Jonathan Harker returns</a></li><li class="chapter-item expanded "><a href="../chapter15/index.html"><strong aria-hidden="true">15.</strong> Chapter 15 - Time to start vampire hunting</a></li><li class="chapter-item expanded "><a href="../chapter16/index.html"><strong aria-hidden="true">16.</strong> Chapter 16 - Is Renfield telling the truth?</a></li><li class="chapter-item expanded "><a href="../chapter17/index.html"><strong aria-hidden="true">17.</strong> Chapter 17 - Poor Renfield. Poor Mina.</a></li><li class="chapter-item expanded "><a href="../chapter18/index.html"><strong aria-hidden="true">18.</strong> Chapter 18 - Using Dracula's own weapon against him</a></li><li class="chapter-item expanded "><a href="../chapter19/index.html"><strong aria-hidden="true">19.</strong> Chapter 19 - Dracula escapes</a></li><li class="chapter-item expanded "><a href="../chapter20/index.html"><strong aria-hidden="true">20.</strong> Chapter 20 - The final battle</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2 id="tags-introspection-type-union-operator"><a class="header" href="#tags-introspection-type-union-operator">tags: Introspection, Type Union Operator</a></h2>
+<h1 id="chapter-13---meet-the-new-lucy"><a class="header" href="#chapter-13---meet-the-new-lucy">Chapter 13 - Meet the new Lucy</a></h1>
+<blockquote>
+<p>This time it was too late to save Lucy, and she is dying. Suddenly she opens her eyes, but they look very strange. She looks at Arthur and says “Arthur! Oh, my love, I am so glad you have come! Kiss me!”</p>
+<p>Arthur tries to kiss her, but Van Helsing grabs him and says &quot;Don't you dare!&quot; It was not Lucy, but the vampire spirit inside her that was talking. Lucy soon dies, and Van Helsing puts a golden crucifix on her lips to stop her from moving (crucifixes have that power over vampires). Unfortunately, the nurse steals the crucifix to sell when nobody is looking and vampire Lucy is able to move again...</p>
+<p>A few days later there is news about a lady who is stealing and biting children. The newspaper calls it the &quot;Bloofer Lady&quot;, because the young children try to call her the &quot;Beautiful Lady&quot; but can't pronounce <em>beautiful</em> right.</p>
+<p>Van Helsing decides that it's time to tell the other people the truth about vampires, but Arthur doesn't believe him and becomes angry that he would say crazy things about his wife. Van Helsing says, &quot;Fine, you don't believe me. Let's go to the graveyard together tonight and see what happens. Maybe then you will.&quot;</p>
+</blockquote>
+<p>Looks like Lucy, an <code>NPC</code>, has become a <code>MinorVampire</code>. How should we show this in the database? Let's look at the types again first.</p>
+<p>Right now <code>MinorVampire</code> is nothing special, just a type that extends <code>Person</code>:</p>
+<pre><code class="language-sdl">type MinorVampire extending Person;
+</code></pre>
+<p>Fortunately for us, according to the book she is a new &quot;type&quot; of person. The old Lucy is gone, and this new Lucy is now one of the <code>slaves</code> linked to the <code>Vampire</code> object named Count Dracula. We can treat them as two separate objects.</p>
+<p>So instead of trying to change the <code>NPC</code> type, we can just give <code>MinorVampire</code> an optional link to <code>Person</code>:</p>
+<pre><code class="language-sdl">type MinorVampire extending Person {
+  former_self: Person;
+}
+</code></pre>
+<p>The <code>former_self</code> link isn't <code>required</code> because we don't always know anything about people before they were made into vampires. For example, we don't know anything about the three vampire women before Dracula found them so we can't make an <code>NPC</code> type for them.</p>
+<p>Another way to (informally) link them is to give the same date to <code>last_appearance</code> for an <code>NPC</code> and <code>first_appearance</code> for a <code>MinorVampire</code>. First we will update Lucy with her <code>last_appearance</code>:</p>
+<pre><code class="language-edgeql">update Person filter .name = 'Lucy Westenra'
+set {
+  last_appearance := cal::to_local_date(1893, 9, 20)
+};
+</code></pre>
+<p>After doing the migration, let's practice a big insert to add Dracula along with all of the <code>MinorVampire</code> objects. We haven't done much our existing objects so let's just  <code>delete Vampire;</code> and <code>delete MinorVampire;</code> and insert them all again.</p>
+<p>Note the first line of the insert where we create a variable called <code>lucy</code>. We can then use that to bring in all the data to make her a <code>MinorVampire</code>, which is much more efficient than manually inserting all the information. It also includes her strength: we should add 5 to that, because vampires are generally stronger than humans.</p>
+<p>We could give her the name 'Lucy Westenra' here because the <code>name</code> property is a delegated constraint from the <code>Person</code> type, but we'll just call her Lucy now.</p>
+<p>Here's the insert:</p>
+<pre><code class="language-edgeql">with lucy := assert_single(
+    (select Person filter .name = 'Lucy Westenra')
+)
+insert Vampire {
+  name := 'Count Dracula',
+  age := 800,
+  strength := 20,
+  slaves := {
+    (insert MinorVampire {
+      name := 'Vampire Woman 1',
+      strength := &lt;int16&gt;round(random() * 5) + 5
+    }),
+    (insert MinorVampire {
+      name := 'Vampire Woman 2',
+      strength := &lt;int16&gt;round(random() * 5) + 5
+    }),
+    (insert MinorVampire {
+      name := 'Vampire Woman 3',
+      strength := &lt;int16&gt;round(random() * 5) + 5
+    }),
+    (insert MinorVampire {
+      name := 'Lucy',
+      former_self := lucy,
+      first_appearance := lucy.last_appearance,
+      strength := lucy.strength + 5,
+    }),
+  },
+  places_visited := (select Place filter .name in {'Romania', 'Castle Dracula'})
+};
+</code></pre>
+<p>And thanks to the <code>former_self</code> link, it's easy to find all the minor vampires that come from <code>Person</code> objects. Just filter by <code>exists .former_self</code>:</p>
+<pre><code class="language-edgeql">select MinorVampire {
+  name,
+  strength,
+  first_appearance,
+} filter exists .former_self;
+</code></pre>
+<p>This gives us the following input (though strength will vary):</p>
+<pre><code>{
+  default::MinorVampire {
+    name: 'Lucy',
+    strength: 9,
+    first_appearance: &lt;cal::local_date&gt;'1893-09-20',
+  },
+}
+</code></pre>
+<p>Other filters such as <code>filter .name in Person.name and .first_appearance in Person.last_appearance;</code> are possible too but checking if the link <code>exists</code> is easiest. We could also switch to <code>cal::local_datetime</code> instead of <code>cal::local_date</code> to get the exact time down to the minute. But we won't need to get that precise just yet.</p>
+<!-- 
+-->
+<h2 id="the-type-union-operator-"><a class="header" href="#the-type-union-operator-">The type union operator: |</a></h2>
+<p>Another operator related to types is <code>|</code>, which is used to combine them (similar to writing <code>or</code>). This query for example pulling up all <code>Person</code> types will return <code>{true}</code>:</p>
+<pre><code class="language-edgeql">with lucy := (select Person filter .name like 'Lucy%'),
+select lucy is NPC | MinorVampire | Vampire;
+</code></pre>
+<p>It returns true if the <code>Person</code> type selected is of type <code>NPC</code>, <code>MinorVampire</code>, or <code>Vampire</code>. Since Lucy the <code>NPC</code> and Lucy the <code>MinorVampire</code> match any of the three types, the return value is <code>{true, true}</code>.</p>
+<p>One cool thing about the type union operator is that you can also add it to links in your schema. Let's say for example there are other <code>Vampire</code> objects in the game, and one <code>Vampire</code> that is extremely powerful can control another less powerful vampire. Right now though a <code>Vampire</code> can only control a <code>MinorVampire</code>:</p>
+<pre><code>type Vampire extending Person {
+  multi slaves: MinorVampire;
+}
+</code></pre>
+<p>So to represent this change, you could just use <code>|</code> and add another type:</p>
+<pre><code>type Vampire extending Person {
+  multi slaves: MinorVampire | Vampire;
+}
+</code></pre>
+<p>We only have Count Dracula in our database as the main <code>Vampire</code> type so we won't change our schema in this way, but keep the <code>|</code> operator in mind in case you need it.</p>
+<!--
+Content to change for when https://github.com/edgedb/edgedb/issues/5823 is solved:
+
+But how about our `Ship` type? Let's look at it again.
+
+```
+type Ship {
+  required name: str;
+  multi sailors: Sailor;
+  multi crew: Crewman;
+}
+```
+
+Both `sailors` and `crew` link to pretty similar objects, so this could be a good place to try out the type union operator by turning them into a single link called `crew: Sailor | Crewman;`. This will take two migrations though, because we don't want to lose any of the `crew` data. So we will first change the `Ship` to have `crew` hold both types:
+
+```
+type Ship {
+  required name: str;
+  multi sailors: Sailor;
+  multi crew: Crewman | Sailor;
+}
+```
+-->
+<h2 id="on-target-delete-on-source-delete"><a class="header" href="#on-target-delete-on-source-delete">On target delete, on source delete</a></h2>
+<p>We've decided to keep the existing <code>NPC</code> object for Lucy, because that Lucy will be in the game as an <code>NPC</code> until September 1893. Other <code>PC</code> objects could interact with her as an <code>NPC</code> up to this time, for example. </p>
+<p>But what if we had chosen to delete her, what would have happened to the objects she is linked to? Or more realistically, what if all <code>MinorVampire</code> types connected to a <code>Vampire</code> should be deleted when the vampire dies? This is the way vampire physics works in Bram Stoker's book: vampires drain people of their blood and turn them into minor vampires, who are only alive because the vampire is still controlling them. But when the master vampire dies, the souls of the minor vampires are finally set free and they disappear too.</p>
+<p>We can begin thinking about these vampire physics in our game by learning about how to set a deletion policy. We'll start with the keywords <code>on target delete</code>. This <code>on target delete</code> means &quot;when the target is deleted&quot;, or in other words &quot;when the object that is linked to is deleted&quot;. It goes inside <code>{}</code> after the link declaration. After this point there are some options {ref}<code>four options &lt;docs:ref_datamodel_link_deletion&gt;</code> to choose.</p>
+<p>One deletion policy is <code>restrict</code>, and forbids you from deleting the target object. This is the default setting. In other words, anything you link to can't be deleted unless you specify otherwise in the schema. So when you declare a <code>type Vampire</code> like this:</p>
+<pre><code class="language-sdl">type Vampire extending Person {
+  multi slaves: MinorVampire;
+}
+</code></pre>
+<p>It is as if you had written the following:</p>
+<pre><code class="language-sdl">type Vampire extending Person {
+  multi slaves: MinorVampire {
+    on target delete restrict;
+  }
+}
+</code></pre>
+<p>We can test this out right now with an attempt to delete one of the vampire women:</p>
+<pre><code class="language-edgeql">delete MinorVampire filter .name = 'Vampire Woman 1';
+</code></pre>
+<p>Here is the error:</p>
+<pre><code>edgedb error: ConstraintViolationError: deletion of default::MinorVampire (db56215a-268c-11ee-ab5e-6322976b513c) is prohibited by link target policy
+  Detail: Object is still referenced in link slaves of default::Vampire (db561336-268c-11ee-ab5e-b338ce4886f8).
+</code></pre>
+<p>Another deletion policy is <code>allow</code>, and simply allows you to delete the target. Inside the <code>Vampire</code> type it would look like this, which would let us delete any <code>MinorVampire</code> linked to a <code>Vampire</code> object.</p>
+<pre><code class="language-sdl">type Vampire extending Person {
+  multi slaves: MinorVampire {
+    on target delete allow;
+  }
+}
+</code></pre>
+<p>A third deletion policy is called <code>delete source</code>, which deletes the source of a link when the target is deleted. Be careful with this deletion policy! You want to be absolutely certain when setting a policy that results in automatic deletions, because EdgeDB won't let you know about the automatic deletions that happen as a result of another deletion query. And if you have an automatic deletion policy that leads to another type that has its own automatic deletion policy...you'll end up with a cascade of deletions that maybe you didn't expect to happen.</p>
+<p>Now in our case, using <code>on target delete delete source</code> would delete Count Dracula if we deleted the <code>MinorVampire</code> (the target) called <code>Vampire Woman 1</code>. So this schema is the opposite of what we want!</p>
+<pre><code class="language-sdl">type Vampire extending Person {
+  multi slaves: MinorVampire {
+    on target delete delete source;
+  }
+}
+</code></pre>
+<p>Fortunately, to switch the target and source around we can just change the keyword <code>target</code> to <code>source</code>. This gives us a deletion policy of <code>on source delete delete target</code>, which looks like this:</p>
+<pre><code class="language-sdl">type Vampire extending Person {
+  multi slaves: MinorVampire {
+    on source delete delete target;
+  }
+}
+</code></pre>
+<p>Again, you want to be careful when setting a deletion policy like this one. But our database is small and controlled, so let's add this <code>on source delete delete target</code> deletion policy to the <code>Vampire</code> type and do a migration.</p>
+<p>Now let's give this deletion policy a quick test. We'll insert a <code>Vampire</code> named 'Alucard' who has bitten a man named Brian, and made him into a <code>MinorVampire</code>. We'll insert both together:</p>
+<pre><code>insert Vampire {
+  name := 'Alucard',
+  slaves := (insert MinorVampire {name := &quot;Brian&quot;})
+};
+</code></pre>
+<p>Now let's make sure that both of them are in the database:</p>
+<pre><code class="language-edgeql">select Vampire {**} filter .name = 'Alucard';
+</code></pre>
+<p>There they are! Selecting Alucard leads us to Brian as well thanks to the link.</p>
+<pre><code>{
+  default::Vampire {
+    strength: {},
+    last_appearance: {},
+    first_appearance: {},
+    degrees: {},
+    title: {},
+    name: 'Alucard',
+    pen_name: 'Alucard',
+    conversational_name: 'Alucard',
+    age: {},
+    is_single: true,
+    id: 5d3a42da-286a-11ee-9442-9fa367e8a4c0,
+    places_visited: {},
+    lovers: {},
+    slaves: {
+      default::MinorVampire {
+        strength: {},
+        last_appearance: {},
+        first_appearance: {},
+        degrees: {},
+        title: {},
+        name: 'Brian',
+        pen_name: 'Brian',
+        conversational_name: 'Brian',
+        age: {},
+        is_single: true,
+        id: 5d3a4a96-286a-11ee-9442-c31d83f69190,
+      },
+    },
+  },
+}
+</code></pre>
+<p>Now if Alucard is killed, Brian should turn to dust and vanish as well:</p>
+<pre><code class="language-edgeql">delete Vampire filter .name = 'Alucard';
+</code></pre>
+<p>And then let's do a query to see if we can find Brian anywhere:</p>
+<pre><code>select Person filter .name = 'Brian';
+</code></pre>
+<p>The query returns <code>{}</code>. Thanks to the <code>on source delete delete target</code> deletion policy, Brian is gone too!</p>
+<h2 id="adding-if-orphan-to-a-deletion-policy"><a class="header" href="#adding-if-orphan-to-a-deletion-policy">Adding 'if orphan' to a deletion policy</a></h2>
+<p>Deletion policies can be pretty tricky to get right so let's put together another concrete example of one in our schema and walk through it step by step.</p>
+<p>PCs can join together as parties inside games to work together on a common goal. We could allow players of our game to create a party that can then be joined by anyone who is interested. To start, let's make a simple <code>Party</code> type that <code>PC</code> can link to.</p>
+<pre><code class="language-sdl">type Party {
+  name: str;
+}
+
+type PC extending Person {
+  required class: Class;
+  required created_at: datetime {
+    default := datetime_of_statement();
+  }
+  multi party: Party; # New link here
+}
+</code></pre>
+<p>Easy enough! Now let's think about what the <code>multi party: Party</code> line means in practice. It has a default <code>on target delete restrict</code> placed on it, which means that we can't delete any <code>Party</code> that is linked to by a PC. Let's give this a try by adding a Party and two PC objects:</p>
+<pre><code class="language-edgeql">insert Party { name := &quot;Ye olde party&quot; };
+insert PC {
+  name := &quot;Talloon&quot;,
+  class := Class.Merchant,
+  party := (select Party filter .name = &quot;Ye olde party&quot;)
+};
+insert PC {
+  name := &quot;Alena&quot;,
+  class := Class.Rogue,
+  party := (select Party filter .name = &quot;Ye olde party&quot;)
+};
+</code></pre>
+<p>And now any attempt to <code>delete Party;</code> will give this error:</p>
+<pre><code>edgedb error: ConstraintViolationError: deletion of default::Party (86b32874-299c-11ee-8bd8-737485b849cd) is prohibited by link target policy
+  Detail: Object is still referenced in link party of default::PC (9a6eaabe-299c-11ee-8bd8-c76e1f17a3f2).
+</code></pre>
+<p>We don't want old <code>Party</code> objects to just sit around in our database when no <code>PC</code>s are using them anymore, so let's set up a deletion policy to delete any <code>Party</code> when all <code>PC</code> objects linking to it are deleted.</p>
+<p>There are two items to think about here. First of all, simply adding a <code>on source delete delete target</code> as below will not work. But let's give it a try and see what happens. First change the <code>PC</code> type to have this deletion policy and do a migration:</p>
+<pre><code class="language-sdl">type PC extending Person {
+  required class: Class;
+  required created_at: datetime {
+    default := datetime_of_statement();
+  }
+  multi party: Party {
+    on source delete delete target;
+  }
+}
+</code></pre>
+<p>And then let's try to delete both PC objects that link to the <code>Party</code> object:</p>
+<pre><code class="language-edgeql">delete PC filter .name in { &quot;Alena&quot;, &quot;Talloon&quot; };
+</code></pre>
+<p>We get an error!</p>
+<pre><code>edgedb error: ConstraintViolationError: deletion of default::Party (86b32874-299c-11ee-8bd8-737485b849cd) is prohibited by link target policy
+  Detail: Object is still referenced in link party of default::PC (a2bb7ce2-299c-11ee-8bd8-431f1e9112d6).
+</code></pre>
+<p>This is because EdgeDB is attempting to delete <code>Party</code> when we delete each <code>PC</code> object, but there is still an invisible <code>on target delete restrict</code> policy that prevents the <code>Party</code> object from being deleted. In other words, our query tries to delete the <code>PC</code> called Alena but can't because the <code>PC</code> called Talloon still links to the Party object.</p>
+<p>So let's add an <code>on target delete allow</code> to the <code>PC</code> type to allow the linked to <code>Party</code> object to be deleted. This is closer to what we want, but not quite! But let's do a migration and see what happens in this case.</p>
+<pre><code class="language-sdl">type PC extending Person {
+  required class: Class;
+  required created_at: datetime {
+    default := datetime_of_statement();
+  }
+  multi party: Party {
+    on source delete delete target;
+    on target delete allow;
+  }
+}
+</code></pre>
+<p>Okay, now let's delete Talloon.</p>
+<pre><code class="language-edgeql">delete PC filter .name = &quot;Talloon&quot;;
+</code></pre>
+<p>Success! Talloon is now deleted. But hold on a second...where did the Party go?</p>
+<pre><code class="language-edgeql">select Party;
+</code></pre>
+<p>The query returns an empty set! The <code>PC</code> named Alena is still in the database but her <code>Party</code> has outright disappeared. This <code>Party</code> object was automatically deleted because that's what we instructed EdgeDB to do: adding <code>on source delete delete target</code> means &quot;delete the target every time any object linking to it is deleted&quot;. That's not what we want.</p>
+<p>The solution here is to add two new keywords: <code>if orphan</code>. Here is the difference once <code>if orphan</code> is added:</p>
+<ul>
+<li><code>on source delete delete target</code> means &quot;delete the target if any object linking to it is deleted&quot;</li>
+<li><code>on source delete delete target if orphan</code> means &quot;delete the target if the last object linking to it is deleted&quot;.</li>
+</ul>
+<p>That's what we want! So now let's change the PC type to add these two new words and do another migration:</p>
+<pre><code class="language-sdl">type PC extending Person {
+  required class: Class;
+  required created_at: datetime {
+    default := datetime_of_statement();
+  }
+  multi party: Party {
+    on source delete delete target if orphan;
+    on target delete allow;
+  }
+}
+</code></pre>
+<p>Next we have a bit of work to insert the <code>Party</code> object again, link the existing <code>PC</code> named Alena to it, and then to insert the <code>PC</code> named Talloon again...</p>
+<pre><code class="language-edgeql">insert Party { name := &quot;Ye olde party&quot; };
+update PC filter .name = &quot;Alena&quot; 
+  set { 
+    party := (select Party filter .name = &quot;Ye olde party&quot;) 
+  };
+insert PC { 
+  name := &quot;Talloon&quot;,
+  class := Class.Merchant,
+  party := (select Party filter .name = &quot;Ye olde party&quot;) 
+  };
+</code></pre>
+<p>And with that we are ready to delete our PC objects one at a time again. We'll start with Talloon again:</p>
+<pre><code class="language-edgeql">delete PC filter .name = &quot;Talloon&quot;;
+</code></pre>
+<p>Alena is still linking to the Party object, so it should still be there. Let's check:</p>
+<pre><code class="language-edgeql">select Party { name };
+</code></pre>
+<p>It sure is!</p>
+<pre><code>{default::Party {name: 'Ye olde party'}}
+</code></pre>
+<p>And with just a single (orphan) link left, deleting Alena the PC should delete the Party object as well. Let's try it:</p>
+<pre><code class="language-edgeql">delete PC filter .name = &quot;Alena&quot;;
+</code></pre>
+<p>Now if we try <code>select Party;</code> we will get an empty set, just as we hoped!</p>
+<h2 id="set-operators-distinct-intersect-except-and-losing-shape"><a class="header" href="#set-operators-distinct-intersect-except-and-losing-shape">Set operators (distinct, intersect, except) and losing shape</a></h2>
+<p>We are already familiar with one of the set operators in EdgeDB: <code>union</code>. This is used to join two sets together. So <code>select MinorVampire.name union MinorVampire.name;</code> will return the following:</p>
+<pre><code>{
+  'Vampire Woman 1',
+  'Vampire Woman 2',
+  'Vampire Woman 3',
+  'Vampire Woman 1',
+  'Vampire Woman 2',
+  'Vampire Woman 3',
+}
+</code></pre>
+<p>The <code>distinct</code> keyword is used if we want to remove duplicate values in a set, and is easy: just change <code>select</code> to <code>select distinct</code>. </p>
+<p>A quick example of a property that has a lot of duplicates is the <code>strength</code> property on the <code>Person</code> type. A quick <code>select Person.strength;</code> will show this. The output will vary because it comes from the <code>random</code> function, but it will look something like this:</p>
+<pre><code>{1, 1, 7, 8, 9, 9, 5, 3, 0, 0, 5, 10, 2, 0, 
+2, 5, 3, 4, 0, 1, 4, 20, 5, 5, 5, 5, 5}
+</code></pre>
+<p>Change it to <code>select distinct Person.strength;</code> and now only the distinct values remain:</p>
+<pre><code>{0, 1, 2, 3, 4, 5, 10, 20}
+</code></pre>
+<p>Note that <code>distinct</code> works by item and doesn't unpack or aggregate, so something like a set of arrays will check to see if the entire array is distinct or not, not each of the values inside. Thus using <code>distinct</code> on the following query won't do anything!</p>
+<pre><code class="language-edgeql">select distinct {[7, 8], [7, 8], [9]};
+</code></pre>
+<p>It will simply return the original <code>{[7, 8], [9]}</code>, and not <code>{7, 8, 9}</code>.</p>
+<p>The next set operator is called <code>intersect</code> and returns all the items in one set that match any item in the other set. Let's try this one out on the <code>places_visited</code> property on the <code>Person</code> type. First let's look at the places visited by all our <code>NPC</code> and <code>PC</code> objects:</p>
+<pre><code>db&gt; select PC.places_visited.name;
+{'Buda-Pesth', 'Bistritz', 'Munich'}
+db&gt; select NPC.places_visited.name;
+{'Romania', 'Castle Dracula', 'Buda-Pesth', 'Bistritz', 'London', 'Munich'}
+</code></pre>
+<p>Now let's intersect them!</p>
+<pre><code class="language-edgeql">select PC.places_visited.name intersect NPC.places_visited.name;
+</code></pre>
+<p>This will simply return <code>{'Bistritz', 'Buda-Pesth', 'Munich'}</code>.</p>
+<p>What if we want to use <code>intersect</code> on some object types and give them a shape? Let's try giving a shape to all these <code>Place</code> objects instead of just showing their name. Simply putting a <code>{*}</code> after an <code>intersect</code> might seem to be the right way to make this happen:</p>
+<pre><code class="language-edgeql">select PC.places_visited intersect NPC.places_visited {*};
+</code></pre>
+<p>And indeed the query does work, but the output is a bit unexpected. The shape is gone!</p>
+<pre><code>{
+  default::City {id: da23b4be-268c-11ee-ab5e-0bda71669b0c},
+  default::City {id: da317478-268c-11ee-ab5e-8b58f378092b},
+  default::City {id: da41f9ec-268c-11ee-ab5e-e3cd443a19f2},
+}
+</code></pre>
+<p>The issue here is that set operators don't preserve the original expression type, so they don't preserve the shape of an expression either. There is in effect no shape for us to work with.</p>
+<p>Fortunately, the solution here is fairly simple: we can use <code>with</code> to capture the result of a set operator, and then <em>that</em> will have a shape that we can work with. So a small change to our query will do the job:</p>
+<pre><code class="language-edgeql">with common_locations := PC.places_visited intersect NPC.places_visited,
+  select common_locations {*};
+</code></pre>
+<p>The result is what we hoped to see: not just the names of the places visited by both <code>PC</code> and <code>NPC</code> objects, but their properties too.</p>
+<pre><code>{
+  default::City {
+    id: da41f9ec-268c-11ee-ab5e-e3cd443a19f2,
+    important_places: ['Golden Krone Hotel'],
+    modern_name: 'Bistrița',
+    name: 'Bistritz',
+  },
+  default::City {
+    id: da23b4be-268c-11ee-ab5e-0bda71669b0c,
+    important_places: {},
+    modern_name: {},
+    name: 'Munich',
+  },
+  default::City {
+    id: da317478-268c-11ee-ab5e-8b58f378092b,
+    important_places: {},
+    modern_name: 'Budapest',
+    name: 'Buda-Pesth',
+  },
+}
+</code></pre>
+<p>The last set operator to learn is called <code>except</code>, and it's the opposite of <code>intersect</code>. While <code>intersect</code> returns items that are in the first set as well as the other, <code>except</code> returns items from the first set that are <em>not</em> shared with the second set.</p>
+<p>The <code>except</code> operator is a good opportunity to demonstrate that order can matter when using a set operator. Our <code>PC</code> objects have been to three cities: <code>{'Buda-Pesth', 'Bistritz', 'Munich'}</code>. The <code>NPC</code> objects have been to more places: <code>{'Romania', 'Castle Dracula', 'Buda-Pesth', 'Bistritz', 'London', 'Munich'}</code>. What do you think will happen in the query below that uses <code>intersect</code>? Note the order in which it is done.</p>
+<pre><code class="language-edgeql">select PC.places_visited.name except NPC.places_visited.name;
+</code></pre>
+<p>That's right, the query simply returns a <code>{}</code> empty set. That's because EdgeDB went through the three names returned by <code>PC.places_visited.name</code> as follows:</p>
+<ul>
+<li>'Buda-Pesth': Is this one inside NPC.places_visited.name? Yes. So don't return it.</li>
+<li>'Bistritz': Same.</li>
+<li>'Munich': Same.</li>
+</ul>
+<p>And then the query was done.</p>
+<p>But if we reverse the query then it will return some names:</p>
+<pre><code class="language-edgeql">select NPC.places_visited.name except PC.places_visited.name;
+</code></pre>
+<p>The result is <code>{'Castle Dracula', 'London', 'Romania'}</code>, because this time EdgeDB began with the names of the places visited by the NPC objects and found three names that didn't have a matching value in the set of names returned by the <code>PC</code> objects.</p>
+<p>In other words, you can sort of think of <code>except</code> as meaning <code>minus</code>.</p>
+<h2 id="being-introspective"><a class="header" href="#being-introspective">Being introspective</a></h2>
+<p>We saw back in Chapter 8 that we can use <code>__type__</code> to get object types in a query, and that <code>__type__</code> always has a <code>name</code> property that shows us the type's name (otherwise we will only see its <code>uuid</code>). In the same way that we can get all the names of <code>Person</code> objects with <code>select Person.name</code>, we can use <code>__type__.name</code> to get all the type names that extend the <code>Person</code> type:</p>
+<pre><code class="language-edgeql">select Person.__type__.name;
+</code></pre>
+<p>The output shows us all the names of types attached to <code>Person</code> so far, namely the types that extend <code>Person</code>:</p>
+<pre><code>{
+  'default::NPC',
+  'default::Sailor',
+  'default::MinorVampire',
+  'default::Crewman',
+  'default::Vampire',
+  'default::PC',
+}
+</code></pre>
+<p>On top of the <code>name</code> property, the two most useful fields inside <code>__type__</code> are <code>properties</code> and <code>links</code>. (You can also just choose the field <code>pointers</code> which holds both <code>properties</code> and <code>links</code> together.) If we add these to the query the output will get quite long.</p>
+<pre><code class="language-edgeql">select Person.__type__ {
+   name,
+   properties: {name},
+   links: {name}
+};
+</code></pre>
+<p>The output contains the name, properties and links of each and every type that extends <code>Person</code>:</p>
+<pre><code>{
+  schema::ObjectType {
+    name: 'default::NPC',
+    properties: {
+      schema::Property {name: 'strength'},
+      schema::Property {name: 'last_appearance'},
+      schema::Property {name: 'first_appearance'},
+      schema::Property {name: 'degrees'},
+      schema::Property {name: 'title'},
+      schema::Property {name: 'name'},
+      schema::Property {name: 'pen_name'},
+      schema::Property {name: 'conversational_name'},
+      schema::Property {name: 'is_single'},
+      schema::Property {name: 'id'},
+      schema::Property {name: 'age'},
+    },
+    links: {
+      schema::Link {name: '__type__'},
+      schema::Link {name: 'places_visited'},
+      schema::Link {name: 'lovers'},
+    },
+  },
+  schema::ObjectType {
+    name: 'default::Sailor',
+    # And so on...
+</code></pre>
+<p>For such type-related queries, EdgeDB has a keyword called <code>introspect</code> that is specialized for looking inside types. (Indeed, the word <em>introspect</em> itself means to &quot;look inside&quot;.) It's a little bit similar to adding <code>__type__</code> to a query, but is more focused and has certain abilities and uses that you can't get by using <code>__type__</code>.</p>
+<p>A good rule of thumb is that:</p>
+<ul>
+<li>If you are doing a query on objects and want to add some type information on the object itself, adding <code>__type__</code> lets you do this.</li>
+<li>If you want to do a query exclusively on the type itself, go with <code>introspect</code>.</li>
+</ul>
+<p>To do an <code>introspect</code> query, just wrap it in parentheses inside a <code>select</code>. Here is how we can use <code>introspect</code> to look inside the <code>Person</code> type:</p>
+<pre><code class="language-edgeql">select (introspect Person) {
+    name,
+    pointers: {name}
+};
+</code></pre>
+<p>Both the query and output are now quite clean:</p>
+<pre><code>{
+  schema::ObjectType {
+    name: 'default::Person',
+    pointers: {
+      schema::Link {name: '__type__'},
+      schema::Property {name: 'id'},
+      schema::Link {name: 'lovers'},
+      schema::Property {name: 'is_single'},
+      schema::Link {name: 'places_visited'},
+      schema::Property {name: 'age'},
+      schema::Property {name: 'name'},
+      schema::Property {name: 'title'},
+      schema::Property {name: 'conversational_name'},
+      schema::Property {name: 'degrees'},
+      schema::Property {name: 'pen_name'},
+      schema::Property {name: 'first_appearance'},
+      schema::Property {name: 'last_appearance'},
+      schema::Property {name: 'strength'},
+    },
+  },
+}
+</code></pre>
+<p>Using <code>introspect</code> also lets us look inside scalar types, which isn't possible with <code>__type__</code> (which only works on object types). So this query won't work:</p>
+<pre><code class="language-edgeql">select Class.__type__ {*};
+</code></pre>
+<p>But <code>introspect</code> will:</p>
+<pre><code class="language-edgeql">select (introspect Class);
+</code></pre>
+<p>That query just returns a <code>{schema::ScalarType {id: c7c181cc-268c-11ee-980e-a10f818aefc0}}</code>. But <code>ScalarType</code> looks like an object type of its own that we can use the splat operator on! Let's see what's inside:</p>
+<pre><code class="language-edgeql">select (introspect Class) {*};
+</code></pre>
+<p>There it is! Lots of info about our <code>Class</code> enum:</p>
+<pre><code>{
+  schema::ScalarType {
+    final: false,
+    is_final: false,
+    abstract: false,
+    is_abstract: false,
+    id: c7c181cc-268c-11ee-980e-a10f818aefc0,
+    name: 'default::Class',
+    internal: false,
+    builtin: false,
+    computed_fields: [],
+    expr: {},
+    from_alias: false,
+    is_from_alias: false,
+    inherited_fields: [],
+    default: {},
+    enum_values: ['Rogue', 'Mystic', 'Merchant'],
+    arg_values: {},
+  },
+}
+</code></pre>
+<p>You can even <code>introspect</code> the most basic of EdgeDB's scalar types:</p>
+<pre><code class="language-edgeql">select ((introspect str), (introspect int64), (introspect int16));
+</code></pre>
+<p>The output for this query is actually pretty interesting. We can see that the <code>id</code>s for EdgeDB's basic scalar types have been manually chosen instead of automatically generated.</p>
+<pre><code>{
+  (
+    schema::ScalarType {id: 00000000-0000-0000-0000-000000000101},
+    schema::ScalarType {id: 00000000-0000-0000-0000-000000000105},
+    schema::ScalarType {id: 00000000-0000-0000-0000-000000000103},
+  ),
+}
+</code></pre>
+<p>But the <code>introspect</code> keyword isn't limited to doing queries on types for our own information and fun. EdgeDB has one type that requires you to <code>introspect</code> it whenever it gets used! Let's take a look at that now.</p>
+<h2 id="the-sequence-type"><a class="header" href="#the-sequence-type">The sequence type</a></h2>
+<p>We made a few inserts of <code>Crewman</code> objects a few chapters ago, in which we gave them each a number. To do that, we used the <code>count()</code> function to count the number of <code>Crewman</code> objects, to which we added one:</p>
+<pre><code class="language-edgeql">with next_number := count(Crewman) + 1,
+  insert Crewman {
+  number := next_number
+};
+</code></pre>
+<p>This gave us a sequence of numbers.</p>
+<p>Well, it just so happens that EdgeDB has a type called {eql:type}<code>docs:std::sequence</code> that has this incrementation built in. This type is defined as an &quot;auto-incrementing sequence of int64&quot;, so an <code>int64</code> that starts at 1 and goes up every time you increment it.</p>
+<p>A <code>sequence</code> is used as an abstract type for other type names to extend, which allows each one of these sequence types to increment independently of any others. Note the similarity to the enum syntax we are familiar with:</p>
+<pre><code class="language-sdl">scalar type SomeSequence extending sequence;
+scalar type SomeEnumType extending enum&lt;OptionOne, OptionTwo, OptionThree&gt;;
+</code></pre>
+<p>And once it is defined, we can just stick it on our object types as a property.</p>
+<pre><code class="language-sdl">scalar type SomeSequenceNumber extending sequence;
+
+type SomeType {
+  # This wouldn't work
+  # required number: sequence;
+
+  # But this will
+  required number: SomeSequenceNumber;
+}
+</code></pre>
+<p>This sequence number could be useful for our <code>PC</code> objects, because players of our game might want us to delete their accounts. When that happens we will have to delete the <code>PC</code> object that the player used, so the data will be gone. That means that we can't use <code>count(PC)</code> as a sequence number. If we did that, then the 51st player would have the number 51, but if a <code>PC</code> object was then deleted then the next one would also be number 51! A sequence is just right for us here.</p>
+<p>Let's experiment first. We'll add a <code>SomeSequenceNumber</code> to our schema with the following, and do a migration:</p>
+<pre><code class="language-sdl">scalar type SomeSequenceNumber extending sequence;
+</code></pre>
+<p>And now let's play around with this sequence type a bit before we make a <code>PCNumber</code> to put on our <code>PC</code> type as a property. Basic sequence behavior is pretty simple: you increment them with the <code>sequence_next()</code> function, and reset them with <code>sequence_reset()</code>. But here's an important point: inside these functions you need to specify the sequence type that we want to increment.</p>
+<p>In other words, just typing <code>sequence_next()</code> won't work because EdgeDB doesn't know which sequence type we want to increment:</p>
+<pre><code>db&gt; select sequence_next();
+error: QueryError: function &quot;sequence_next()&quot; does not exist
+  ┌─ &lt;query&gt;:1:8
+  │
+1 │ select sequence_next();
+  │        ^^^^^^^^^^^^^^^ Did you want &quot;std::sequence_next(seq: schema::ScalarType)&quot;?
+</code></pre>
+<p>And typing <code>SomeSequenceNumber</code> won't work either because SomeSequenceNumber isn't an object type in our schema:</p>
+<pre><code>db&gt; select sequence_next(SomeSequenceNumber);
+error: InvalidReferenceError: object type or alias 'default::SomeSequenceNumber' does not exist
+  ┌─ &lt;query&gt;:1:22
+  │
+1 │ select sequence_next(SomeSequenceNumber);
+  │                      ^^^^^^^^ error
+</code></pre>
+<p>But did you notice that the function is expecting an argument of <code>ScalarType</code>? We saw this just above when we learned the <code>introspect</code> keyword. So let's try replacing <code>SomeSequenceNumber</code> with <code>introspect SomeSequenceNumber</code> which returns a <code>ScalarType</code>:</p>
+<pre><code>db&gt; select sequence_next(introspect SomeSequenceNumber);
+{1}
+</code></pre>
+<p>Success! Just add <code>introspect</code> and the <code>sequence_next()</code> and <code>sequence_reset()</code> functions will know which sequence type to increment.</p>
+<p>Now that we know how sequences work, let's play around with this sequence number of ours for a bit. As you can see, it can be incremented or reset, but can't be reset to anything less than 1.</p>
+<pre><code>db&gt; select sequence_next(introspect SomeSequenceNumber);
+{2}
+db&gt; select sequence_next(introspect SomeSequenceNumber);
+{3}
+db&gt; select sequence_next(introspect SomeSequenceNumber);
+{4}
+db&gt; select sequence_next(introspect SomeSequenceNumber);
+{5}
+db&gt; select sequence_reset(introspect SomeSequenceNumber, 10);
+{10}
+db&gt; select sequence_reset(introspect SomeSequenceNumber, 0);
+edgedb error: NumericOutOfRangeError: setval: value 0 is out of bounds for 
+sequence &quot;6f7e322d-ff25-11ed-95e6-558fd8f3e188_sequence&quot; (1..9223372036854775807)
+db&gt; select sequence_reset(introspect SomeSequenceNumber, 1);
+{1}
+</code></pre>
+<p>Finally, let's change the schema for our <code>PC</code> type to include this number. We could type <code>sequence_next(introspect PCNumber)</code> every time we insert a PC object, but it's much easier just to set <code>sequence_next(introspect PCNumber)</code> in the schema as the default value. Delete <code>SomeSequenceNumber</code> from the schema if you like, and then change the schema around <code>PC</code> to look like the following and do a migration:</p>
+<pre><code class="language-sdl">scalar type PCNumber extending sequence;
+
+type PC extending Person {
+  required class: Class;
+  required created_at: datetime {
+    default := datetime_of_statement()
+  }
+  required number: PCNumber {
+    default := sequence_next(introspect PCNumber);
+  }
+}
+</code></pre>
+<p>And now let's do a quick query to see if it worked:</p>
+<pre><code class="language-edgeql">select PC {
+  name, 
+  number,
+  created_at
+};
+</code></pre>
+<p>And with that, the sequence incrementing just works. That was easy! And thanks to the default value we provided, EdgeDB has even updated our existing object types with the <code>number</code> property.</p>
+<pre><code>{
+  default::PC {
+    name: 'Emil Sinclair',
+    number: 1,
+    created_at: &lt;datetime&gt;'2023-05-28T10:40:53.598763Z',
+  },
+  default::PC {
+    name: 'Max Demian',
+    number: 2,
+    created_at: &lt;datetime&gt;'2023-05-30T01:13:28.022340Z',
+  },
+}
+</code></pre>
+<p><a href="code.html">Here is all our code so far up to Chapter 13.</a></p>
+<!-- quiz-start -->
+<h2 id="time-to-practice"><a class="header" href="#time-to-practice">Time to practice</a></h2>
+<ol>
+<li>
+<p>How would you insert an <code>NPC</code> named 'Mr. Swales' who has visited the <code>City</code> called 'York', the <code>Country</code> called 'England', and the <code>OtherPlace</code> called 'Whitby Abbey'? Try it in a single insert.</p>
+</li>
+<li>
+<p>How readable is the result of this introspect query?</p>
+<pre><code class="language-edgeql">select (introspect Ship) {
+  name,
+  properties,
+  links
+};
+</code></pre>
+</li>
+<li>
+<p>What would be the shortest way to see what links form the <code>Vampire</code> type?</p>
+</li>
+<li>
+<p>What do you think the output of <code>select distinct {1, 2} + {1, 2};</code> will be?</p>
+<p>Hint: don't forget the Cartesian multiplication.</p>
+</li>
+<li>
+<p>What do you think the output of <code>select distinct {2, 2} + {2, 2};</code> will be?</p>
+</li>
+</ol>
+<p><a href="answers.html">See the answers here.</a></p>
+<!-- quiz-end -->
+<p><strong>Up next:</strong> <em>An old friend returns.</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter12/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter14/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter12/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter14/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

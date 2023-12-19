@@ -1,0 +1,632 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chapter 18 - Using Dracula&#x27;s own weapon against him</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../chapter1/index.html"><strong aria-hidden="true">1.</strong> Chapter 1 - Jonathan Harker travels to Transylvania</a></li><li class="chapter-item expanded "><a href="../chapter2/index.html"><strong aria-hidden="true">2.</strong> Chapter 2 - At the Hotel in Bistritz</a></li><li class="chapter-item expanded "><a href="../chapter3/index.html"><strong aria-hidden="true">3.</strong> Chapter 3 - Jonathan goes to Castle Dracula</a></li><li class="chapter-item expanded "><a href="../chapter4/index.html"><strong aria-hidden="true">4.</strong> Chapter 4 - "What a strange man this Count Dracula is."</a></li><li class="chapter-item expanded "><a href="../chapter5/index.html"><strong aria-hidden="true">5.</strong> Chapter 5 - Jonathan tries to leave the castle</a></li><li class="chapter-item expanded "><a href="../chapter6/index.html"><strong aria-hidden="true">6.</strong> Chapter 6 - Still no escape</a></li><li class="chapter-item expanded "><a href="../chapter7/index.html"><strong aria-hidden="true">7.</strong> Chapter 7 - Jonathan finally "leaves" the castle</a></li><li class="chapter-item expanded "><a href="../chapter8/index.html"><strong aria-hidden="true">8.</strong> Chapter 8 - Dracula takes the boat to England</a></li><li class="chapter-item expanded "><a href="../chapter9/index.html"><strong aria-hidden="true">9.</strong> Chapter 9 - Strange events in England</a></li><li class="chapter-item expanded "><a href="../chapter10/index.html"><strong aria-hidden="true">10.</strong> Chapter 10 - Terrible events in Whitby</a></li><li class="chapter-item expanded "><a href="../chapter11/index.html"><strong aria-hidden="true">11.</strong> Chapter 11 - What's wrong with Lucy?</a></li><li class="chapter-item expanded "><a href="../chapter12/index.html"><strong aria-hidden="true">12.</strong> Chapter 12 - From bad to worse</a></li><li class="chapter-item expanded "><a href="../chapter13/index.html"><strong aria-hidden="true">13.</strong> Chapter 13 - Farewell, Lucy. Meet the new Lucy</a></li><li class="chapter-item expanded "><a href="../chapter14/index.html"><strong aria-hidden="true">14.</strong> Chapter 14 - Jonathan Harker returns</a></li><li class="chapter-item expanded "><a href="../chapter15/index.html"><strong aria-hidden="true">15.</strong> Chapter 15 - Time to start vampire hunting</a></li><li class="chapter-item expanded "><a href="../chapter16/index.html"><strong aria-hidden="true">16.</strong> Chapter 16 - Is Renfield telling the truth?</a></li><li class="chapter-item expanded "><a href="../chapter17/index.html"><strong aria-hidden="true">17.</strong> Chapter 17 - Poor Renfield. Poor Mina.</a></li><li class="chapter-item expanded "><a href="../chapter18/index.html" class="active"><strong aria-hidden="true">18.</strong> Chapter 18 - Using Dracula's own weapon against him</a></li><li class="chapter-item expanded "><a href="../chapter19/index.html"><strong aria-hidden="true">19.</strong> Chapter 19 - Dracula escapes</a></li><li class="chapter-item expanded "><a href="../chapter20/index.html"><strong aria-hidden="true">20.</strong> Chapter 20 - The final battle</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2 id="tags-complex-inserts-schema-cleanup-triggers"><a class="header" href="#tags-complex-inserts-schema-cleanup-triggers">tags: Complex Inserts, Schema Cleanup, Triggers</a></h2>
+<h1 id="chapter-18---using-draculas-own-weapon-against-him"><a class="header" href="#chapter-18---using-draculas-own-weapon-against-him">Chapter 18 - Using Dracula's own weapon against him</a></h1>
+<blockquote>
+<p>Van Helsing was correct: Mina is connected to Dracula. Van Helsing continues to use hypnotism to find out more about where Dracula is and what he is doing. </p>
+<p>Meanwhile, Jonathan does a lot of investigation into Dracula's activities in London. He visits all the companies that were involved in selling Dracula's house, and some moving companies who moved his coffins around. Jonathan is becoming more and more confident, and only has one thought in his mind: find Dracula, destroy him, and save Mina.</p>
+<p>Our heroes eventually find Dracula's other house in London with all of his money. Knowing that Dracula will come to get it, they wait for him to arrive.</p>
+<p>Suddenly, Dracula runs into the house and attacks. Jonathan hits out with his knife, and cuts Dracula's bag with all his money. Dracula grabs some of the money that fell and jumps out the window. He yells at them: &quot;You shall be sorry yet, each one of you! You think you have left me without a place to rest; but I have more. My revenge is just begun!&quot; Then he disappears.</p>
+</blockquote>
+<p>This is a good reminder that we should probably think about money in our game. Money in a regular fantasy game is generally pretty easy: you can use a parameter called <code>gold</code> or something, call that the currency and give everyone a <code>gold</code> property. But our game is based on the real world. The characters have been to countries like England, Romania, and Germany, each of which have their own money.</p>
+<p>On top of this is an extra difficulty: in the 1800s, monetary systems were more complicated than they are today. For example, the United Kingdom at the time didn't use a simple 100 pence to 1 pound conversion. Instead, it was as follows:</p>
+<ul>
+<li>12 pence (the smallest coin) made one shilling,</li>
+<li>20 shillings made one pound, thus</li>
+<li>240 pence per pound.</li>
+</ul>
+<p>(There was also a <em>halfpenny</em> that was half of one pence, but let's not get into that much detail in our game.)</p>
+<p>Fortunately, even in this case we can default to the smallest unit of money when it comes to things like buying and selling.  By using the smallest unit of currency possible, we can do all calculations with integers instead of floats. For example, if a <code>Person</code> object with 5 pounds, 3 shillings and 5 pence wants to buy something that costs 1 shilling and 15 pence, we can calculate how much money the buyer has in pence:</p>
+<ul>
+<li>5 pounds, which equals 5 * 240 = 1200 pence,</li>
+<li>3 shillings, which equals 3 * 20 = 60 pence,</li>
+<li>5 pence.</li>
+</ul>
+<p>Which makes a total of 1265 pence for the buyer minus the item that costs 75 pence (3 shillings * 20, plus 15 pence). And since shopkeepers like to have small currencies (so they can give people change) and people like to have large currencies (so they aren't weighed down with too many coins), you can always subtract pence first, then shillings, and finally pounds when making a purchase.</p>
+<p>There are many ways to represent money in a game. Let's think about them a bit:</p>
+<ul>
+<li>Simply adding properties like <code>pence</code>, <code>shilling</code> and <code>cent</code> to the <code>Person</code> type. This could work, but the <code>Person</code> type is already quite large. Plus there might be other objects that have money, such as <code>City</code> objects (if we wanted to keep track of a city's money supply). Even things like dead bodies could hold treasure and money.</li>
+<li>Creating an object type for types of currency with a link to an <code>owner</code>. This could make sense, considering that in life there are always heaps of money that are linked to us. For example, $1000.50 USD in a bank that belongs to you can be thought of as a <code>USD</code> type that holds 1000 <code>dollars</code> and 50 <code>cents</code> and has a link to you, the owner. The <code>USD</code> type could extend an abstract <code>Currency</code> type, and then you, a <code>Person</code> object, would have a backlink for all the piles of money that link to you. This might be too complicated for our game, however, which is centered on <code>PC</code>s and which doesn't have too many currencies to think about.</li>
+<li>Creating an abstract <code>HasMoney</code> type that can be extended by <code>Person</code> and anything else that holds money later on. This abstract type can hold each of the currencies as a property.</li>
+</ul>
+<p>This last option seems easiest, so let's try that. We'll start with a scalar type called <code>Money</code> that we can use for every type of currency in the game, and give it a minimum value of 0:</p>
+<pre><code class="language-edgeql">  scalar type Money extending int64 {
+    constraint min_value(0);
+  }
+</code></pre>
+<p>With the <code>Money</code> type created, we can now move on to the abstract <code>HasMoney</code> type. Here it is to start:</p>
+<pre><code class="language-edgeql">  abstract type HasMoney {
+    pounds: Money;
+    shillings: Money;
+    pence: Money;
+    dollars: Money;
+    cents: Money;
+  }
+</code></pre>
+<p>Next, we can make all of these properties <code>required</code> and give them a default value of 0. This will make calculations easier since we will be guaranteed to always have a value instead of an empty set:</p>
+<pre><code class="language-edgeql">  abstract type HasMoney {
+    required pounds: Money {
+      default := 0;
+    }
+    required shillings: Money {
+      default := 0;
+    }
+    required pence: Money {
+      default := 0;
+    }
+    required cents: Money {
+      default := 0;
+    }
+    required dollars: Money {
+      default := 0;
+    }
+  }
+</code></pre>
+<p>And finally, to top it off let's add three computed properties called <code>total_pence</code>, <code>total_cents</code>, and <code>approx_wealth_in_pounds</code>. The first two represent the smallest units of currency in their respective countries, and so will represent a person's total wealth.</p>
+<p>The last <code>approx_wealth_in_pounds</code> property shows the character's total wealth in pounds, which we will use as a general benchmark to compare all wealth. The calculation to make this property returns a float, but we are just using this for general comparisons and won't be using it to buy or sell anything. So we will cast it to an <code>int64</code> for readability.</p>
+<p>At the time of the book, the exchange rate was about 8 US dollars to one pound (so 800 cents to one pound). Putting all that together, the final <code>HasMoney</code> type looks like this:</p>
+<pre><code class="language-edgeql">  abstract type HasMoney {
+    required pounds: Money {
+      default := 0;
+    }
+    required shillings: Money {
+      default := 0;
+    }
+    required pence: Money {
+      default := 0;
+    }    
+    required cents: Money {
+      default := 0;
+    }
+    required dollars: Money {
+      default := 0;
+    }
+    property total_pence := .pounds * 240 + .shillings * 20 + .pence;
+    property total_cents := .dollars * 100 + .cents;
+    property approx_wealth_in_pounds := &lt;int64&gt;.total_pence / 240 + .total_cents / 800;
+  }
+</code></pre>
+<p>With all the above done, just add <code>extending HasMoney</code> to the <code>Person</code> type, and do a migration. Now it's time to give our characters some money!</p>
+<p>An average laborer in the United Kingdom in 1893 made 30 pounds per year. Both Arthur Holmwood and Count Dracula are lords with almost unimaginable amounts of money, so we'll <code>update</code> them with random numbers that should be well beyond anything a laborer can earn in a lifetime:</p>
+<pre><code class="language-edgeql">update Person filter .name in { 'Arthur Holmwood', 'Count Dracula' }
+ set {
+   pounds := 3000 + &lt;int64&gt;(random() * 3000),
+   shillings := 3000 + &lt;int64&gt;(random() * 3000),
+   pence := 3000 + &lt;int64&gt;(random() * 3000)
+};
+</code></pre>
+<p>And then a query to check how much money they have:</p>
+<pre><code class="language-edgeql">select Person {
+  name,
+  pounds,
+  shillings,
+  pence,
+  total_pence } filter .name in { 'Arthur Holmwood', 'Count Dracula' };
+</code></pre>
+<p>The output should show each of these two characters with some pretty incredible amounts of money.</p>
+<pre><code>{
+  default::NPC {
+    name: 'Arthur Holmwood',
+    pounds: 4249,
+    shillings: 4219,
+    pence: 3296,
+    total_pence: 1107436,
+  },
+  default::Vampire {
+    name: 'Count Dracula',
+    pounds: 5967,
+    shillings: 3539,
+    pence: 3109,
+    total_pence: 1505969,
+  },
+}
+</code></pre>
+<p>You can see that the <code>total_pence</code> property lets us quickly see who of the two is richer.</p>
+<p>The other characters will get an <code>update</code> with more reasonable random amounts of money:</p>
+<pre><code class="language-edgeql">update Person filter .name not in { 'Arthur Holmwood', 'Count Dracula' }
+ set {
+   pence := 100 + &lt;int64&gt;(random() * 100),
+   shillings := 20 + &lt;int64&gt;(random() * 100),
+   pounds := 10 + &lt;int64&gt;(random() * 100)
+ };
+</code></pre>
+<p>Then we have Quincy Morris, who should have some USD because he is an American. Back in 1890 an average American worker earned about $500 a year. He is pretty wealthy too so we'll <code>update</code> him with a few times that amount.</p>
+<pre><code class="language-edgeql">update Person filter .name = 'Quincey Morris'
+ set { 
+  dollars := 500 + &lt;int64&gt;(random() * 2000),
+  cents := 500 + &lt;int64&gt;(random() * 2000)
+};
+</code></pre>
+<p>And now let's try this query on all our <code>Person</code> objects.</p>
+<pre><code>select Person {
+  name,
+  total_pence,
+  total_cents,
+  approx_wealth_in_pounds
+ } order by .approx_wealth_in_pounds desc;
+</code></pre>
+<p>The output should be similar to the output below, with Count Dracula and Arthur Holmwood on top, Quincey Morris in third place, and other <code>Person</code> objects in random order. Looks like the Crewmen and Innkeeper have been doing pretty well for themselves!</p>
+<pre><code>{
+  default::Vampire {
+    name: 'Count Dracula',
+    total_pence: 1505969,
+    total_cents: 0,
+    approx_wealth_in_pounds: 6275,
+  },
+  default::NPC {
+    name: 'Arthur Holmwood',
+    total_pence: 1107436,
+    total_cents: 0,
+    approx_wealth_in_pounds: 4614,
+  },
+  default::NPC {
+    name: 'Quincey Morris',
+    total_pence: 27395,
+    total_cents: 197076,
+    approx_wealth_in_pounds: 360,
+  },
+  default::NPC {
+    name: 'Mina Murray',
+    total_pence: 27722,
+    total_cents: 0,
+    approx_wealth_in_pounds: 116,
+  },
+  default::Crewman {
+    name: 'Crewman 2',
+    total_pence: 25928,
+    total_cents: 0,
+    approx_wealth_in_pounds: 108,
+  },
+  default::Crewman {
+    name: 'Crewman 4',
+    total_pence: 25554,
+    total_cents: 0,
+    approx_wealth_in_pounds: 106,
+  },
+  default::NPC {
+    name: 'The innkeeper',
+    total_pence: 24409,
+    total_cents: 0,
+    approx_wealth_in_pounds: 102,
+  },
+  # And so on...
+}
+</code></pre>
+<h2 id="triggers"><a class="header" href="#triggers">Triggers</a></h2>
+<p>Let's give some thought to the actual users of our game - the people who will be signing up to make player characters to try to save the world from (or to help??) Count Dracula.</p>
+<p>However the game takes shape, it will require some sort of account type to hold the information for the people using our game in real life. A simplified example of what we might need is as follows:</p>
+<pre><code class="language-sdl">type Account {
+  required name: str;
+  required address: str;
+  required username: str;
+  required credit_card: CreditCardInfo {
+    on source delete delete target;
+  }
+  multi pcs: PC;
+}
+
+type CreditCardInfo {
+  required name: str;
+  required number: str;
+
+  link card_holder := .&lt;credit_card[is Account]
+}
+</code></pre>
+<p>Every single property in these types is required, which makes sense - it's all personal information required to create accounts and pay for them.</p>
+<p>Now let's think about what happens when an <code>Account</code> gets deleted. In almost every country, a company is legally bound to remove a user's personal information when they ask for an account to be deleted. With the <code>on source delete delete target</code> deletion policy, we have the <code>credit_card</code> link set up to delete any linked <code>CreditCardInfo</code> when an <code>Account</code> object is deleted. (A reminder: <code>on source delete delete target</code> means that when the source of the link is deleted, the target of the link gets deleted as well.) Deleting an <code>Account</code> object will delete absolutely everything to do with the user of our game.</p>
+<p>However, users tend to be fickle. They might delete their accounts and regret doing so, they might delete an account by mistake, and so on. In that case they will get into contact with us asking if an account can be restored. Legally, however, we can't just keep the <code>Account</code> and <code>CreditCardInfo</code> objects around just in case! We are obligated to delete all of a user's information when they ask. How to solve this issue?</p>
+<p>An easy way to solve this problem is by using <em>triggers</em>, which were added in EdgeDB 3.0. A trigger represents some sort of action that we want to take place every time an object is inserted, updated, or deleted. Let's first take a look at the official syntax for triggers to get an idea of how to use them:</p>
+<pre><code>type type-name &quot;{&quot;
+  trigger name
+  after
+    {insert | update | delete} [, ...]
+    for {each | all}
+    do expr
+&quot;}&quot;
+</code></pre>
+<p>In other words:</p>
+<ul>
+<li>Decide on a name for a trigger (like <code>validate_input</code> or <code>check_length</code>),</li>
+<li>Add the keyword <code>after</code>,</li>
+<li>Decide for which cases we want a trigger to happen (only after an <code>insert</code>, after either an <code>insert</code> or an <code>update</code>, etc.),</li>
+<li>Decide whether a trigger should happen on <code>each</code> object or once per query with <code>all</code>,</li>
+<li>And finally the expression of the trigger itself.</li>
+</ul>
+<p>Inside a trigger we get access to the old object using <code>__old__</code> and the new object using <code>__new__</code>, though this depends on the operation. For example, when you <code>delete</code> there is no <code>__new__</code> object to access, nor is there an <code>__old__</code> object to access when doing an <code>insert</code>.</p>
+<p>And now back to our <code>Account</code> type. To keep a minimal amount of information after a user's account is deleted, we can create a new type that holds this information. We can call this type <code>MinimalUserInfo</code>, because it will only hold their username and the <code>PC</code> objects they made. None of this information can be used to track down a person in real life so it is safe to hold, and at the same time it is enough information for us to restore an account. (Perhaps we will hold on to <code>PC</code> objects for 30 days or so in case a user changes their mind)</p>
+<p>The <code>MinimalUserInfo</code> type is pretty simple, just a person's <code>username</code>, the <code>PC</code>s that they own, and an <code>int16</code> to hold a random number.</p>
+<pre><code class="language-sdl">type MinimalUserInfo {
+  username: str;
+  multi pcs: PC;
+  passcode: int16;
+}
+</code></pre>
+<p>And now let's add the trigger to <code>Account</code> that inserts a <code>MinimalUserInfo</code> object every time an <code>Account</code> object is deleted. With this trigger in place, we can freely delete any <code>Account</code> objects and the user's personal information will be removed: name, address, and credit card info. But a <code>MinimalUserInfo</code> will always be created at the same time which holds the <code>username</code> and the <code>PC</code> objects linked to it. It will also hold a <code>passcode</code> which holds a number in between 100 and 500.</p>
+<p>All together, the changes now look as follows:</p>
+<pre><code class="language-sdl">type Account {
+  required name: str;
+  required address: str;
+  required username: str;
+  required credit_card: CreditCardInfo {
+    on source delete delete target;
+  }
+  multi pcs: PC;
+
+  trigger user_info_insert after delete for each do (
+  insert MinimalUserInfo {
+    username := __old__.name,
+    pcs := __old__.pcs,
+    passcode := &lt;int16&gt;(random() * 400) + 100,
+  }
+);
+}
+
+type CreditCardInfo {
+  required name: str;
+  required number: str;
+  link card_holder := .&lt;credit_card[is Account]
+}
+
+type MinimalUserInfo {
+  username: str;
+  multi pcs: PC;
+  passcode: int16;
+}
+</code></pre>
+<p>Okay, let's do a migration and then insert an <code>Account</code> object. Look at all the personal information inside!</p>
+<pre><code>insert Account {
+  name := 'Deborah Brown',
+  address := '10 Main Street',
+  username := 'deb_deb_999',
+  credit_card := (insert CreditCardInfo 
+    {  name := 'DEBORAH LAURA BROWN',
+       number := '000-000-000' }
+  ),
+  pcs := (insert PC 
+    {  name := 'LordOfSalty',
+       class := Class.Rogue
+    }
+  )
+};
+</code></pre>
+<p>We have only one <code>Account</code> object so far so let's query with <code>select Account {**};</code> to see all of the information available. Here is the output:</p>
+<pre><code>{
+  default::Account {
+    id: 6f67992a-0d90-11ee-b3bb-8f877d23b651,
+    name: 'Deborah Brown',
+    address: '10 Main Street',
+    username: 'deb_deb_999',
+    pcs: {
+      default::PC {
+        last_appearance: {},
+        first_appearance: {},
+        degrees: {},
+        title: {},
+        age: {},
+        is_single: true,
+        strength: {},
+        name: 'LordOfSalty',
+        pen_name: 'LordOfSalty',
+        conversational_name: 'LordOfSalty',
+        id: 6f67f154-0d90-11ee-b3bb-37992cdeda59,
+        class: Rogue,
+        created_at: &lt;datetime&gt;'2023-06-18T04:27:29.059881Z',
+        number: 5,
+      },
+    },
+    credit_card: default::CreditCardInfo {
+      id: 6f678106-0d90-11ee-b3bb-13592cce3a16,
+      name: 'DEBORAH LAURA BROWN',
+      number: '000-000-000',
+    },
+  },
+}
+</code></pre>
+<p>Looks good! That is, until Deborah decides she has been playing too many vampire games recently and would like to delete her account. We are sad to see her go but comply with her request:</p>
+<pre><code class="language-edgeql">delete Account filter .user_name = 'deb_deb_999';
+</code></pre>
+<p>And now Deborah's personal information is all gone, as requested. But thanks to the trigger we added, we now have a <code>MinimalUserInfo</code> object in the database that was added automatically at the moment that we deleted Deborah's account. Let's take a look at it:</p>
+<pre><code>select MinimalUserInfo {**};
+</code></pre>
+<p>Here is the output:</p>
+<pre><code>{
+  default::MinimalUserInfo {
+    id: 5c17b0de-0d91-11ee-946c-6f411083ab25,
+    username: 'deb_deb_999',
+    passcode: 453,
+    pcs: {
+      default::PC {
+        last_appearance: {},
+        first_appearance: {},
+        degrees: {},
+        title: {},
+        age: {},
+        is_single: true,
+        strength: {},
+        name: 'LordOfSalty',
+        pen_name: 'LordOfSalty',
+        conversational_name: 'LordOfSalty',
+        id: 59cbd4b8-0d91-11ee-946c-a3693fe5d218,
+        class: Rogue,
+        created_at: &lt;datetime&gt;'2023-06-18T04:34:02.301357Z',
+        number: 8,
+      },
+    },
+  },
+}
+</code></pre>
+<p>With that we are holding none of Deborah's personal information anymore. All that we know is that some user called <code>deb_deb_999</code> had a <code>PC</code> called <code>LordOfSalty</code> - no personal info anywhere! Our software will check for new <code>MinimalUserInfo</code> objects and send off an email to users that have deleted their accounts to let them know how to restore their account if they wish. It would look something like this:</p>
+<pre><code>We're sorry to see you go...
+
+Your personal information has been deleted from our database. Your PCs have been kept on file for the next 30 days should you choose to restore your account. Keep the passcode safe if you think you might want to restore your account! It's the only way to verify your identity now that all of your personal information has been removed.
+
+Account name: deb_deb_999
+PC names: LordOfSalty
+Passcode: 453
+</code></pre>
+<p>So if Deborah decides that she wants to get back into the world of vampire gaming she can choose to restore her account - as long as she remembers her username and passcode.</p>
+<p><a href="code.html">Here is all our code so far up to Chapter 18.</a></p>
+<!-- quiz-start -->
+<h2 id="time-to-practice"><a class="header" href="#time-to-practice">Time to practice</a></h2>
+<ol>
+<li>
+<p>The Goldmark was used in Germany during the time of Bram Stoker's Dracula. One Goldmark had 100 Pfennig. How would you make this type?</p>
+</li>
+<li>
+<p>Try adding two annotations to this type. One should be called <code>description</code> and mention that <code>One mark = 100 Pfennig</code>. The other should be called <code>note</code> and mention the types of coins there are.</p>
+<p><a href="https://en.wikipedia.org/w/index.php?title=German_gold_mark&amp;oldid=972733514#Base_metal_coins">Here are the types of coins</a>: 1, 2, 5, 10, 20, 25 Pfennig coins.</p>
+</li>
+<li>
+<p>A vampire named Godbrand has just attacked a village and turned three villagers into <code>MinorVampire</code>s. How would you insert all four of them at once?</p>
+<p>Here is their data (name, date of birth (<code>first_appearance</code>), date turned into a MinorVampire (<code>last_appearance</code>)):</p>
+<pre><code>('Fritz Frosch', '1850-01-15', '1893-09-11'),
+('Levanta Sinyeva', '1862-02-24', '1893-09-11'),
+('김훈', '1860-09-09', '1893-09-11'),
+</code></pre>
+</li>
+</ol>
+<p><a href="answers.html">See the answers here.</a></p>
+<!-- quiz-end -->
+<p><strong>Up next:</strong> <em>Only Mina can tell them where Dracula has gone.</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter17/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter19/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter17/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter19/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

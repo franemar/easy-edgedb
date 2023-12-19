@@ -1,0 +1,577 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chapter 2 - At the Hotel in Bistritz</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../chapter1/index.html"><strong aria-hidden="true">1.</strong> Chapter 1 - Jonathan Harker travels to Transylvania</a></li><li class="chapter-item expanded "><a href="../chapter2/index.html" class="active"><strong aria-hidden="true">2.</strong> Chapter 2 - At the Hotel in Bistritz</a></li><li class="chapter-item expanded "><a href="../chapter3/index.html"><strong aria-hidden="true">3.</strong> Chapter 3 - Jonathan goes to Castle Dracula</a></li><li class="chapter-item expanded "><a href="../chapter4/index.html"><strong aria-hidden="true">4.</strong> Chapter 4 - "What a strange man this Count Dracula is."</a></li><li class="chapter-item expanded "><a href="../chapter5/index.html"><strong aria-hidden="true">5.</strong> Chapter 5 - Jonathan tries to leave the castle</a></li><li class="chapter-item expanded "><a href="../chapter6/index.html"><strong aria-hidden="true">6.</strong> Chapter 6 - Still no escape</a></li><li class="chapter-item expanded "><a href="../chapter7/index.html"><strong aria-hidden="true">7.</strong> Chapter 7 - Jonathan finally "leaves" the castle</a></li><li class="chapter-item expanded "><a href="../chapter8/index.html"><strong aria-hidden="true">8.</strong> Chapter 8 - Dracula takes the boat to England</a></li><li class="chapter-item expanded "><a href="../chapter9/index.html"><strong aria-hidden="true">9.</strong> Chapter 9 - Strange events in England</a></li><li class="chapter-item expanded "><a href="../chapter10/index.html"><strong aria-hidden="true">10.</strong> Chapter 10 - Terrible events in Whitby</a></li><li class="chapter-item expanded "><a href="../chapter11/index.html"><strong aria-hidden="true">11.</strong> Chapter 11 - What's wrong with Lucy?</a></li><li class="chapter-item expanded "><a href="../chapter12/index.html"><strong aria-hidden="true">12.</strong> Chapter 12 - From bad to worse</a></li><li class="chapter-item expanded "><a href="../chapter13/index.html"><strong aria-hidden="true">13.</strong> Chapter 13 - Farewell, Lucy. Meet the new Lucy</a></li><li class="chapter-item expanded "><a href="../chapter14/index.html"><strong aria-hidden="true">14.</strong> Chapter 14 - Jonathan Harker returns</a></li><li class="chapter-item expanded "><a href="../chapter15/index.html"><strong aria-hidden="true">15.</strong> Chapter 15 - Time to start vampire hunting</a></li><li class="chapter-item expanded "><a href="../chapter16/index.html"><strong aria-hidden="true">16.</strong> Chapter 16 - Is Renfield telling the truth?</a></li><li class="chapter-item expanded "><a href="../chapter17/index.html"><strong aria-hidden="true">17.</strong> Chapter 17 - Poor Renfield. Poor Mina.</a></li><li class="chapter-item expanded "><a href="../chapter18/index.html"><strong aria-hidden="true">18.</strong> Chapter 18 - Using Dracula's own weapon against him</a></li><li class="chapter-item expanded "><a href="../chapter19/index.html"><strong aria-hidden="true">19.</strong> Chapter 19 - Dracula escapes</a></li><li class="chapter-item expanded "><a href="../chapter20/index.html"><strong aria-hidden="true">20.</strong> Chapter 20 - The final battle</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>tags: Scalar Types, Abstract Types, Filtering, Slicing
+leadImage: illustration_02.jpg</h2>
+<h1 id="chapter-2---at-the-hotel-in-bistritz"><a class="header" href="#chapter-2---at-the-hotel-in-bistritz">Chapter 2 - At the Hotel in Bistritz</a></h1>
+<p>We continue to read the story as we think about the database we need to store the information. The important information is in bold:</p>
+<blockquote>
+<p>Jonathan Harker has found a hotel in <strong>Bistritz</strong>, called the <strong>Golden Krone Hotel</strong>. He gets a welcome letter there from Dracula, who is waiting in his <strong>castle</strong>. Jonathan Harker will have to take a horse-driven carriage to get there tomorrow. Jonathan Harker is originally from <strong>London</strong>. The innkeeper at the Golden Krone Hotel seems very afraid of Dracula. He doesn't want Jonathan to leave and says it will be dangerous, but Jonathan doesn't listen. An old lady gives Jonathan a golden crucifix and says that it will protect him. Jonathan is embarrassed, and takes it to be polite. Jonathan has no idea how much it will help him later.</p>
+</blockquote>
+<p>Now we are starting to see some detail about the city of Bistritz: it contains a hotel. To represent this, we could add another property to <code>City</code>, and call it <code>important_places</code>. That's where places like the <strong>Golden Krone Hotel</strong> could go. We're not sure if places will be their own object types yet, so we'll just make it an array of strings for now: <code>important_places: array&lt;str&gt;;</code> We can put the names of important places in there for the time being and develop it into a link later. It will now look like this:</p>
+<pre><code class="language-sdl">type City {
+  required name: str;
+  modern_name: str;
+  important_places: array&lt;str&gt;;
+}
+</code></pre>
+<p>After doing a migration, let's insert Bistritz with the <code>important_places</code> property:</p>
+<pre><code class="language-edgeql">insert City {
+  name := 'Bistritz',
+  modern_name := 'Bistrița',
+  important_places := ['Golden Krone Hotel'],
+};
+</code></pre>
+<p>After this insert, our database will have two cities called Bistritz. It would be nice to delete one of them but first we will need to learn the <code>filter</code> and <code>delete</code> keywords to do so. We will learn <code>filter</code> in this chapter, and <code>delete</code> in the next, and then we will delete our duplicate Bistritz.</p>
+<h2 id="enums-scalar-types-and-extending"><a class="header" href="#enums-scalar-types-and-extending">Enums, scalar types, and extending</a></h2>
+<p>Our game is going to need to have player characters in it, which means that users of the game are going to have to choose what type of character they want to be. The book is <a href="https://vampvault.jimdofree.com/tidbits/timeframe/">probably based in 1893</a>, and our game will let the characters use classes that make sense for this time period. That means that we will need some sort of type that allows us to select from a number of options. EdgeDB has a type called an <code>enum</code> that will let us do this.</p>
+<p>Simple types like <code>int64</code> are what are known as <code>scalar types</code>, which means that they only hold a single value at a time. An enum allows us to select from multiple options, but it is a scalar type too because you can only pick one. The other types (<code>City</code>, <code>NPC</code>) are <code>object types</code> because they can hold multiple values at the same time.</p>
+<p>The other keyword we will see for the first time is <code>extending</code>, which means to take a type as a base and extend it. This keyword gives you all the power of the type that you are extending, and lets you add more on top. Enums in EdgeDB are created by <code>extending</code> a base enum type with the list of values (choices) we want to choose from. The syntax looks like this:</p>
+<pre><code class="language-sdl">scalar type Class extending enum&lt;Rogue, Mystic, Merchant&gt;;
+</code></pre>
+<p>Feel free to add more classes if you want! But in our schema we will just have three classes for simplicity.</p>
+<p>Did you notice that <code>scalar type</code> ends with a semicolon and the other types don't? That's because the object types have a <code>{}</code> to make a full expression. But here on a single line we don't have <code>{}</code> so we need the semicolon to show that the expression ends here.</p>
+<p>To choose between the values in an enum, you just use a <code>.</code> (a dot). For our enum, that means we can choose <code>Class.Rogue</code>, <code>Class.Mystic</code>, or <code>Class.Merchant</code>.</p>
+<p>This <code>Class</code> type is going to be for player characters in our game, not the <code>NPC</code> objects from the book (their stories, choices and statistics are already decided). That means that we will need both an <code>PC</code> type and an <code>NPC</code> type. These two types need to be different, but they are pretty similar to each other! They both have a <code>name</code>, <code>places_visited</code>, and probably some other properties that we will add later. This is a good case for a base type. Inside this base type we can put all the properties that are common to <code>PC</code> and <code>NPC</code>, which will use the <code>extending</code> keyword to gain the properties that <code>Person</code> has.</p>
+<p>This part of the schema will look like this...except for one change we will make.</p>
+<pre><code class="language-sdl">type Person {
+  required name: str;
+  multi places_visited: City;
+}
+
+type PC extending Person {
+  required class: Class;
+}
+
+type NPC extending Person;
+</code></pre>
+<p>So what change should we make? Well, the <code>Person</code> type at the moment is a concrete type, which means that we would be able to insert <code>Person</code> objects, <code>PC</code> objects, and <code>NPC</code> objects. But we only want to use <code>Person</code> as a base for other types to extend from, not a concrete type that we can insert. So in this case we will change <code>type Person</code> to <code>abstract type Person</code>.</p>
+<p>With that change done, the schema now looks like this. Let's do a migration now.</p>
+<pre><code class="language-sdl">abstract type Person {
+  required name: str;
+  multi places_visited: City;
+}
+
+type PC extending Person {
+  required class: Class;
+}
+
+type NPC extending Person;
+</code></pre>
+<p>Because <code>Person</code> is an abstract type, we can't insert it directly. Let's try it though and see what the error is! Give this query a try:</p>
+<pre><code class="language-edleql">insert Person {name := 'Mr. HasAName'};
+</code></pre>
+<p>As expected, we can't insert this <code>Person</code> type because it is abstract.</p>
+<pre><code>error: QueryError: cannot insert into abstract object type 'default::Person'
+  ┌─ &lt;query&gt;:1:8
+  │
+1 │ insert Person {name := 'Mr. HasAName'};
+  │        ^^^^^^ error
+</code></pre>
+<p>However, <code>select</code> on an abstract type is just fine. A <code>select</code> on a <code>Person</code> type will select all of the objects of all the types that extend <code>Person</code>. So let's add a <code>PC</code> object now so that the result of a <code>select Person</code> query will be more interesting.</p>
+<p>We'll make a <code>PC</code> called Emil Sinclair who is a mystic. He hasn't visited anywhere yet so he won't have any <code>places_visited</code> to link to.</p>
+<pre><code class="language-edgeql">insert PC {
+  name := 'Emil Sinclair',
+  class := Class.Mystic,
+};
+</code></pre>
+<p>Note that we didn't just write <code>Mystic</code>, because we have to choose the enum <code>Class</code> and then make a choice of one of the values. Just typing <code>Mystic</code> would make EdgeDB think that we were trying to link to objects of a type called <code>Mystic</code>.</p>
+<p>However, EdgeDB also allows you to choose an enum just by writing a string that matches the value. So this insert would have worked too:</p>
+<pre><code class="language-edgeql">insert PC {
+  name := 'Emil Sinclair',
+  class := 'Mystic',
+};
+</code></pre>
+<p>But if you were to type something like <code>class := 'Wrestler'</code> it wouldn't work, because <code>Wrestler</code> is not one of the values inside the <code>Class</code> enum.</p>
+<pre><code>edgedb error: InvalidValueError: invalid input value for enum 
+'default::Class': &quot;Wrestler&quot;
+</code></pre>
+<p>Now let's do a select on the abstract type <code>Person</code> to see the objects inside, plus the properties common to both: <code>name</code> and <code>places_visited</code>.</p>
+<pre><code class="language-edgeql">select Person {
+  name,
+  places_visited: {
+    name
+  }
+};
+</code></pre>
+<p>This gives us an output showing objects of both the <code>PC</code> and <code>NPC</code> type.</p>
+<pre><code>{
+  default::NPC {
+    name: 'Jonathan Harker',
+    places_visited: {
+      default::City {name: 'Munich'},
+      default::City {name: 'Buda-Pesth'},
+      default::City {name: 'Bistritz'},
+    },
+  },
+  default::PC {name: 'Emil Sinclair', places_visited: {}},
+}
+</code></pre>
+<h2 id="casting"><a class="header" href="#casting">Casting</a></h2>
+<p>Casting means to quickly change one type into another. Casting is used a lot in EdgeDB because it is strict about types, and will refuse to do operations on two types that are different. A lot of casting is done automatically out of convenience, such as with numbers. Take this query for example:</p>
+<pre><code class="language-edgeql">select 9 + 9.9;
+</code></pre>
+<p>The 9 in the query is an <code>int64</code>, while 9.9 is a <code>float64</code>. And though 9 and 9.9 are different types, EdgeDB will not generate an error here and will just give the output of <code>18.9</code>, returning a <code>float64</code>. You can confirm that here:</p>
+<pre><code class="language-edgeql">select (9 + 9.9) is float64;
+</code></pre>
+<p>This will give <code>true</code>, while <code>select (9 + 9.9) is float32;</code> gives <code>false</code>.</p>
+<p>When a cast is done without you needing to type anything extra, it is known as an <em>implicit cast</em>.</p>
+<p>When you need to do the cast yourself, it is called an <em>explicit cast</em>. In this case you can indicate the type using <code>&lt;&gt;</code> angle brackets. For example, this will generate an error:</p>
+<pre><code class="language-edgeql">select '9' + 9;
+</code></pre>
+<p>EdgeDB tells us the exact problem here:</p>
+<pre><code>error: InvalidTypeError: operator '+' cannot be applied to operands of type
+'std::str' and 'std::int64'
+  ┌─ &lt;query&gt;:1:8
+  │
+1 │ select '9' + 9;
+  │        ^^^^^^^ Consider using an explicit type cast or a conversion function.
+</code></pre>
+<p>And to fix it, just use the angle brackets:</p>
+<pre><code class="language-edgeql">select &lt;int64&gt;'9' + 9;
+</code></pre>
+<p>And you will get <code>18</code>, a 64-bit integer.</p>
+<p>But don't worry, a cast won't work if the input is invalid. You can't just cast a bunch of letters into an <code>&lt;int64&gt;</code> for example:</p>
+<pre><code>db&gt; select &lt;int64&gt;&quot;Hi I'm a number please add me to&quot; + 9;
+edgedb error: InvalidValueError: invalid input syntax for type std::int64:
+&quot;Hi I'm a number please add me to&quot;
+</code></pre>
+<p>You can cast more than once at a time if you need to. This example isn't something you will need to do but shows how you can cast over and over again if you want:</p>
+<pre><code class="language-edgeql">select &lt;str&gt;&lt;int64&gt;&lt;str&gt;&lt;int32&gt;50 is str;
+</code></pre>
+<p>Did you notice that the output for this query is <code>{true}</code>? That's because casting works from right to left, with the final cast on the far left. You can follow the casts by reading from right to left using the word &quot;into&quot;:</p>
+<ul>
+<li>&quot;The number 50 into an int32 into a string into an int64 into a string&quot;.</li>
+</ul>
+<p>Or you can read it from left to right using the word &quot;from&quot;:</p>
+<ul>
+<li>&quot;A string from an int64 from a string from an int32 from the number 50&quot;.</li>
+</ul>
+<p>Also note that casting is almost always only for scalar types: user-created object types like <code>City</code> and <code>Person</code> are too complex to simply cast into.</p>
+<p>There is one exception to this as of EdgeDB 3.0: a <code>uuid</code> can be cast into an object type. This makes sense because each object in EdgeDB has a unique id, and why not be able to cast from this <code>uuid</code> into the object it belongs to?</p>
+<p>Let's give this a try by first picking any <code>id</code> from our <code>Person</code> type with <code>select Person.id;</code>. Found one? Good, now paste that into the REPL, surround it with quotes to make it a <code>str</code>, and then use <code>&lt;uuid&gt;</code> to cast it. Like this:</p>
+<pre><code>select &lt;uuid&gt;'82348556-1928-11ee-ab8c-efed3acb0f00';
+</code></pre>
+<p>Good! And now let's see if we can cast from a <code>uuid</code> into a <code>City</code>. Use <code>select City.id;</code>, pick an id from the list, and then try casting it into a <code>City</code>. Let's also display its <code>name</code> and <code>important_places</code> property while we are at it.</p>
+<p>The query below almost works, but will generate an error. Can you guess why?</p>
+<pre><code class="language-edgedb">select &lt;City&gt;&lt;uuid&gt;'6b62fbc6-1975-11ee-9693-cff543bb8205' {
+  name, 
+  important_places 
+  };
+</code></pre>
+<p>Ah yes, there it is:</p>
+<pre><code>error: QueryError: shapes cannot be applied to scalar type 'std::str'
+  ┌─ &lt;query&gt;:1:20
+  │
+1 │   select &lt;City&gt;&lt;uuid&gt;'6b62fbc6-1975-11ee-9693-cff543bb8205' {
+  │ ╭────────────────────^
+2 │ │   name,
+3 │ │   important_places
+4 │ │ };
+  │ ╰─^ error
+</code></pre>
+<p>We told EdgeDB to give a shape to <code>str</code> which obviously doesn't have properties like <code>name</code> and <code>important_places</code>. No problem: just wrap everything in parentheses first.</p>
+<pre><code class="language-edgedb">select (&lt;City&gt;&lt;uuid&gt;'6b62fbc6-1975-11ee-9693-cff543bb8205') {
+  name, 
+  important_places 
+  };
+</code></pre>
+<p>With the parentheses, the query can be seen as this: &quot;Take a string, try to cast it into a uuid, and try to cast it into a City. Take this result and display its <code>name</code> and <code>important_places</code> properties. The query will now work, and display one of the cities we added. It should look something like this.</p>
+<pre><code>{default::City {name: 'Munich', important_places: {}}}
+</code></pre>
+<h2 id="filtering-like-and-ilike-and-indexing"><a class="header" href="#filtering-like-and-ilike-and-indexing">Filtering, like and ilike, and indexing</a></h2>
+<p>To finish up the second chapter, let's learn how to <code>filter</code>. You can use <code>filter</code> after the curly brackets in <code>select</code> to only show certain objects instead of showing every object for a type. Let's <code>filter</code> to only show <code>Person</code> types that have the property <code>name</code> that equals 'Emil Sinclair':</p>
+<pre><code class="language-edgeql">select Person {
+  name,
+  places_visited: {name},
+} filter .name = 'Emil Sinclair';
+</code></pre>
+<p><code>filter .name</code> is short for <code>filter Person.name</code>. You can write <code>filter Person.name</code> too if you want - it's the same thing.</p>
+<p>The output now only shows a single <code>PC</code> object with a name that matches our filter:</p>
+<pre><code>{default::PC {name: 'Emil Sinclair', places_visited: {}}}
+</code></pre>
+<p>Let's filter the cities now. EdgeDB has two keywords called <code>like</code> or <code>ilike</code> which allow us to to match on parts of a string instead of just a whole string. They are slightly different:</p>
+<ul>
+<li><code>like</code> is case sensitive, so &quot;Bistritz&quot; matches &quot;Bistritz&quot; but &quot;bistritz&quot; does not match &quot;Bistritz&quot;.</li>
+<li><code>ilike</code> is not case sensitive (the i in ilike means <strong>insensitive</strong>), so &quot;Bistritz&quot; matches both &quot;BiStRitz&quot; and &quot;bisTRITz&quot;.</li>
+</ul>
+<p>You can also add <code>%</code> on the left and/or right which means match anything before or after. Here are some examples with the matched part <strong>in bold</strong>:</p>
+<ul>
+<li><code>like Bistr%</code> matches &quot;<strong>Bistr</strong>itz&quot;, but not &quot;bistritz&quot;.</li>
+<li><code>ilike '%IsTRiT%'</code> matches &quot;B<strong>istrit</strong>z&quot;.</li>
+<li><code>like %athan Harker</code> matches &quot;Jon<strong>athan Harker</strong>&quot;.</li>
+<li><code>ilike %n h%</code> matches &quot;Jonatha<strong>n H</strong>arker&quot;.</li>
+</ul>
+<p>Let's <code>filter</code> to get all the cities that start with a capital B. That means we'll need <code>like</code> because it needs to be case sensitive:</p>
+<pre><code class="language-edgeql">select City {
+  name,
+  modern_name,
+} filter .name like 'B%';
+</code></pre>
+<p>Here is the result:</p>
+<pre><code>{
+  default::City {name: 'Buda-Pesth', modern_name: 'Budapest'},
+  default::City {name: 'Bistritz', modern_name: 'Bistrița'},
+}
+</code></pre>
+<p>You can also index a string with <code>[]</code> square brackets, starting at 0. For example, the indexes in the string 'Jonathan' look like this:</p>
+<pre><code>J o n a t h a n
+0 1 2 3 4 5 6 7
+</code></pre>
+<p>So <code>'Jonathan'[0]</code> is 'J' and <code>'Jonathan'[4]</code> is 't'.</p>
+<p>We can then use this method to filter too. In the next query we are checking to see if the first character is a 'B' or not:</p>
+<pre><code class="language-edgeql">select City {
+  name,
+  modern_name,
+} filter .name[0] = 'B'; # First character must be 'B'
+</code></pre>
+<p>That gives the same result. Careful though: if you set the number too high then it will try to search outside of the string, which is an error. If we change 0 to 18 (<code>filter .name[18] = 'B';</code>), we'll get this error:</p>
+<pre><code>edgedb error: InvalidValueError: string index 18 is out of bounds
+(on line 4, column 16)
+</code></pre>
+<p>Plus, if you have any <code>City</code> types with a name of <code>''</code>, even a search for index 0 will cause an error.</p>
+<p>Let's try to make that error happen.</p>
+<p>First we will insert a <code>City</code> object with '' for a name:</p>
+<pre><code>db&gt; insert City {
+ name := ''
+ };
+{default::City {id: 5d01e634-f2c7-11ed-87af-d7dfced50628}}
+</code></pre>
+<p>And now our former query doesn't work, because EdgeDB will come across a <code>City</code> object with a <code>name</code> property that it can't index into.</p>
+<pre><code>db&gt; select City {
+  name,
+  modern_name,
+ } filter .name[0] = 'B';
+edgedb error: InvalidValueError: string index 0 is out of bounds
+(on line 4, column 16)
+</code></pre>
+<p>So a good rule of thumb is to not use raw indexes when filtering unless you are sure that there will be a value, and that the value will be long enough. In the next chapter we will learn how to use <em>constraints</em> to ensure that your data matches certain expectations you have, such as minimum length.</p>
+<p>So what if you want to make sure that you won't get an error with an index number that might be too high? Here you can use <code>like</code> or <code>ilike</code> instead. If you replace the <code>.name[0]</code> part in the query above with <code>.name ilike 'B%'</code> we don't get an error, and the query still checks to see if there is a 'B' at index 0.</p>
+<pre><code class="language-edgeql">db&gt; select City {
+  name,
+  modern_name,
+ } filter .name ilike 'B%';
+</code></pre>
+<p>The result is now all <code>City</code> objects that start with 'B', and the <code>City</code> object with a <code>name</code> of <code>''</code> is no longer getting in the way.</p>
+<pre><code> {
+  default::City {name: 'Buda-Pesth', modern_name: 'Budapest'},
+  default::City {name: 'Bistritz', modern_name: 'Bistrița'},
+}
+</code></pre>
+<h2 id="slicing"><a class="header" href="#slicing">Slicing</a></h2>
+<p>You can also slice a string to get a piece of it. Let's look at the index values for 'Jonathan' again and think about how we could slice it.</p>
+<pre><code>J o n a t h a n
+0 1 2 3 4 5 6 7
+</code></pre>
+<p>Slices represent a part of a string that starts at one index and ends <em>before</em> another one. In other words, if you take a &quot;slice&quot; of it between indexes 2 and 5, you get 'nat' (<code>'Jonathan'[2:5]</code> = 'nat'), because it starts at 2 and goes <em>up to</em> 5 - but not including index 5. It's sort of like when you phone your friends to tell them that you're 'at their house': you're not telling them that you're inside it. So <code>[2:5]</code> represents a slice that starts at index 2 and is &quot;at&quot; (in front of) index 5.</p>
+<p>In the same way, selecting a slice of 'Jonathan' up to index 7 will show up to and including index 6:</p>
+<pre><code>db&gt; select 'Jonathan'[0:7];
+{'Jonatha'}
+</code></pre>
+<p>In this case, you could search up to index 8. You could even search up to index 1000, as slicing doesn't involve trying to directly access an index so it won't generate an error if there is no value at that index. Or you can use <code>[0:]</code> for an open-ended slice that starts at 0 and ends when the string ends. So all three of these queries will work without generating an error:</p>
+<pre><code>db&gt; select 'Jonathan'[0:8];
+{'Jonathan'}
+db&gt; select 'Jonathan'[0:1000];
+{'Jonathan'}
+db&gt; select 'Jonathan'[0:];
+{'Jonathan'}
+</code></pre>
+<p>This also means that you can use slicing to safely search for values at a certain index even if the value might be an empty string. We still have that <code>City</code> object in the database with a <code>name</code> of <code>''</code>, so <code>select City.name[0]</code> generates an error:</p>
+<pre><code>db&gt; select City.name[0];
+edgedb error: InvalidValueError: string index 0 is out of bounds
+(on line 1, column 18)
+</code></pre>
+<p>However, if we change the query to <code>db&gt; select City.name[0:1];</code> then it will look for a slice instead of an exact character index, and the query will work:</p>
+<pre><code>db&gt; select City.name[0:1];
+{'M', 'B', 'B', ''}
+</code></pre>
+<p>You can also use negative numbers to slice from the other end of a string. Negative index values are counted from the end of 'Jonathan', which is 8, so -1 corresponds to <code>8 - 1</code>: index number 7. Let's prove this with a query:</p>
+<pre><code>db&gt; select 'Jonathan'[7] = 'Jonathan'[-1];
+{true}
+</code></pre>
+<p>And this query will show all the characters in the string 'Jonathan' starting from index 1 and going up to the second last index:</p>
+<pre><code>db&gt; select 'Jonathan'[1:-1];
+{'onatha'}
+</code></pre>
+<p>Let's end the chapter with a quick note. Did you notice one of the queries used <code>#</code> to add a comment? Comments in EdgeDB are simple: anything to the right of <code>#</code> on a line gets ignored.</p>
+<p>So this:</p>
+<pre><code class="language-edgeql">select 1893#0503 is the first day of the book Dracula when...
+;
+</code></pre>
+<p>returns <code>{1893}</code>.</p>
+<p><a href="code.html">Here is all our code so far up to Chapter 2.</a></p>
+<!-- quiz-start -->
+<h2 id="time-to-practice"><a class="header" href="#time-to-practice">Time to practice</a></h2>
+<ol>
+<li>
+<p>Change the following <code>select</code> to display <code>{100}</code> by casting: <code>select '99' + '1'</code>;</p>
+</li>
+<li>
+<p>Select all the <code>City</code> types that start with 'Mu' (case sensitive).</p>
+</li>
+<li>
+<p>Select the third letter (i.e. index number 2) of the name of every <code>NPC</code>.</p>
+</li>
+<li>
+<p>If some <code>NPC</code> objects might have a name of <code>''</code>, how would you find the third letter of the name of every <code>NPC</code>?</p>
+</li>
+<li>
+<p>Imagine an abstract type called <code>HasAString</code>:</p>
+<pre><code class="language-sdl">abstract type HasAString {
+  string: str
+};
+</code></pre>
+<p>How would you change the <code>Person</code> type to extend <code>HasAString</code>?</p>
+</li>
+<li>
+<p>This query only shows the id numbers of the places visited. How do you show their name?</p>
+<pre><code class="language-edgeql">select Person {
+  places_visited
+};
+</code></pre>
+</li>
+</ol>
+<p><a href="answers.html">See the answers here.</a></p>
+<!-- quiz-end -->
+<p><strong>Up next:</strong> <em>Jonathan gets into the carriage and travels into the cold mountains.</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter1/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter3/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter1/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter3/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

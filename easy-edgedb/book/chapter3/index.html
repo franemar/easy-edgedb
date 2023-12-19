@@ -1,0 +1,612 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chapter 3 - Jonathan goes to Castle Dracula</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../chapter1/index.html"><strong aria-hidden="true">1.</strong> Chapter 1 - Jonathan Harker travels to Transylvania</a></li><li class="chapter-item expanded "><a href="../chapter2/index.html"><strong aria-hidden="true">2.</strong> Chapter 2 - At the Hotel in Bistritz</a></li><li class="chapter-item expanded "><a href="../chapter3/index.html" class="active"><strong aria-hidden="true">3.</strong> Chapter 3 - Jonathan goes to Castle Dracula</a></li><li class="chapter-item expanded "><a href="../chapter4/index.html"><strong aria-hidden="true">4.</strong> Chapter 4 - "What a strange man this Count Dracula is."</a></li><li class="chapter-item expanded "><a href="../chapter5/index.html"><strong aria-hidden="true">5.</strong> Chapter 5 - Jonathan tries to leave the castle</a></li><li class="chapter-item expanded "><a href="../chapter6/index.html"><strong aria-hidden="true">6.</strong> Chapter 6 - Still no escape</a></li><li class="chapter-item expanded "><a href="../chapter7/index.html"><strong aria-hidden="true">7.</strong> Chapter 7 - Jonathan finally "leaves" the castle</a></li><li class="chapter-item expanded "><a href="../chapter8/index.html"><strong aria-hidden="true">8.</strong> Chapter 8 - Dracula takes the boat to England</a></li><li class="chapter-item expanded "><a href="../chapter9/index.html"><strong aria-hidden="true">9.</strong> Chapter 9 - Strange events in England</a></li><li class="chapter-item expanded "><a href="../chapter10/index.html"><strong aria-hidden="true">10.</strong> Chapter 10 - Terrible events in Whitby</a></li><li class="chapter-item expanded "><a href="../chapter11/index.html"><strong aria-hidden="true">11.</strong> Chapter 11 - What's wrong with Lucy?</a></li><li class="chapter-item expanded "><a href="../chapter12/index.html"><strong aria-hidden="true">12.</strong> Chapter 12 - From bad to worse</a></li><li class="chapter-item expanded "><a href="../chapter13/index.html"><strong aria-hidden="true">13.</strong> Chapter 13 - Farewell, Lucy. Meet the new Lucy</a></li><li class="chapter-item expanded "><a href="../chapter14/index.html"><strong aria-hidden="true">14.</strong> Chapter 14 - Jonathan Harker returns</a></li><li class="chapter-item expanded "><a href="../chapter15/index.html"><strong aria-hidden="true">15.</strong> Chapter 15 - Time to start vampire hunting</a></li><li class="chapter-item expanded "><a href="../chapter16/index.html"><strong aria-hidden="true">16.</strong> Chapter 16 - Is Renfield telling the truth?</a></li><li class="chapter-item expanded "><a href="../chapter17/index.html"><strong aria-hidden="true">17.</strong> Chapter 17 - Poor Renfield. Poor Mina.</a></li><li class="chapter-item expanded "><a href="../chapter18/index.html"><strong aria-hidden="true">18.</strong> Chapter 18 - Using Dracula's own weapon against him</a></li><li class="chapter-item expanded "><a href="../chapter19/index.html"><strong aria-hidden="true">19.</strong> Chapter 19 - Dracula escapes</a></li><li class="chapter-item expanded "><a href="../chapter20/index.html"><strong aria-hidden="true">20.</strong> Chapter 20 - The final battle</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>tags: Constraints, Deleting
+leadImage: illustration_03.jpg</h2>
+<h1 id="chapter-3---jonathan-goes-to-castle-dracula"><a class="header" href="#chapter-3---jonathan-goes-to-castle-dracula">Chapter 3 - Jonathan goes to Castle Dracula</a></h1>
+<p>In this chapter we encounter a vampire for the first time - or rather, <em>the</em> vampire. As you can see, Dracula seems human but is actually quite different:</p>
+<blockquote>
+<p>Jonathan Harker has just arrived at Castle Dracula after a ride in the carriage through the mountains. The ride was terrible. There was snow, strange blue fires, and wolves everywhere. It was <strong>night</strong> when he arrived. He meets with Count Dracula. Dracula picks up all of Jonathan's luggage <strong>with one hand</strong>, they go inside, and they talk all night. Dracula always leaves <strong>just before the sun rises</strong> though. Curious! Days go by, and Jonathan still doesn't know that Dracula is a vampire. But he does notice something strange: the castle seems completely empty. If Dracula is so rich, where are his servants? Why is he so strong? Who is making his meals that he finds on the table? But Jonathan finds Dracula's stories of history very interesting, and so far is enjoying his trip.</p>
+</blockquote>
+<p>Now we are completely inside Dracula's castle, so this is a good time to create a <code>Vampire</code> type. We can extend it from <code>abstract type Person</code> because that type has <code>name</code> and <code>places_visited</code>, which are good for <code>Vampire</code> too.</p>
+<p>One possibility is adding <code>age</code> to <code>Person</code> so that all the other types can use it too. Then `Person' would look like this:</p>
+<pre><code class="language-sdl">abstract type Person {
+  required name: str;
+  multi places_visited: City;
+  age: int16;
+}
+</code></pre>
+<p><code>int16</code> means a 16 bit (2 byte) integer, which has enough space for -32768 to +32767. That's enough for age, so we don't need the bigger <code>int32</code> or <code>int64</code> types which are much larger. We also don't want it to be a <code>required</code> property, because we don't care about everybody's age.</p>
+<p>But we don't want <code>PC</code>s and <code>NPC</code>s to live up to 32767 years, so let's remove <code>age</code> from the abstract <code>Person</code> type and give it only to <code>Vampire</code> for now. We will think about the other types later. We'll make <code>Vampire</code> a type that extends <code>Person</code>, and adds age:</p>
+<pre><code class="language-sdl">type Vampire extending Person {
+  age: int16;
+}
+</code></pre>
+<p>Now we can create Count Dracula. We know that he lives in Romania, but Romania isn't a city. This is a good time to change the <code>City</code> type. We'll change the name to <code>Place</code> and make it an <code>abstract type</code>, and then <code>City</code> can extend from it. We'll also add a <code>Country</code> type that does the same thing. Now they look like this:</p>
+<pre><code class="language-sdl">abstract type Place {
+  required name: str;
+  modern_name: str;
+  important_places: array&lt;str&gt;;
+}
+
+type City extending Place;
+
+type Country extending Place;
+</code></pre>
+<p>We will also need to change <code>places_visited</code> in <code>Person</code> from <code>City</code> to <code>Place</code> so that it can include many things: the <code>City</code> types London and Bistritz, the <code>Country</code> type Hungary, and any other types we decide to add later that will extend <code>Place</code>.</p>
+<pre><code class="language-sdl">abstract type Person {
+  required name: str;
+  multi places_visited: Place;
+}
+</code></pre>
+<p>With these changes done, let's do a migration!</p>
+<p>It's easy to make a <code>Country</code>, because its only required property is <code>name</code>. We'll quickly insert two <code>Country</code> objects for Hungary and Romania:</p>
+<pre><code class="language-edgeql">insert Country { name := 'Hungary' };
+insert Country { name := 'Romania' };
+</code></pre>
+<h2 id="capturing-a-select-expression"><a class="header" href="#capturing-a-select-expression">Capturing a select expression</a></h2>
+<p>With these countries added, we are now ready to insert Dracula.</p>
+<p>We only know that Dracula has been in Romania, so his <code>places_visited</code> will be pretty easy: just select all the <code>Place</code> types and filter on <code>.name = 'Romania'</code>. When doing this, we put the <code>select</code> inside <code>()</code> brackets (parentheses). The parentheses are used to capture the result of the <code>select</code> query. In other words, the parentheses delimit (set the boundaries for) the <code>select</code> query which is then assigned to <code>places_visited</code>.</p>
+<pre><code class="language-edgeql">insert Vampire {
+  name := 'Count Dracula',
+  places_visited := (select Place filter .name = 'Romania'),
+  # .places_visited is the result of this select query.
+};
+</code></pre>
+<p>The insert works, with a result that looks something like this: <code>{default::Vampire {id: 7f5b25ac-ff43-11eb-af59-3f8e155c6686}}</code>.</p>
+<p>Let's check if <code>places_visited</code> worked. We only have one <code>Vampire</code> object now, so let's <code>select</code> it:</p>
+<pre><code class="language-edgeql">select Vampire {
+  places_visited: {
+    name
+  }
+};
+</code></pre>
+<p>This query gives us the following:</p>
+<pre><code>{default::Vampire {places_visited: {default::Country {name: 'Romania'}}}}
+</code></pre>
+<p>Perfect!</p>
+<h2 id="adding-constraints"><a class="header" href="#adding-constraints">Adding constraints</a></h2>
+<p>Now let's think about <code>age</code> again. It was easy to add <code>age</code> to the <code>Vampire</code> type, because they can live forever. But now we want to give <code>age</code> to <code>PC</code> and <code>NPC</code> too, who are humans who don't live forever (we don't want them living up to 32767 years). For this we can add a &quot;constraint&quot; (a limit). Instead of <code>age</code>, we'll give them a new scalar type called <code>HumanAge</code>. Then we can write <code>constraint</code> on it and use {ref}<code>one of the functions &lt;docs:ref_datamodel_constraints&gt;</code> that it can take. We will use the one called  <code>max_value()</code>.</p>
+<p>Here's the signature for <code>max_value()</code>:</p>
+<p><code>std::max_value(max: anytype)</code></p>
+<p>The <code>anytype</code> part of the signature is interesting, because that means that the constraint can work on other types like strings too. With a constraint <code>max_value('B')</code> for example you couldn't use 'C', 'D', etc.</p>
+<p>Now let's go back to our constraint for <code>HumanAge</code>, which is 120. The <code>HumanAge</code> type looks like this:</p>
+<pre><code class="language-sdl">scalar type HumanAge extending int16 {
+  constraint max_value(120);
+}
+</code></pre>
+<p>Remember, it's a scalar type because it can only have one value. Then we'll add it to the <code>NPC</code> type.</p>
+<pre><code class="language-sdl">type NPC extending Person {
+  age: HumanAge;
+}
+</code></pre>
+<p>This <code>HumanAge</code> scalar is our own type with its own name, but underneath it's an <code>int16</code> that can't be greater than 120. So let's do a migration now and try to add an <code>NPC</code> that is 130 years old. This <code>insert</code> should not work:</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := 'The innkeeper',
+  age := 130
+};
+</code></pre>
+<p>As expected, we are not allowed and an error shows up. Perfect.</p>
+<pre><code>edgedb error: ConstraintViolationError: Maximum allowed value for HumanAge is 120.
+ Detail: Maximum allowed value for value of scalar type 'default::HumanAge' is 120.
+</code></pre>
+<p>Now let's insert the same innkeeper but give him an <code>age</code> of 30. This will now work: <code>{default::NPC {id: e7c4dd96-f2d4-11ed-a0c7-17fe2be02578}}</code>. Our <code>NPC</code> objects are now guaranteed to be no more than 120 years old.</p>
+<h2 id="deleting-objects"><a class="header" href="#deleting-objects">Deleting objects</a></h2>
+<p>Deleting in EdgeDB is very easy: just use the <code>delete</code> keyword. The <code>delete</code> keyword is similar to <code>select</code> in that it will apply to all types unless you <code>filter</code> them. This similarity to <code>select</code> might make you nervous, because if you type something like <code>select City;</code> then it will select all of them. Using <code>delete</code> is the same: <code>delete City;</code> deletes every object for the <code>City</code> type. That's why you should think carefully before deleting anything.</p>
+<p>However, sometimes you may be prevented from deleting an object. Remember our two <code>Country</code> objects for Hungary and Romania? Let's try deleting them all. Interestingly, it won't work:</p>
+<pre><code class="language-edgeql">delete Country;
+</code></pre>
+<p>We got an error telling us that deleting a <code>Country</code> is not possible because it is still referenced by <code>places_visited</code> of a <code>Person</code>.</p>
+<pre><code>edgedb error: ConstraintViolationError: deletion of default::Country
+(e9e8acda-f2d2-11ed-86e2-4bed5b30457e) is prohibited by link target policy
+Detail: Object is still referenced in link places_visited of 
+default::Person (ce8146ea-f2d3-11ed-92a8-237b79022c26).
+</code></pre>
+<p>That's Count Dracula who visited Romania getting in the way. Let's delete him first then:</p>
+<pre><code class="language-edgeql">delete Vampire;
+</code></pre>
+<p>Just like <code>insert</code>, using <code>delete</code> gives us the id numbers of the objects that are now deleted: <code>{default::Vampire {id: 7f5b25ac-ff43-11eb-af59-3f8e155c6686}}</code>.</p>
+<p>Now we can try deleting all of the <code>Country</code> objects. Count Dracula is no longer in our way so the query will work:</p>
+<pre><code class="language-edgeql">delete Country;
+</code></pre>
+<p>We got confirmation that two <code>Country</code> objects have been deleted:</p>
+<pre><code>{
+  default::Country {id: e988e476-f2d2-11ed-86e2-e34ef4a919b9},
+  default::Country {id: e9e8acda-f2d2-11ed-86e2-4bed5b30457e},
+}
+</code></pre>
+<p>Okay, let's insert both countries again so that we can delete them once more. This time we will try deleting them with a filter. First let's try deleting every <code>Country</code> object that has a name with &quot;States&quot; somewhere inside it. <code>ilike</code> will let us do that:</p>
+<pre><code class="language-edgeql">delete Country filter .name ilike '%States%';
+</code></pre>
+<p>Nothing matches, so the output is just an empty set of <code>{}</code> - we deleted nothing. Let's try again, deleting any <code>Country</code> object that has &quot;ania&quot; in its name:</p>
+<pre><code class="language-edgeql">delete Country filter .name ilike '%ania%';
+</code></pre>
+<p>We got a <code>{default::Country {id: 7f3c611c-ff43-11eb-af59-dfe5a152a5cb}}</code>, which is certainly Romania. Only Hungary is left. What if we want to see what we deleted? No problem - just put the <code>delete</code> inside parentheses and <code>select</code> it. Since EdgeDB just returns the objects that have been worked on, we can give them a shape to view them even as we are deleting them! So the query will look like this:</p>
+<pre><code class="language-edgeql">select (delete Country) {
+  name
+};
+</code></pre>
+<p>These queries are easier to read if you think about what expressions inside parentheses evaluate into. What does <code>delete Country</code> evaluate into? A set of <code>Country</code> objects. So the query is essentially just saying &quot;select the country objects (that we are deleting) and display their name&quot;.</p>
+<p>The output is <code>{default::Country {name: 'Hungary'}}</code>, showing us that we deleted Hungary. And now if we do <code>select Country</code> we get a <code>{}</code>, which confirms that we did delete them all.</p>
+<p>Fun fact: <code>delete</code> statements in EdgeDB are actually {ref}<code>syntactic sugar &lt;docs:ref_eql_statements_delete&gt;</code> for <code>delete (select ...)</code>. You'll be learning something called <code>limit</code> in the next chapter with <code>select</code> and as you do so, keep in mind that you can apply the same to <code>delete</code> too.</p>
+<p>We should probably delete that <code>City</code> object with <code>''</code> as its name that we inserted in the last chapter as we practiced indexing. That's easy:</p>
+<pre><code class="language-edgeql">delete City filter .name = '';
+</code></pre>
+<p>Finally, let's insert Hungary and Romania again to finish the section on deleting. Plus Count Dracula! With those three objects inserted again, we'll now leave them alone.</p>
+<h2 id="the-splat-operator"><a class="header" href="#the-splat-operator">The splat operator</a></h2>
+<p>Sometimes a query can take some time to type. Let's say we want to look up all of our <code>PC</code> objects and their properties, plus check whether their name has changed since Bram Stoker's book Dracula was published. Such a query would look like this:</p>
+<pre><code class="language-edgeql">select City {
+  name,
+  modern_name,
+  important_places,
+  id,
+  name_has_changed := exists .modern_name
+};
+</code></pre>
+<p>This gives us the following output:</p>
+<pre><code>{
+  default::City {
+    name: 'Munich',
+    modern_name: {},
+    important_places: {},
+    id: 8a6d06bc-0b04-11ee-bd1f-67f7c83004cb,
+    name_has_changed: false,
+  },
+  default::City {
+    name: 'Buda-Pesth',
+    modern_name: 'Budapest',
+    important_places: {},
+    id: 8a9e9222-0b04-11ee-bd1f-cfa57ad4cff6,
+    name_has_changed: true,
+  },
+  default::City {
+    name: 'Bistritz',
+    modern_name: 'Bistrița',
+    important_places: ['Golden Krone Hotel'],
+    id: 8ac23b46-0b04-11ee-bd1f-cf07e2483e97,
+    name_has_changed: true,
+  },
+}
+</code></pre>
+<p>Not bad! But we had to type quite a bit to select every property inside <code>City</code>. Wouldn't it be nice if EdgeDB had an operator that could do that for us?</p>
+<p>It just so happens that EdgeDB since 2023 does have such an operator! The operator is called the splat operator because it uses a <code>*</code> which...looks like a splat. In other languages you sometimes see this called the 'global operator' which also has to do with importing or using everything in a namespace, so the <code>*</code> operator was well chosen. In SQL this is callect &quot;select star&quot;, and the splat operator in EdgeDB is a better and more powerful version of that.</p>
+<p>Let's try using the splat operator with <code>City</code> now.</p>
+<pre><code class="language-edgeql">select City {*};
+</code></pre>
+<p>And that's all there is to it! Here's the output:</p>
+<pre><code>{
+  default::City {
+    name: 'Munich',
+    modern_name: {},
+    important_places: {},
+    id: 8a6d06bc-0b04-11ee-bd1f-67f7c83004cb,
+  },
+  default::City {
+    name: 'Buda-Pesth',
+    modern_name: 'Budapest',
+    important_places: {},
+    id: 8a9e9222-0b04-11ee-bd1f-cfa57ad4cff6,
+  },
+  default::City {
+    name: 'Bistritz',
+    modern_name: 'Bistrița',
+    important_places: ['Golden Krone Hotel'],
+    id: 8ac23b46-0b04-11ee-bd1f-cf07e2483e97,
+  },
+}
+</code></pre>
+<p>And if we want to include the computed <code>name_has_changed</code> property, we can just add it after the splat operator. So the quick query below will return the same output as the first query that needed all the extra typing.</p>
+<pre><code class="language-edgeql">select City {
+  *,
+  name_has_changed := exists .modern_name
+};
+</code></pre>
+<p>If the splat operator is used for a type that is extended by other types, it will choose all of the properties that they have in common. Let's demonstrate that with three queries.</p>
+<pre><code>db&gt; select PC{*};
+{default::PC {name: 'Emil Sinclair', id: 8b0633d2-0b04-11ee-bd1f-2f48cb19fb35, class: Mystic}}
+
+db&gt; select NPC {*};
+{
+  default::NPC {name: 'Jonathan Harker', id: 8ae5923a-0b04-11ee-bd1f-e3545fe0bccf, age: {}},
+  default::NPC {name: 'The innkeeper', id: 8bd08f10-0b04-11ee-bd1f-bf2be2316e84, age: 30},
+}
+
+db&gt; select Person {*};
+{
+  default::PC {id: 8b0633d2-0b04-11ee-bd1f-2f48cb19fb35, name: 'Emil Sinclair'},
+  default::Vampire {id: 8b4aefcc-0b04-11ee-bd1f-c36d2df0b47a, name: 'Count Dracula'},
+  default::NPC {id: 8ae5923a-0b04-11ee-bd1f-e3545fe0bccf, name: 'Jonathan Harker'},
+  default::NPC {id: 8bd08f10-0b04-11ee-bd1f-bf2be2316e84, name: 'The innkeeper'},
+}
+</code></pre>
+<p>Notice the difference? The <code>PC</code> type contains a <code>class</code> that the two others don't, while <code>NPC</code> has an <code>age</code> property. The base <code>Person</code> type doesn't hold either of these two properties.</p>
+<h2 id="the-double-splat-operator"><a class="header" href="#the-double-splat-operator">The double splat operator</a></h2>
+<p>But wait, there's more! EdgeDB also has a double splat operator: <code>**</code> instead of <code>*</code>. Let's see what it does with <code>City</code>.</p>
+<pre><code class="language-edgeql">select City {**};
+</code></pre>
+<p>If you try that query...you'll get the same output. That's because <code>City</code> isn't linked to anything, and the double splat operator is used for showing all properties <em>and</em> all links.</p>
+<p>Let's demonstrate by querying all of our <code>Person</code> objects. We tried a query just before with <code>select Person {*};</code> which showed us all of the <code>Person</code> types, their <code>id</code> and their <code>name</code>. Could the double splat operator be any different? Let's give it a try.</p>
+<pre><code class="language-edgeql">select Person {**};
+</code></pre>
+<p>The output is...verbose!</p>
+<pre><code>{
+  default::PC {
+    id: 8b0633d2-0b04-11ee-bd1f-2f48cb19fb35,
+    name: 'Emil Sinclair',
+    places_visited: {},
+  },
+  default::Vampire {
+    id: 8b4aefcc-0b04-11ee-bd1f-c36d2df0b47a,
+    name: 'Count Dracula',
+    places_visited: {
+      default::Country {
+        id: 8b2a64f0-0b04-11ee-bd1f-632e60d595d2,
+        important_places: {},
+        modern_name: {},
+        name: 'Romania',
+      },
+    },
+  },
+  default::NPC {
+    id: 8ae5923a-0b04-11ee-bd1f-e3545fe0bccf,
+    name: 'Jonathan Harker',
+    places_visited: {
+      default::City {
+        id: 8a6d06bc-0b04-11ee-bd1f-67f7c83004cb,
+        important_places: {},
+        modern_name: {},
+        name: 'Munich',
+      },
+      default::City {
+        id: 8a9e9222-0b04-11ee-bd1f-cfa57ad4cff6,
+        important_places: {},
+        modern_name: 'Budapest',
+        name: 'Buda-Pesth',
+      },
+      default::City {
+        id: 8ac23b46-0b04-11ee-bd1f-cf07e2483e97,
+        important_places: ['Golden Krone Hotel'],
+        modern_name: 'Bistrița',
+        name: 'Bistritz',
+      },
+    },
+  },
+  default::NPC {
+    id: 8bd08f10-0b04-11ee-bd1f-bf2be2316e84,
+    name: 'The innkeeper',
+    places_visited: {},
+  },
+}
+</code></pre>
+<p>This is because <code>Person</code> is linked to <code>Place</code> via the <code>places_visited</code> link, and the double splat operator shows you both an object's properties and the properties of the objects it links to. This operator only goes down to a depth of one, meaning that it won't follow the links of a linked object. This makes sense because in some databases you could see links that go on almost forever.</p>
+<h2 id="deleting-bistritz"><a class="header" href="#deleting-bistritz">Deleting Bistritz</a></h2>
+<p>Now that we know how to <code>delete</code>, let's try to get rid of our duplicate Bistritz. Later on we will learn how to do this smoothly thanks to learning how to <code>update</code> in Chapter 6, and how to manage deletion policies in Chapter 13. But even at this point we still know enough to make the deletion happen with a few extra steps.</p>
+<p>Let's first do a query to remember what the two objects look like at the moment:</p>
+<pre><code class="language-edgeql">select City {*} filter .name = 'Bistritz';
+</code></pre>
+<p>And the output:</p>
+<pre><code>{
+  default::City {
+    name: 'Bistritz',
+    modern_name: 'Bistrița',
+    id: 8ac23b46-0b04-11ee-bd1f-cf07e2483e97,
+    important_places: ['Golden Krone Hotel'],
+  },
+  default::City {
+    name: 'Bistritz',
+    modern_name: 'Bistrița',
+    id: d1e38192-0bd6-11ee-ba45-d7ecb20723cf,
+    important_places: {},
+  },
+}
+</code></pre>
+<p>Ah yes, we have a <code>City</code> called Bistritz that was inserted before we added the <code>important_places</code> property. There are two differences between the two: they have different <code>id</code> numbers, and one has an <code>important_places</code> property. Our plan is to delete one of them by filtering on its <code>id</code> property, so make a note of the <code>id</code> of the <code>City</code> that doesn't have any <code>important_places</code>. The <code>id</code> will naturally be different on your computer as an <code>id</code> is always unique.</p>
+<p>Now if we wanted to delete both of them, we would simply type <code>delete City;</code>. However, this wouldn't work in any case. Give it a try and see what happens!</p>
+<pre><code class="language-edgeql">delete City;
+</code></pre>
+<p>The problem here is that Jonathan Harker is standing in our way. He is an <code>NPC</code> object with a link to the other <code>City</code> objects, and by default you can't delete an object that is being linked to by another one.</p>
+<pre><code>edgedb error: ConstraintViolationError: deletion of default::City (f801a034-387c-11ee-95af-87dfbf43e85c) is prohibited by link target policy
+  Detail: Object is still referenced in link places_visited of default::Person (fc6522d6-387c-11ee-95af-f750f3ca3b62).
+</code></pre>
+<p>Within the limitations of what we know at the moment, the only thing we can do is to temporarily delete Jonathan Harker. We'll <code>insert</code> him again shortly, but in the meantime let's just get him out of the way:</p>
+<pre><code class="language-edgeql">delete NPC filter .name = 'Jonathan Harker';
+</code></pre>
+<p>And now that Jonathan is no longer standing in the way, let's try to delete one of the duplicate cities.</p>
+<p>This query almost works but not quite:</p>
+<pre><code class="language-edgeql">delete City filter .id = 'd1e38192-0bd6-11ee-ba45-d7ecb20723cf';
+</code></pre>
+<p>Close! Remember the casting we did from a <code>str</code> to <code>uuid</code> in Chapter 2?</p>
+<pre><code>error: InvalidTypeError: operator '=' cannot be applied to operands of type 
+'std::uuid' and 'std::str'
+  ┌─ &lt;query&gt;:1:13
+  │
+1 │ delete City filter .id = 'd1e38192-0bd6-11ee-ba45-d7ecb20723cf';
+  │             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+  Consider using an explicit type cast or a conversion function.
+</code></pre>
+<p>So let's just cast the <code>str</code> to a <code>uuid</code> and it will now work:</p>
+<pre><code class="language-edgeql">delete City filter .id = &lt;uuid&gt;'d1e38192-0bd6-11ee-ba45-d7ecb20723cf';
+</code></pre>
+<p>And now it's gone! We are back to a single <code>City</code> object named Bistritz instead of two.</p>
+<p>Finally, let's put Jonathan Harker back into the database. Soon we'll learn enough about EdgeDB so that we won't have to delete him like we did in this chapter.</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := 'Jonathan Harker',
+  places_visited := City,
+};
+</code></pre>
+<p><a href="code.html">Here is all our code so far up to Chapter 3.</a></p>
+<!-- quiz-start -->
+<h2 id="time-to-practice"><a class="header" href="#time-to-practice">Time to practice</a></h2>
+<ol>
+<li>
+<p>This query is trying to display every <code>NPC</code> along with the <code>name</code> plus every <code>City</code> type for each <code>NPC</code>, but it's giving an error. What is it missing?</p>
+<pre><code class="language-edgeql">select NPC {
+  name,
+  cities := select City.name
+};
+</code></pre>
+</li>
+<li>
+<p>If the <code>City</code> type needed a required property called <code>population</code>, what would it look like? What type would 'population' be?</p>
+</li>
+<li>
+<p>This query wants to display <code>name</code> twice for some reason but is giving an error. Can you think of a way to do it?</p>
+<pre><code class="language-edgeql">select Person {
+  name,
+  name
+};
+</code></pre>
+<p>(Hint: the problem is that the name <code>name</code> is being used twice)</p>
+</li>
+<li>
+<p>People keep trying to make characters with negative ages. Can you think of a constraint that can stop this?</p>
+<p>Hint: the current constraint is <code>max_value(120);</code></p>
+</li>
+<li>
+<p>Can you insert a HumanAge type?</p>
+</li>
+</ol>
+<p><a href="answers.html">See the answers here.</a></p>
+<!-- quiz-end -->
+<p><strong>Up next:</strong> <em>Jonathan: &quot;This Count Dracula knows so much about history! I'm glad I came.&quot;</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter2/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter4/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter2/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter4/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

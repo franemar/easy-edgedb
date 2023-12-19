@@ -1,0 +1,534 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chapter 5 - Jonathan tries to leave the castle</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../chapter1/index.html"><strong aria-hidden="true">1.</strong> Chapter 1 - Jonathan Harker travels to Transylvania</a></li><li class="chapter-item expanded "><a href="../chapter2/index.html"><strong aria-hidden="true">2.</strong> Chapter 2 - At the Hotel in Bistritz</a></li><li class="chapter-item expanded "><a href="../chapter3/index.html"><strong aria-hidden="true">3.</strong> Chapter 3 - Jonathan goes to Castle Dracula</a></li><li class="chapter-item expanded "><a href="../chapter4/index.html"><strong aria-hidden="true">4.</strong> Chapter 4 - "What a strange man this Count Dracula is."</a></li><li class="chapter-item expanded "><a href="../chapter5/index.html" class="active"><strong aria-hidden="true">5.</strong> Chapter 5 - Jonathan tries to leave the castle</a></li><li class="chapter-item expanded "><a href="../chapter6/index.html"><strong aria-hidden="true">6.</strong> Chapter 6 - Still no escape</a></li><li class="chapter-item expanded "><a href="../chapter7/index.html"><strong aria-hidden="true">7.</strong> Chapter 7 - Jonathan finally "leaves" the castle</a></li><li class="chapter-item expanded "><a href="../chapter8/index.html"><strong aria-hidden="true">8.</strong> Chapter 8 - Dracula takes the boat to England</a></li><li class="chapter-item expanded "><a href="../chapter9/index.html"><strong aria-hidden="true">9.</strong> Chapter 9 - Strange events in England</a></li><li class="chapter-item expanded "><a href="../chapter10/index.html"><strong aria-hidden="true">10.</strong> Chapter 10 - Terrible events in Whitby</a></li><li class="chapter-item expanded "><a href="../chapter11/index.html"><strong aria-hidden="true">11.</strong> Chapter 11 - What's wrong with Lucy?</a></li><li class="chapter-item expanded "><a href="../chapter12/index.html"><strong aria-hidden="true">12.</strong> Chapter 12 - From bad to worse</a></li><li class="chapter-item expanded "><a href="../chapter13/index.html"><strong aria-hidden="true">13.</strong> Chapter 13 - Farewell, Lucy. Meet the new Lucy</a></li><li class="chapter-item expanded "><a href="../chapter14/index.html"><strong aria-hidden="true">14.</strong> Chapter 14 - Jonathan Harker returns</a></li><li class="chapter-item expanded "><a href="../chapter15/index.html"><strong aria-hidden="true">15.</strong> Chapter 15 - Time to start vampire hunting</a></li><li class="chapter-item expanded "><a href="../chapter16/index.html"><strong aria-hidden="true">16.</strong> Chapter 16 - Is Renfield telling the truth?</a></li><li class="chapter-item expanded "><a href="../chapter17/index.html"><strong aria-hidden="true">17.</strong> Chapter 17 - Poor Renfield. Poor Mina.</a></li><li class="chapter-item expanded "><a href="../chapter18/index.html"><strong aria-hidden="true">18.</strong> Chapter 18 - Using Dracula's own weapon against him</a></li><li class="chapter-item expanded "><a href="../chapter19/index.html"><strong aria-hidden="true">19.</strong> Chapter 19 - Dracula escapes</a></li><li class="chapter-item expanded "><a href="../chapter20/index.html"><strong aria-hidden="true">20.</strong> Chapter 20 - The final battle</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>tags: Datetime, Describing Types
+leadImage: illustration_05.jpg</h2>
+<h1 id="chapter-5---jonathan-tries-to-leave-the-castle"><a class="header" href="#chapter-5---jonathan-tries-to-leave-the-castle">Chapter 5 - Jonathan tries to leave the castle</a></h1>
+<p>Poor Jonathan is still at Castle Dracula and is not having much luck. Here's what happens to him in this chapter:</p>
+<blockquote>
+<p>During the day, Jonathan decides to try to explore the castle but too many doors and windows are locked. He doesn't know how to get out, and wishes he could at least send a letter to Mina <strong>in London</strong>. He wonders what Mina is doing right about now. <strong>What time is it in London</strong>, and is she okay?</p>
+<p>He pretends that there is no problem, and keeps talking to Dracula during the night. One night he sees Dracula climb out of his window and down the castle wall, like a snake. Dracula is not a human, but a monster! Now Jonathan is very afraid.</p>
+<p>A few days later he breaks one of the doors and finds another part of the castle. The room is very strange and he feels sleepy. When he opens his eyes, he sees three vampire women next to him. He is attracted to them and afraid of them at the same time. He wants to kiss them, but knows that he will die if he does. They come closer, and he can't move...</p>
+</blockquote>
+<h2 id="stddatetime"><a class="header" href="#stddatetime">std::datetime</a></h2>
+<p>Jonathan in Romania was thinking of Mina back in London, which is in a different timezone. This sounds like a good time to give the <code>std::datetime</code> type a try. To create a datetime, you can just cast a string in ISO 8601 format with <code>&lt;datetime&gt;</code>. The ISO 8601 format is <code>YYYY-MM-DDTHH:MM:SSZ</code>, which next to a concrete example looks like this:</p>
+<pre><code>Format:  YYYY-MM-DDTHH:MM:SSZ
+Example: 2023-06-06T22:12:10Z
+</code></pre>
+<p>So a cast to an actual datetime looks like this:</p>
+<pre><code class="language-edgeql">select &lt;datetime&gt;'2023-06-06T22:12:10Z';
+</code></pre>
+<p>The <code>T</code> inside there is just a separator between date and time (in other words, <code>T</code> is where the <em>Time</em> starts), and the <code>Z</code> at the end stands for &quot;zero timeline&quot;. That means that it has no offset — no difference — from UTC: in other words, it <em>is</em> UTC.</p>
+<p>One way to set a timezone is to change the <code>T</code> to an offset: the hour difference between the current time zone and UTC. Our query above returns the time &quot;22:12:10Z&quot;, so 10:12 PM in London. Let's change the <code>T</code> to <code>+09:00</code> (the timezone for Korea and Japan) and see what happens:</p>
+<pre><code class="language-edgeql">select &lt;datetime&gt;'2023-06-06T22:12:10+09:00';
+</code></pre>
+<p>The output shows us the time in UTC again. In other words, it's 1:12 pm in London when it's 10:12 pm in Korea and Japan.</p>
+<pre><code>{&lt;datetime&gt;'2023-06-06T13:12:10Z'}
+</code></pre>
+<p>One other way to get a <code>datetime</code> is to use the <code>to_datetime()</code> function. {eql:func}<code>Here are its signatures &lt;docs:std::to_datetime&gt;</code>, which show that there are six ways to make a <code>datetime</code> with this function depending on how you want to make it. EdgeDB will know which one of the six function signatures you have chosen depending on what input you pass in.</p>
+<p>(Keep that point in mind, by the way! It's a hint for when we learn to write our own functions in Chapter 11.)</p>
+<p>Let's do a quick detour before getting back to datetime. Inside one of the <code>to_datetime()</code> function signatures you might have noticed one unfamiliar type called a {eql:type}<code> ``decimal`` &lt;docs:std::decimal&gt;</code>. A decimal is a float with &quot;arbitrary precision&quot;, meaning that you can give it as many numbers after the decimal point as you want. The decimal type exists because float types on computers <a href="https://www.youtube.com/watch?v=PZRI1IfStY0&amp;ab_channel=Computerphile">become imprecise after a while</a> thanks to rounding errors. This example shows the problem that floats have after too much precision:</p>
+<pre><code>db&gt; select 6.777777777777777; # Good so far
+{6.777777777777777}
+db&gt; select 6.7777777777777777; # Add one more digit...
+{6.777777777777778} # Where did the 8 come from?!
+</code></pre>
+<p>To avoid this imprecision you can use a <code>&lt;decimal&gt;</code> cast, or just add an <code>n</code> to the end. This will return a <code>decimal</code> type which will be as precise as it needs to be. Now the rounding errors are gone:</p>
+<pre><code>db&gt; select 6.7777777777777777n;
+{6.7777777777777777n}
+db&gt; select 6.7777777777777777777777777777777777777777777777777n;
+{6.7777777777777777777777777777777777777777777777777n}
+</code></pre>
+<p>Similarly, there is a <code>bigint</code> type that also uses <code>n</code> for an arbitrary size. That's because even int64 has a limit: it's 9223372036854775807.</p>
+<pre><code>db&gt; select 9223372036854775807; # Good so far...
+{9223372036854775807}
+db&gt; select 9223372036854775808; # But add 1 and it will fail
+edgedb error: NumericOutOfRangeError: std::int64 out of range
+</code></pre>
+<p>Here as well you can just add an <code>n</code> and it will create a <code>bigint</code> that can accommodate any size.</p>
+<pre><code>db&gt; select 9223372036854775808n;
+{9223372036854775808n}
+</code></pre>
+<p>Now that we know all the numeric types, let's get back to the six signatures for the <code>to_datetime()</code> function:</p>
+<pre><code>std::to_datetime(s: str, fmt: optional str = {}) -&gt; datetime
+std::to_datetime(local: cal::local_datetime, zone: str) -&gt; datetime
+std::to_datetime(year: int64, month: int64, day: int64,
+  hour: int64, min: int64, sec: float64, timezone: str) -&gt; datetime
+std::to_datetime(epochseconds: decimal) -&gt; datetime
+std::to_datetime(epochseconds: float64) -&gt; datetime
+std::to_datetime(epochseconds: int64) -&gt; datetime
+</code></pre>
+<p>The last signature works well if you want to know the <code>datetime</code> right now and are getting the epoch seconds (the number of seconds since 1970) from your computer's system time. It's also kind of fun to just experiment with:</p>
+<pre><code>db&gt; select to_datetime(0);
+{&lt;datetime&gt;'1970-01-01T00:00:00Z'}
+db&gt; select to_datetime(100);
+{&lt;datetime&gt;'1970-01-01T00:01:40Z'}
+db&gt; select to_datetime(9879879870);
+{&lt;datetime&gt;'2283-01-30T11:04:30Z'}
+db&gt; select to_datetime(87623);
+{&lt;datetime&gt;'1970-01-02T00:20:23Z'}
+db&gt; select to_datetime(98723987213);
+{&lt;datetime&gt;'5098-06-09T17:46:53Z'}
+</code></pre>
+<p>But the easiest signature is probably the third if you find ISO 8601 unfamiliar or you have a bunch of separate numbers to make into a date. Let's give that signature a try.</p>
+<p>Let's imagine that it's May 12. It's a bright morning at 10:35 in Castle Dracula. The sun is up, Dracula is asleep in a coffin somewhere, and Jonathan is trying to use the time during the day to find a way to send Mina a letter. In Romania the timezone is 'EEST' (Eastern European Summer Time), and the year is (probably) 1893. We'll use <code>to_datetime()</code> to generate this.</p>
+<pre><code class="language-edgeql">select to_datetime(1893, 5, 12, 10, 35, 0, 'EEST');
+</code></pre>
+<p>And get the following output:</p>
+<p><code>{&lt;datetime&gt;'1893-05-12T07:35:00Z'}</code></p>
+<p>The <code>07:35:00</code> part shows that it was automatically converted to UTC, which is London where Mina lives.</p>
+<p>We can also use this to see the duration between events. EdgeDB has a <code>duration</code> type that you can get by subtracting a datetime from another one. Let's practice by calculating the exact number of seconds between one date in Central Europe and another in Korea:</p>
+<pre><code class="language-edgeql">select to_datetime(2003, 5, 12, 8, 15, 15, 'CET')
+     - to_datetime(2003, 5, 12, 6, 10, 0,  'KST');
+</code></pre>
+<p>This takes May 12 2003 8:15:15 am in Central European Time and subtracts May 12 2003 6:10 in Korean Standard Time. The result is: <code>{&lt;duration&gt;'10:05:15'}</code>, so 10 hours, 5 minutes, and 15 seconds.</p>
+<p>Now let's try something similar with Jonathan as he tries to escape Castle Dracula. It's May 12 at 10:35 am in the <code>EEST</code> timezone. On the same day, Mina was in London at 6:10 am, drinking her morning tea. How many seconds passed between these two events? They are in different timezones, which makes the calculation a bit annoying. Fortunately, we don't need to calculate it ourselves! We can just specify the timezone and EdgeDB will do the rest.</p>
+<pre><code class="language-edgeql">select to_datetime(1893, 5, 12, 10, 35, 0, 'EEST')
+     - to_datetime(1893, 5, 12, 6,  10, 0, 'UTC');
+</code></pre>
+<p>The answer is 1 hour and 25 minutes: <code>{&lt;duration&gt;'1:25:00'}</code>.</p>
+<p>To make the query easier for us to read, we can also use the <code>with</code> keyword to create variables. We can then use the variables in <code>select</code> below. We'll make one called <code>jonathan_wants_to_escape</code> and another called <code>mina_has_tea</code>, and subtract one from another to get a <code>duration</code>. With variable names it is now a lot clearer what we are trying to do:</p>
+<pre><code class="language-edgeql">with
+  jonathan_wants_to_escape := 
+    to_datetime(1893, 5, 12, 10, 35, 0, 'EEST'),
+  mina_has_tea := 
+    to_datetime(1893, 5, 12, 6,  10, 0, 'UTC'),
+select jonathan_wants_to_escape - mina_has_tea;
+</code></pre>
+<p>The output is the same: <code>{&lt;duration&gt;'1:25:00'}</code>. As long as we know the timezone, the <code>datetime</code> type does the work for us when we need a <code>duration</code>. </p>
+<h2 id="casting-to-a-duration"><a class="header" href="#casting-to-a-duration">Casting to a duration</a></h2>
+<p>Besides subtracting a <code>datetime</code> from another <code>datetime</code>, you can also just cast to make a <code>duration</code>. To do this, just write the number followed by the unit: <code>microseconds</code>, <code>milliseconds</code>, <code>seconds</code>, <code>minutes</code>, or <code>hours</code>. It will return a number including a number of seconds, or a more precise unit if necessary. For example, <code>select &lt;duration&gt;'2 hours';</code> will return <code>{&lt;duration&gt;'2:00:00'}</code>, and <code>select &lt;duration&gt;'2 microseconds';</code> will return <code>{&lt;duration&gt;'0:00:00.000002'}</code>.</p>
+<p>You can include multiple units as well. For example:</p>
+<pre><code class="language-edgeql">select &lt;duration&gt;'6 hours 6 minutes 10 milliseconds 678999 microseconds';
+</code></pre>
+<p>This will return <code>{&lt;duration&gt;'6:06:00.688999'}</code>.</p>
+<p>EdgeDB is pretty forgiving when it comes to inputs when casting to a <code>duration</code>. It and will ignore plurals, will recognize abbreviations, and so on:</p>
+<pre><code>edgedb&gt; select &lt;duration&gt;'2 milliseconds';
+{&lt;duration&gt;'0:00:00.002'}
+edgedb&gt; select &lt;duration&gt;'2 hour';
+{&lt;duration&gt;'2:00:00'}
+edgedb&gt; select &lt;duration&gt;'1 seconds';
+{&lt;duration&gt;'0:00:01'}
+edgedb&gt; select &lt;duration&gt;'1 H';
+{&lt;duration&gt;'1:00:00'}
+</code></pre>
+<p>It even ignores symbols and irrelevant characters so even this horrible input will work:</p>
+<pre><code class="language-edgeql">select &lt;duration&gt;'1 hours, 8 minute ** 5 second ()()()( //// 6 milliseconds'
+     - &lt;duration&gt;'10 microsecond 7 minutes %%%%%%% 10 seconds 5 hour';
+</code></pre>
+<p>The result: <code>{&lt;duration&gt;'-3:59:04.99401'}</code>.</p>
+<p>It won't just accept anything, however, so there is a limit:</p>
+<pre><code>edgedb&gt; select &lt;duration&gt;'three howers';
+edgedb error: InvalidValueError: invalid input syntax for type std::duration: 
+&quot;three howers&quot;
+</code></pre>
+<h2 id="relative-duration"><a class="header" href="#relative-duration">Relative duration</a></h2>
+<p>The scene in the book today takes place on the 16th of May, 15 days after Jonathan Harker left London. Jonathan Harker was kind enough to even mark down the time of day during his first journal entry, which gives us a good idea of how much time has gone by since then. Here are the two relevant journal entries:</p>
+<pre><code>3 May. Bistritz.—Left Munich at 8:35 P. M., on 1st May, arriving at 
+Vienna early next morning;
+</code></pre>
+<pre><code>The Morning of 16 May.—God preserve my sanity, for to this I am reduced...
+All three had brilliant white teeth that shone like pearls against the 
+ruby of their voluptuous lips. There was something about them that made
+me uneasy, some longing and at the same time some deadly fear.
+</code></pre>
+<p>Let's imagine that our <code>PC</code> named Emil Sinclair has been accomplishing some missions during this time in order to build up experience and get involved with the events in the book. It would be nice to let the player know how much time has elapsed since the game started. If the player clock currently says 8:03:17 am right now, we can calculate the duration as we did just before:</p>
+<pre><code class="language-edgeql">with
+  game_start := to_datetime(1893, 5, 3, 20, 35, 0, 'UTC'),
+  today      := to_datetime(1893, 5, 16, 8, 3, 17, 'EEST'),
+select today - game_start;
+</code></pre>
+<p>That gives us a duration of <code>{&lt;duration&gt;'296:28:17'}</code>. That's very precise, but it would be nice to show the player these units in more readable units. EdgeDB added a type called <code>relative_duration</code> in 2021 to do exactly this. A relative_duration will show up when you add or subtract local dates and local datetimes. Here is a quick example:</p>
+<pre><code class="language-edgeql">select &lt;cal::local_datetime&gt;'2023-05-18T08:00:00'
+     - &lt;cal::local_datetime&gt;'2023-05-16T04:06:55';
+</code></pre>
+<p>This gives the output <code>{&lt;cal::relative_duration&gt;'P2DT3H53M5S'}</code>, which has done all the calculating for us and is easy to split up into parts. Adding a few spaces makes it easy to read: <code>P 2D T 3H 53M 5S</code>. In other words:</p>
+<ul>
+<li>P - period (i.e. a period of time). This is from the ISO8601 standard.</li>
+<li>2D - two days</li>
+<li>T - delimiter between days and time</li>
+<li>3H = three hours</li>
+<li>53M - 53 minutes</li>
+<li>5S - 5 seconds</li>
+</ul>
+<p>So let's make a <code>relative_duration</code> for our <code>PC</code>. Here we will use a function called <code>cal::to_local_datetime</code> which turns a <code>datetime</code> into a <code>local_datetime</code> by entering the <code>datetime</code> to convert and the timezone we want it to show the time of.</p>
+<p>The player is currently in Romania so we will choose the EEST timezone. The code looks like this:</p>
+<pre><code class="language-edgeql">with
+  game_start := to_datetime(1893, 5, 3, 20, 35, 0, 'UTC'),
+  today      := to_datetime(1893, 5, 16, 8, 3, 17, 'EEST'),
+  select
+    cal::to_local_datetime(today, 'EEST') 
+  - cal::to_local_datetime(game_start, 'EEST');
+</code></pre>
+<p>This gives us an output of <code>{&lt;cal::relative_duration&gt;'P12DT8H28M17S'}</code>. Perfect! Now our game can display something like <code>Time elapsed: 12 days, 8 hours, 28 minutes, 17 seconds</code> and we don't need to do any calculations to do so.</p>
+<p>Another type called <code>date_duration</code> is useful when you only care about day to day duration. If we change the above code from <code>cal::to_local_datetime</code> to <code>cal::to_local_date</code> then we will cut off the time information and get a <code>date_duration</code> that only shows the number of days passed. So if we type this query:</p>
+<pre><code class="language-edgeql">with
+  game_start := to_datetime(1893, 5, 3, 20, 35, 0, 'UTC'),
+  today      := to_datetime(1893, 5, 16, 8, 3, 17, 'EEST'),
+  select 
+    cal::to_local_date(today, 'EEST') 
+  - cal::to_local_date(game_start, 'EEST');
+</code></pre>
+<p>We will get the output <code>{&lt;cal::date_duration&gt;'P13D'}</code>. So even though only about 12 days and 8 hours have gone by, in terms of changes to the date it is 13 days. Then we could add one to it and have this output for the character playing the game:</p>
+<p><code>Day 14 of your quest...</code></p>
+<h2 id="required-links"><a class="header" href="#required-links">Required links</a></h2>
+<p>The three female vampires that Jonathan encounters this chapter are controlled by Count Dracula. They have their own thoughts but Dracula can control them if he wants, and they only exist because he exists. We'll need a new type for this sort of vampire, so let's call it <code>MinorVampire</code>. These have a link to the <code>Vampire</code> type, which needs to be <code>required</code>:</p>
+<pre><code class="language-sdl">type MinorVampire extending Person {
+  required master: Vampire;
+}
+</code></pre>
+<p>Now let's do a migration to add <code>MinorVampire</code> to the schema.</p>
+<p>With <code>master</code> as a <code>required</code> link, we can't insert a <code>MinorVampire</code> with just a name:</p>
+<pre><code class="language-edgeql">insert MinorVampire {
+  name := 'Vampire Woman 1' # We never find out their names in the book
+};
+</code></pre>
+<p>Trying this insert will give us this error: <code>edgedb error: MissingRequiredError: missing value for required link 'master' of object type 'default::MinorVampire'</code>. This is what we want. Now let's insert the same <code>MinorVampire</code> but this time we will connect her to Dracula. This link is to a single object, which means that we should filter on the name 'Count Dracula' and then use the <code>assert_single()</code> function to ensure that <code>master</code> doesn't link to more than one object.</p>
+<p>Our three <code>MinorVampire</code> inserts look like this:</p>
+<pre><code class="language-edgeql">insert MinorVampire {
+  name := 'Vampire Woman 1',
+  master := assert_single((select Vampire filter .name = 'Count Dracula'))
+};
+insert MinorVampire {
+  name := 'Vampire Woman 2',
+  master := assert_single((select Vampire filter .name = 'Count Dracula'))
+};
+insert MinorVampire {
+  name := 'Vampire Woman 3',
+  master := assert_single((select Vampire filter .name = 'Count Dracula'))
+};
+</code></pre>
+<p>Later on we will learn to add a constraint to ensure on the schema level that parameters like <code>name</code> have to be unique. And we will also learn how to insert three objects at the same time instead of doing three separate inserts like we did here.</p>
+<h2 id="using-the-describe-keyword-to-look-inside-types"><a class="header" href="#using-the-describe-keyword-to-look-inside-types">Using the 'describe' keyword to look inside types</a></h2>
+<p>Our <code>MinorVampire</code> type extends <code>Person</code>, and so does <code>Vampire</code>. Types can continue to extend other types, and they can extend more than one type at the same time. The more you do this, the harder it can be to try to picture it all together in your mind. Or you might be in the middle of using the REPL and don't want to switch to the schema file to get some information about a type. EdgeDB has a keyword called <code>describe</code> that can help in this case. There are four ways to use <code>describe</code>:</p>
+<ul>
+<li><code>describe type MinorVampire</code> - this will give the {ref}<code>DDL (data definition language) &lt;docs:ref_eql_ddl&gt;</code> description of a type. DDL is the lower level language that we have seen in our migration files that end in <code>.edgeql</code> such as 00001.edgeql, 00002.edgeql, and so on. If we type <code>describe type MinorVampire</code> into the REPL, we will see the following output:</li>
+</ul>
+<pre><code>{
+  'create type default::MinorVampire extending default::Person {
+    create required link master: default::Vampire;
+};',
+}
+</code></pre>
+<p>The <code>create</code> keyword shows that DDL is a series of quick commands, which is why the order is important. In other words, SDL is <em>declarative</em> (it <em>declares</em> what something will be without worrying about order), while DDL is <em>imperative</em> (it's a series of commands to change the state). Also, because it only shows the DDL commands to create it, it doesn't show us all the <code>Person</code> links and properties that it extends. So we probably don't want that. The next method is:</p>
+<ul>
+<li><code>describe type MinorVampire as sdl</code> - same thing, but in SDL.</li>
+</ul>
+<p>The output is almost the same too, just the SDL version of the above. It's also not enough information for what we want now:</p>
+<pre><code>{
+  'type default::MinorVampire extending default::Person {
+    required master: default::Vampire;
+};',
+}
+</code></pre>
+<p>This output is basically the same as our SDL schema, just a bit more detailed when it comes to module paths: <code>type default::MinorVampire</code> instead of <code>type MinorVampire</code>, and so on.</p>
+<ul>
+<li>The third method is <code>describe type MinorVampire as text</code>. Now the output shows almost everything we need to know inside the type, including from the types that it extends. Here's the output:</li>
+</ul>
+<pre><code>{
+  'type default::MinorVampire extending default::Person {
+    required single link __type__: schema::Type {
+        readonly := true;
+    };
+    optional single link lover: default::Person;
+    required single link master: default::Vampire;
+    optional multi link places_visited: default::Place;
+    required single property id: std::uuid {
+        readonly := true;
+    };
+    required single property name: std::str;
+};',
+}
+</code></pre>
+<p>If you want a bit more information, you can add the keyword <code>verbose</code> to make the command <code>describe type MinorVampire as text verbose</code>. This will look similar to the previous output, except it also includes constraints and annotations. (We'll learn about annotations in Chapter 14.) Here is the output:</p>
+<pre><code>{
+  'type default::MinorVampire extending default::Person {
+    required single link __type__: schema::ObjectType {
+        readonly := true;
+    };
+    optional single link lover: default::Person;
+    required single link master: default::Vampire;
+    optional multi link places_visited: default::Place;
+    required single property id: std::uuid {
+        readonly := true;
+        constraint std::exclusive;
+    };
+    required single property name: std::str;
+};',
+}
+</code></pre>
+<p>The parts that say <code>readonly := true</code> are parts of each type that are automatically generated and which we can't change (hence the word <code>readonly</code>). The next part we want to scan for is <code>required</code>, giving us the minimum we need to create an object. For <code>MinorVampire</code>, we can see that we need a <code>name</code> and a <code>master</code>, and could add a <code>lover</code> and <code>places_visited</code> for these <code>MinorVampire</code>s.</p>
+<p>The most interesting <code>readonly</code> part of an object is <code>__type__</code>, which is a link that every object type has to information about itself. We will learn more about this in Chapters 8 and 13, but if you are curious about what is inside then give it a try with the splat operator:</p>
+<pre><code>select Person.__type__ {*};
+</code></pre>
+<p>For a <em>really</em> long output using <code>describe</code>, try typing <code>describe schema</code> or <code>describe module default</code> (with <code>as sdl</code> or <code>as text</code> if you want). You'll get an output showing the whole schema we've built so far.</p>
+<p>So if we can use <code>describe</code> to learn about a <code>type</code> or our <code>schema</code>, are there other things we can describe? Indeed there are: we can describe an <code>object</code>, <code>annotation</code>, <code>constraint</code>, <code>function</code>, <code>link</code>, <code>module</code>, <code>property</code>, <code>scalar type</code>, or <code>type</code>.</p>
+<p>If you don't want to remember them all, just go with <code>object</code>: it will match anything inside your schema (except modules). So <code>describe scalar type SleepState</code> and <code>describe object SleepState</code> will both return the same thing.</p>
+<p><a href="code.html">Here is all our code so far up to Chapter 5.</a></p>
+<!-- quiz-start -->
+<h2 id="time-to-practice"><a class="header" href="#time-to-practice">Time to practice</a></h2>
+<ol>
+<li>
+<p>What do you think <code>select to_datetime(3600);</code> will return, and why?</p>
+<p>Hint: check the function signatures above (or <a href="https://www.edgedb.com/docs/stdlib/datetime#function::std::to_datetime">in the docs</a>) and see which one EdgeDB will pick when you enter 3600.</p>
+</li>
+<li>
+<p>Will <code>select &lt;int16&gt;9 + 1.06n is decimal;</code> work? And if it does, will it return <code>{true}</code>?</p>
+</li>
+<li>
+<p>How many seconds went by between 5:00 am on Christmas Day 2003 in Turkmenistan (TMT) and 7:00 pm on New Year's Eve for the same year in Uzbekistan (UZT)?</p>
+</li>
+<li>
+<p>The query <code>select &lt;datetime&gt;'2023-05-18T10:56:00+09:00' - &lt;datetime&gt;'2020-09-10T05:00:00+00:00';</code> returns <code>{&lt;duration&gt;'23516:56:00'}</code> which is hard to read. How can we display how many days have passed without having to do the math ourselves?</p>
+</li>
+<li>
+<p>How would you write the same query using <code>with</code> for each of the two times?</p>
+</li>
+<li>
+<p>What's the best way to describe a type if you only want to see how you wrote it?</p>
+</li>
+</ol>
+<p><a href="answers.html">See the answers here.</a></p>
+<!-- quiz-end -->
+<p><strong>Up next:</strong> <em>One of the women vampires to her sisters: &quot;He is young and strong; there are kisses for us all...&quot;</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter4/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter6/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter4/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter6/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

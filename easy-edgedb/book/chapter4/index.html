@@ -1,0 +1,576 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chapter 4 - &quot;What a strange man this Count Dracula is.&quot;</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../chapter1/index.html"><strong aria-hidden="true">1.</strong> Chapter 1 - Jonathan Harker travels to Transylvania</a></li><li class="chapter-item expanded "><a href="../chapter2/index.html"><strong aria-hidden="true">2.</strong> Chapter 2 - At the Hotel in Bistritz</a></li><li class="chapter-item expanded "><a href="../chapter3/index.html"><strong aria-hidden="true">3.</strong> Chapter 3 - Jonathan goes to Castle Dracula</a></li><li class="chapter-item expanded "><a href="../chapter4/index.html" class="active"><strong aria-hidden="true">4.</strong> Chapter 4 - "What a strange man this Count Dracula is."</a></li><li class="chapter-item expanded "><a href="../chapter5/index.html"><strong aria-hidden="true">5.</strong> Chapter 5 - Jonathan tries to leave the castle</a></li><li class="chapter-item expanded "><a href="../chapter6/index.html"><strong aria-hidden="true">6.</strong> Chapter 6 - Still no escape</a></li><li class="chapter-item expanded "><a href="../chapter7/index.html"><strong aria-hidden="true">7.</strong> Chapter 7 - Jonathan finally "leaves" the castle</a></li><li class="chapter-item expanded "><a href="../chapter8/index.html"><strong aria-hidden="true">8.</strong> Chapter 8 - Dracula takes the boat to England</a></li><li class="chapter-item expanded "><a href="../chapter9/index.html"><strong aria-hidden="true">9.</strong> Chapter 9 - Strange events in England</a></li><li class="chapter-item expanded "><a href="../chapter10/index.html"><strong aria-hidden="true">10.</strong> Chapter 10 - Terrible events in Whitby</a></li><li class="chapter-item expanded "><a href="../chapter11/index.html"><strong aria-hidden="true">11.</strong> Chapter 11 - What's wrong with Lucy?</a></li><li class="chapter-item expanded "><a href="../chapter12/index.html"><strong aria-hidden="true">12.</strong> Chapter 12 - From bad to worse</a></li><li class="chapter-item expanded "><a href="../chapter13/index.html"><strong aria-hidden="true">13.</strong> Chapter 13 - Farewell, Lucy. Meet the new Lucy</a></li><li class="chapter-item expanded "><a href="../chapter14/index.html"><strong aria-hidden="true">14.</strong> Chapter 14 - Jonathan Harker returns</a></li><li class="chapter-item expanded "><a href="../chapter15/index.html"><strong aria-hidden="true">15.</strong> Chapter 15 - Time to start vampire hunting</a></li><li class="chapter-item expanded "><a href="../chapter16/index.html"><strong aria-hidden="true">16.</strong> Chapter 16 - Is Renfield telling the truth?</a></li><li class="chapter-item expanded "><a href="../chapter17/index.html"><strong aria-hidden="true">17.</strong> Chapter 17 - Poor Renfield. Poor Mina.</a></li><li class="chapter-item expanded "><a href="../chapter18/index.html"><strong aria-hidden="true">18.</strong> Chapter 18 - Using Dracula's own weapon against him</a></li><li class="chapter-item expanded "><a href="../chapter19/index.html"><strong aria-hidden="true">19.</strong> Chapter 19 - Dracula escapes</a></li><li class="chapter-item expanded "><a href="../chapter20/index.html"><strong aria-hidden="true">20.</strong> Chapter 20 - The final battle</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>tags: Local Time, Advanced Filtering
+leadImage: illustration_04.jpg</h2>
+<h1 id="chapter-4---what-a-strange-man-this-count-dracula-is"><a class="header" href="#chapter-4---what-a-strange-man-this-count-dracula-is">Chapter 4 - &quot;What a strange man this Count Dracula is.&quot;</a></h1>
+<p>The days and nights continue to go by, and Jonathan Harker is still in the castle. In this chapter it's time for us to learn how to work with time.</p>
+<blockquote>
+<p>Jonathan Harker wakes up late and is alone in the castle. Dracula appears after nightfall and they talk <strong>through the night</strong>. Dracula is making plans to move to London, and Jonathan gives him some advice about buying houses. Jonathan tells Dracula that a big house called Carfax would be a good house to buy. It's very big and quiet. Carfax is close to a mental asylum, but not too close. Dracula loves the idea.
+Dracula then tells Jonathan not to go into any of the locked rooms in the castle, because it could be dangerous. Jonathan sees that it's almost <strong>morning</strong>. They talked through the whole night again! Dracula suddenly stands up and says he must go, and leaves the room. Jonathan thinks about <strong>Mina</strong> back in London, who he is going to marry when he returns. He is beginning to feel that there is something wrong with Dracula, and the castle. Seriously, where are the other people?</p>
+</blockquote>
+<p>First let's create Jonathan's girlfriend, Mina Murray. It would be nice to represent their relationship somehow, so let's try by adding a new link to the <code>Person</code> type in the schema called <code>lover</code>. Let's change the <code>Person</code> type to what you see here and do a migration:</p>
+<pre><code class="language-sdl">abstract type Person {
+  required name: str;
+  multi places_visited: Place;
+  lover: Person;
+}
+</code></pre>
+<p>With this we can link the two of them together. We will assume that a person can only have one <code>lover</code>, so this is a single link. If we wanted <code>lover</code> to be a multi link, we would have written <code>multi lover</code> instead.</p>
+<p>Mina is in London, and we don't know if she has been anywhere else. So let's do a quick insert to create the city of London. It couldn't be easier:</p>
+<pre><code class="language-edgeql">insert City {
+  name := 'London',
+};
+</code></pre>
+<p>To give her the city of London, we can just do a quick <code>(select City filter .name = 'London')</code>. This will give her the <code>City</code> that matches <code>.name = 'London'</code>, but it won't give an error if the city's not there: it will just return an empty set. When giving her Jonathan Harker as a <code>lover</code> link, however, it is a bit more complicated. Let's see why.</p>
+<h2 id="using-the-keywords-detached-exists-and-limit"><a class="header" href="#using-the-keywords-detached-exists-and-limit">Using the keywords detached, exists, and limit</a></h2>
+<p>The <code>insert</code> for Mina Murry is a bit more complicated. We might be tempted to try an <code>insert</code> this way, but there are two problems:</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := 'Mina Murray',
+  lover := (select NPC filter .name = 'Jonathan Harker'),
+  places_visited := (select City filter .name = 'London'),
+ };
+</code></pre>
+<p>Fortunately, the compiler is smart enough to tell us exactly what the problems are! If you try this insert you will see the following error message:</p>
+<pre><code>error: QueryError: invalid reference to default::NPC: 
+self-referencing INSERTs are not allowed
+  ┌─ &lt;query&gt;:3:20
+  │
+3 │   lover := (select NPC filter .name = 'Jonathan Harker'),
+  │                    ^^^ Use DETACHED if you meant to refer 
+  to an uncorrelated default::NPC set
+</code></pre>
+<p>The issue here is that we are inside of an <code>insert</code> for the <code>NPC</code> type, but we want to link to another <code>NPC</code>, not the one we are inserting. We need to add <code>detached</code> to specify that we are talking about <code>NPC</code> in general, not the <code>NPC</code> that we are inserting right now.</p>
+<p>Sounds good. Let's change <code>select NPC</code> to <code>select detached NPC</code> so that we can filter on all of the <code>NPC</code> objects. There is one error left, and you might be able to guess what it is. What will the result of the <code>filter</code> be, and does it match with the link <code>lover</code>?</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := 'Mina Murray',
+  lover := (select detached NPC filter .name = 'Jonathan Harker'),
+  places_visited := (select City filter .name = 'London'),
+ };
+</code></pre>
+<p>That's right! Our <code>filter</code> will return a set of <code>NPC</code> objects. This set might have zero or one <code>NPC</code> objects...but it also might be more than one. That's not okay for a <code>link</code>, which is by default a <code>single link</code>. Here is the error message:</p>
+<pre><code>error: QueryError: possibly more than one element returned by an expression 
+for a link 'lover' declared as 'single'
+  ┌─ &lt;query&gt;:3:3
+  │
+3 │   lover := (select detached NPC filter .name = 'Jonathan Harker'),
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ error
+</code></pre>
+<p>To fix this, we can use a function called {eql:func}<code>docs:std::assert_single</code>. This is used here because the link is a single link. EdgeDB doesn't know how many results we might get: for all it knows, there might be 2 or 3 or more <code>Jonathan Harkers</code>. To guarantee that we are only creating a single link, we use the <code>assert_single()</code> function. Careful! This will return an error if more than one result is returned.</p>
+<p>The full insert for Mina Murray will look like this:</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := 'Mina Murray',
+  lover := assert_single(
+    (select detached NPC filter .name = 'Jonathan Harker')
+  ),
+  places_visited := (select City filter .name = 'London'),
+};
+</code></pre>
+<p>EdgeDB has another keyword called <code>limit</code> that limits the number of objects returned to any number we like, and in this case we could have gotten the <code>insert</code> to work by using <code>limit 1</code>.</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := 'Mina Murray',
+  lover := (select detached NPC filter .name = 'Jonathan Harker' limit 1),
+  places_visited := (select City filter .name = 'London'),
+ };
+</code></pre>
+<p>However, in this case <code>assert_single()</code> is better because <code>filter .name = 'Jonathan Harker'</code> might have returned more than one object. Maybe there are four or five Jonathan Harkers in the database, and only one of them would be returned. And if we used <code>limit 1</code> again in the same way, we might get a different <code>NPC</code> called Jonathan Harker. Using <code>limit 1</code> picks at most one result, but it says nothing about which one, just the first one that the database finds. Picking the order in which results get looked at is covered in <a href="../chapter10/index.html">Chapter 10</a>.</p>
+<p>We can (and will) add a constraint to ensure that names are unique, but in the meantime keep in mind the difference between <code>assert_single()</code> and <code>limit 1</code>.</p>
+<p>Now let's make a query to see who is single and who is not. This is easy by using a &quot;computed&quot; property, where we can create a new variable that we define with <code>:=</code>. First here is a basic query showing the names of each <code>Person</code> object's <code>lover</code>:</p>
+<pre><code class="language-edgeql">select Person {
+  name,
+  lover: {
+    name
+  }
+};
+</code></pre>
+<p>This gives us:</p>
+<pre><code>{
+  default::NPC {name: 'Jonathan Harker', lover: {}},
+  default::NPC {name: 'The innkeeper', lover: {}},
+  default::NPC {name: 'Mina Murray', lover: default::NPC {name: 'Jonathan Harker'}},
+  default::PC {name: 'Emil Sinclair', lover: {}},
+  default::Vampire {name: 'Count Dracula', lover: {}},
+}
+</code></pre>
+<p>We can see that Mina Murray has a lover but Jonathan Harker does not yet, because he was inserted first when Mina Murray didn't exist yet. We'll learn some techniques later in Chapters 6, 14 and 15 to deal with this. In the meantime we'll just leave Jonathan Harker with <code>{}</code> for the <code>lover</code> link.</p>
+<p>Back to the query: what if we just want to say <code>true</code> or <code>false</code> depending on if the character has a lover? To do that we can put a computed property in the query, using <code>exists</code>. We'll call it <code>is_single</code>, but since it's not in the schema for the <code>Person</code> type we could call it anything we like here. The keyword <code>not exists</code> will return <code>false</code> if a set is returned, and <code>true</code> if it gets <code>{}</code> (if there is nothing). This is once again one of the nice things about using empty sets in EdgeDB instead of null. It looks like this:</p>
+<pre><code class="language-edgeql">select Person {
+  name,
+  is_single := not exists .lover,
+};
+</code></pre>
+<p>Now this prints:</p>
+<pre><code>{
+  default::NPC {name: 'Jonathan Harker', is_single: true},
+  default::NPC {name: 'The innkeeper', is_single: true},
+  default::NPC {name: 'Mina Murray', is_single: false},
+  default::PC {name: 'Emil Sinclair', is_single: true},
+  default::Vampire {name: 'Count Dracula', is_single: true},
+}
+</code></pre>
+<p>This also shows why abstract types are useful. Here we did a quick search on <code>Person</code> which returned data from <code>Vampire</code>, <code>PC</code>, and <code>NPC</code> objects, because they all extend the <code>abstract type Person</code>.</p>
+<p>We've got a lot of single characters, let's try selecting just one of them:</p>
+<pre><code class="language-edgeql">select Person {
+  name,
+  is_single := not exists .lover,
+} filter .is_single limit 1;
+</code></pre>
+<p>If the first <code>Person</code> type returned from the database is Count Dracula, then we will see the following output:</p>
+<pre><code>{default::Vampire {name: 'Count Dracula', is_single: true}}
+</code></pre>
+<p>Now this time we did want to use <code>limit 1</code> instead of <code>assert_single()</code> because we want just up to one result, even if there are multiple objects that fit our <code>filter</code>. Using <code>assert_single()</code> would cause the database give us an error in case of multiple results. Similarly, <code>limit 2</code>, <code>limit 3</code> and any other number will work just fine if we only want a certain maximum number of objects.</p>
+<p>We could also put the computed property in the type itself, so let's do that. Here's the same computed property except now it's inside the <code>Person</code> type:</p>
+<pre><code class="language-sdl">abstract type Person {
+  required name: str;
+  multi places_visited: Place;
+  lover: Person;
+  property is_single := not exists .lover;
+}
+</code></pre>
+<p>Notice that we have written <code>property is_single</code> this time instead of just <code>is_single</code>. With computed properties and links we need to give EdgeDB a little bit more help by letting it know whether the computed expression will result in a <code>property</code> or a <code>link</code>. So if you are working on your schema and the property or link uses a <code>:=</code> to make it computed, don't forget to choose between <code>property</code> or <code>link</code>!</p>
+<p>You might be curious about how computed links and properties are represented in databases on the back end. They are interesting because they {ref}<code>don't show up in the actual database &lt;docs:ref_datamodel_computed&gt;</code>, and only appear when you query them. Computed links also don't specify the type because the expression itself determines the type. You can kind of imagine this when you look at a query with a quick computed variable like <code>select country_name := 'Romania'</code>. Here, <code>country_name</code> is computed every time we do a query, and the type is determined to be a string. A computed link or property on a type does the same thing. But nevertheless, they still work in the same way as all other links and properties because the instructions for the computed ones are part of the type itself and do not change. In other words, they are a bit different on the back but mostly the same up front.</p>
+<h2 id="ways-to-tell-time"><a class="header" href="#ways-to-tell-time">Ways to tell time</a></h2>
+<p>We will now learn about time, which is important for our game. Keeping track of time is important in general, but is especially important for us because vampires can only go outside at night.</p>
+<p>The part of Romania that Jonathan Harker is visiting has an average sunrise of around 7 am and a sunset of 7 pm. This changes by season, but to keep it simple we will just use 7 am and 7 pm to decide if it's day or night.</p>
+<p>EdgeDB uses two major types for time:</p>
+<ul>
+<li><code>std::datetime</code>, which is the most precise because it includes a timezone. Times in <code>datetime</code> use the <a href="https://en.wikipedia.org/w/index.php?title=ISO_8601&amp;oldid=1154675086">ISO 8601 standard</a>.</li>
+<li><code>cal::local_datetime</code>, which includes the date and time but no information about the timezone.</li>
+</ul>
+<p>There are two others that each include half of the information found in <code>cal::local_datetime</code>:</p>
+<ul>
+<li><code>cal::local_time</code>, for when you only need to know the time,</li>
+<li><code>cal::local_date</code>, for when you only need to know the month, the day, and year.</li>
+</ul>
+<p>Our first concern is whether vampires are sleeping or not, so we'll start with <code>cal::local_time</code> first. Take a close look at the name: this is the first time we have come across something in a different module in the standard library (it's <code>cal::local_time</code>, not <code>std::local_time</code>). The name <code>cal</code> here stands for calendar.</p>
+<p><code>cal::local_time</code> is easy to create, because you can just cast to it from a <code>str</code> in the format 'HH:MM:SS':</p>
+<pre><code class="language-edgeql">select &lt;cal::local_time&gt;('15:44:56');
+</code></pre>
+<p>This gives us the output:</p>
+<pre><code>{&lt;cal::local_time&gt;'15:44:56'}
+</code></pre>
+<p>We will imagine that our game engine has a clock that sends the database the time as a <code>str</code>, like the '15:44:56' in the example above. We'll make a quick <code>Time</code> type that will hold this <code>str</code> and use it to make two computed properties. It looks like this:</p>
+<pre><code class="language-sdl">type Time { 
+  required clock: str; 
+  property clock_time := &lt;cal::local_time&gt;.clock; 
+  property hour := .clock[0:2]; 
+} 
+</code></pre>
+<p><code>.clock[0:2]</code> is an example of {eql:op}<code>&quot;slicing&quot; &lt;docs:arrayslice&gt;</code> that we learned about in Chapter 2. To review, <code>[0:2]</code> means start from index 0 (the first index) and stop <em>before</em> index 2, which means indexes 0 and 1. This is fine because to cast a <code>str</code> to <code>cal::local_time</code> you need to write the hour with two numbers (e.g. <code>09</code> is okay, but <code>9</code> is not).</p>
+<p>So this won't work:</p>
+<pre><code class="language-edgeql">select &lt;cal::local_time&gt;'9:55:05';
+</code></pre>
+<p>It gives this error:</p>
+<pre><code>edgedb error: InvalidValueError: invalid input syntax
+for type cal::local_time: '9:55:05'
+Hint: Please use ISO8601 format. Examples: 18:43:27 or 18:43
+Alternatively &quot;to_local_time&quot; function provides custom formatting options.
+</code></pre>
+<p>Because of that, we are sure that slicing from index 0 to 2 will give us two numbers that indicate the hour of the day.</p>
+<p>Let's do a migration so we can insert a <code>Time</code> object. It's pretty easy:</p>
+<pre><code class="language-edgeql">insert Time {
+    clock := '09:55:05',
+};
+</code></pre>
+<p>And then we can <code>select</code> our <code>Time</code> objects and everything inside:</p>
+<pre><code class="language-edgeql">select Time {
+  clock,
+  clock_time,
+  hour,
+};
+</code></pre>
+<p>That gives us a nice output that shows everything, including the hour:</p>
+<pre><code>{default::Time {clock: '09:55:05', clock_time: &lt;cal::local_time&gt;'09:55:05', hour: '09'}}
+</code></pre>
+<p>Finally, we can add some logic to the <code>Time</code> type to see if vampires are awake or asleep. Since this property requires choosing between one of multiple choices, an enum seems like a good choice.</p>
+<pre><code class="language-sdl">scalar type SleepState extending enum &lt;Asleep, Awake&gt;;
+
+type Time {
+  required clock: str;
+  property clock_time := &lt;cal::local_time&gt;.clock;
+  property hour := .clock[0:2];
+  property vampires_are := SleepState.Asleep if &lt;int16&gt;.hour &gt; 7 and &lt;int16&gt;.hour &lt; 19
+    else SleepState.Awake;
+}
+</code></pre>
+<p>So <code>vampires_are</code> is calculated like this:</p>
+<ul>
+<li>First EdgeDB checks to see if the hour is greater than 7 and less than 19 (7 pm). But it's better to compare with a number than a string, so we cast into an <code>int16</code> with <code>&lt;int16&gt;.hour</code> instead of <code>.hour</code> so it can compare a number to a number.</li>
+<li>Then it chooses between the 'Asleep' or 'Awake' values of the enum depending on that.</li>
+</ul>
+<p>Now let's do a <code>select</code> again with all the properties:</p>
+<pre><code class="language-edgeql">select Time {*};
+</code></pre>
+<p>We then get this output:</p>
+<pre><code>{
+  default::Time {
+    id: 0fb1d964-1989-11ee-915e-5b585f9c9744,
+    clock: '09:55:05',
+    clock_time: &lt;cal::local_time&gt;'09:55:05',
+    hour: '09',
+    vampires_are: Asleep,
+  },
+}
+</code></pre>
+<p>One more note on <code>else</code>: you can keep on using <code>else</code> as many times as you like in the format <code>(result) if (condition) else</code>. Here's an example showing how this could work if we had more values on the <code>SleepState</code> enum:</p>
+<pre><code class="language-sdl">property vampires_are := 
+  SleepState.JustWakingUp if &lt;int16&gt;.hour = 19 else
+  SleepState.GoingToBed if &lt;int16&gt;.hour = 6 else
+  SleepState.Asleep if &lt;int16&gt;.hour &gt; 7 and &lt;int16&gt;.hour &lt; 19 else
+  SleepState.Awake;
+</code></pre>
+<h2 id="selecting-what-you-just-inserted"><a class="header" href="#selecting-what-you-just-inserted">Selecting what you just inserted</a></h2>
+<p>Back in Chapter 3, we learned how to <code>select</code> while deleting at the same time. Using an <code>insert</code> also returns the object (or objects) in question, so we can select them too. You can do this by enclosing the output in parentheses and then giving that a shape, same as with any other <code>select</code>. Let's work on this one step at a time.</p>
+<p>If we insert a new <code>Time</code>, all we get is a <code>uuid</code>:</p>
+<pre><code class="language-edgeql">insert Time {
+  clock := '22:44:10'
+};
+</code></pre>
+<p>The output is just something like this: <code>{default::Time {id: 3f6951c6-ff48-11eb-915e-3fd1092b2757}}</code></p>
+<p>Now let's wrap it inside a <code>select</code>:</p>
+<pre><code class="language-edgeql">select(
+  insert Time {
+    clock := '22:44:10'
+  }
+);
+</code></pre>
+<p>The output is still the same so far. But now that we are using <code>select</code>, we can follow it up with brackets to provide it a shape. Besides the regular properties to display, we can also add a computed property while we are at it. This computed property will give you a taste of what we will learn in the next chapter.</p>
+<pre><code class="language-edgeql">select (
+  insert Time {
+    clock := '22:44:10'
+  }
+)
+  {
+    clock,
+    hour,
+    vampires_are,
+    time_until_just_before_midnight := &lt;cal::local_time&gt;'23:59:59'
+                         - &lt;cal::local_time&gt;.clock
+  };
+</code></pre>
+<p>(The computed <code>time_until_midnight</code> property used '23:59:59' as its input because the range of a <code>local_time</code> is 0:00:00 to 23:59:59. If we needed more accuracy we could have added a <code>&lt;duration&gt;'1 second'</code> to the expression. We will learn how to work with durations in the next chapter.)</p>
+<p>Now the output is more meaningful to us: </p>
+<pre><code>{
+  default::Time {
+    clock: '22:44:10',
+    hour: '22',
+    vampires_are: Awake,
+    time_until_just_before_midnight: &lt;cal::relative_duration&gt;'PT1H15M49S',
+  },
+}
+</code></pre>
+<p>We know the clock and the hour, we can see that vampires are awake, and even make a computed property from the object we just entered. Looks like we have one hour, 15 minutes, and 50 seconds until midnight.</p>
+<h2 id="making-time-global"><a class="header" href="#making-time-global">Making Time global</a></h2>
+<p>Depending on how closely you've been following this chapter, you probably have about three or four <code>Time</code> objects in the database by now. That feels a bit odd, because this <code>Time</code> type is most useful for determining the current state of the game: the current clock time, if vampires are awake or not, and so on. So instead of multiple <code>Time</code> objects floating around in the database, we should have a single global <code>Time</code> object instead.</p>
+<p>So first let's delete all the <code>Time</code> objects in the database with <code>delete Time;</code> and make a change to the schema by making a <code>global</code> type called <code>time</code>. In EdgeDB a global type can either be:</p>
+<ul>
+<li>A scalar type if it isn't computed,</li>
+<li>Any type if it is computed.</li>
+</ul>
+<p>In our case we are going to make <code>time</code> a computed global that selects all the <code>Time</code> objects in the database, which in our case should never be more than one. So we can define it using the <code>assert_single()</code> function again. The global type will now look like this:</p>
+<pre><code class="language-sdl">global time := assert_single((select Time));
+</code></pre>
+<p>Now that this is added, let's do a migration and see what's inside! Selecting a global type is done in the same way as with other types except that it needs the <code>global</code> keyword:</p>
+<pre><code class="language-edgeql">select global time {*};
+</code></pre>
+<p>Doing this should return an empty set. Now let's insert the current time:</p>
+<pre><code class="language-edgeql">insert Time { clock := '09:00:00' };
+</code></pre>
+<p>And then do the query on <code>global time</code> again:</p>
+<pre><code class="language-edgeql">select global time {*};
+</code></pre>
+<p>With this single global <code>Time</code> object in our database, we can now see the current time and what vampires are up to at the moment:</p>
+<pre><code>{
+  default::Time {
+    id: d6363f92-1517-11ee-ab3d-834f250e5e21,
+    clock: '09:00:00',
+    clock_time: &lt;cal::local_time&gt;'09:00:00',
+    hour: '09',
+    vampires_are: Asleep,
+  },
+}
+</code></pre>
+<p>In Chapter 6 we will learn how to <code>update</code> objects, which will let us change this global <code>Time</code> object whenever we like. And much later on in the book we will also add a global scalar value, so stay tuned!</p>
+<p><a href="code.html">Here is all our code so far up to Chapter 4.</a></p>
+<!-- quiz-start -->
+<h2 id="time-to-practice"><a class="header" href="#time-to-practice">Time to practice</a></h2>
+<ol>
+<li>
+<p>This insert is not working.</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := 'I Love Mina',
+  lover := assert_single(
+    (select NPC filter .name like '%Mina%')
+  )
+};
+</code></pre>
+<p>The error is: <code>invalid reference to default::NPC: self-referencing INSERTs are not allowed</code>. What keyword can we use to make this insert work?</p>
+<p>Bonus: there is another method we could use too to make it work without the keyword. Can you think of another way?</p>
+</li>
+<li>
+<p>How would you display up to 2 <code>Person</code> types (and their <code>name</code> property) whose names include the letter <code>a</code>?</p>
+</li>
+<li>
+<p>How would you display all the <code>Person</code> types (and their names) that have never visited anywhere?</p>
+<p>Hint: all the <code>Person</code> types for which <code>.places_visited</code> returns <code>{}</code>.</p>
+</li>
+<li>
+<p>Imagine that you have the following <code>cal::local_time</code> type:</p>
+<pre><code class="language-edgeql">select has_nine_in_it := &lt;cal::local_time&gt;'09:09:09';
+</code></pre>
+<p>This displays <code>{&lt;cal::local_time&gt;'09:09:09'}</code> but instead you want to display {true} if it has a 9 and {false} otherwise. How could you do that?</p>
+</li>
+<li>
+<p>We are inserting a character called The Innkeeper's Son:</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := &quot;The Innkeeper's Son&quot;,
+  age := 10
+};
+</code></pre>
+<p>How would you <code>select</code> this insert at the same time to display the <code>name</code>, <code>age</code>, and <code>age_ten_years_later</code> that is made from <code>age</code> plus 10?</p>
+</li>
+</ol>
+<p><a href="answers.html">See the answers here.</a></p>
+<!-- quiz-end -->
+<p><strong>Up next:</strong> <em>Jonathan's curiosity gets the better of him. What's inside this castle?</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter3/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter5/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter3/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter5/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chapter 1 - Jonathan Harker travels to Transylvania</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../chapter1/index.html" class="active"><strong aria-hidden="true">1.</strong> Chapter 1 - Jonathan Harker travels to Transylvania</a></li><li class="chapter-item expanded "><a href="../chapter2/index.html"><strong aria-hidden="true">2.</strong> Chapter 2 - At the Hotel in Bistritz</a></li><li class="chapter-item expanded "><a href="../chapter3/index.html"><strong aria-hidden="true">3.</strong> Chapter 3 - Jonathan goes to Castle Dracula</a></li><li class="chapter-item expanded "><a href="../chapter4/index.html"><strong aria-hidden="true">4.</strong> Chapter 4 - "What a strange man this Count Dracula is."</a></li><li class="chapter-item expanded "><a href="../chapter5/index.html"><strong aria-hidden="true">5.</strong> Chapter 5 - Jonathan tries to leave the castle</a></li><li class="chapter-item expanded "><a href="../chapter6/index.html"><strong aria-hidden="true">6.</strong> Chapter 6 - Still no escape</a></li><li class="chapter-item expanded "><a href="../chapter7/index.html"><strong aria-hidden="true">7.</strong> Chapter 7 - Jonathan finally "leaves" the castle</a></li><li class="chapter-item expanded "><a href="../chapter8/index.html"><strong aria-hidden="true">8.</strong> Chapter 8 - Dracula takes the boat to England</a></li><li class="chapter-item expanded "><a href="../chapter9/index.html"><strong aria-hidden="true">9.</strong> Chapter 9 - Strange events in England</a></li><li class="chapter-item expanded "><a href="../chapter10/index.html"><strong aria-hidden="true">10.</strong> Chapter 10 - Terrible events in Whitby</a></li><li class="chapter-item expanded "><a href="../chapter11/index.html"><strong aria-hidden="true">11.</strong> Chapter 11 - What's wrong with Lucy?</a></li><li class="chapter-item expanded "><a href="../chapter12/index.html"><strong aria-hidden="true">12.</strong> Chapter 12 - From bad to worse</a></li><li class="chapter-item expanded "><a href="../chapter13/index.html"><strong aria-hidden="true">13.</strong> Chapter 13 - Farewell, Lucy. Meet the new Lucy</a></li><li class="chapter-item expanded "><a href="../chapter14/index.html"><strong aria-hidden="true">14.</strong> Chapter 14 - Jonathan Harker returns</a></li><li class="chapter-item expanded "><a href="../chapter15/index.html"><strong aria-hidden="true">15.</strong> Chapter 15 - Time to start vampire hunting</a></li><li class="chapter-item expanded "><a href="../chapter16/index.html"><strong aria-hidden="true">16.</strong> Chapter 16 - Is Renfield telling the truth?</a></li><li class="chapter-item expanded "><a href="../chapter17/index.html"><strong aria-hidden="true">17.</strong> Chapter 17 - Poor Renfield. Poor Mina.</a></li><li class="chapter-item expanded "><a href="../chapter18/index.html"><strong aria-hidden="true">18.</strong> Chapter 18 - Using Dracula's own weapon against him</a></li><li class="chapter-item expanded "><a href="../chapter19/index.html"><strong aria-hidden="true">19.</strong> Chapter 19 - Dracula escapes</a></li><li class="chapter-item expanded "><a href="../chapter20/index.html"><strong aria-hidden="true">20.</strong> Chapter 20 - The final battle</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <div class="table-wrapper"><table><thead><tr><th style="text-align: center"><code>Object Types</code></th><th style="text-align: center"><code>Select</code></th><th style="text-align: center"><code>Insert</code></th></tr></thead><tbody>
+</tbody></table>
+</div>
+<p><img src="illustration_01.jpg" alt="leadImage" /></p>
+<h1 id="chapter-1---jonathan-harker-travels-to-transylvania"><a class="header" href="#chapter-1---jonathan-harker-travels-to-transylvania">Chapter 1 - Jonathan Harker travels to Transylvania</a></h1>
+<p>In the beginning of the book we see the main character Jonathan Harker, a young lawyer who is going to meet a client. The client is a rich man named Count Dracula who lives somewhere in Eastern Europe. Jonathan is enjoying the trip to a new part of Europe, completely unaware that Count Dracula is actually a vampire. The book begins with Jonathan writing in his journal as he travels. The parts in his journal to note when thinking about a database are in <strong>bold</strong>:</p>
+<blockquote>
+<p><strong>3 May</strong>. <strong>Bistritz</strong>.—Left <strong>Munich</strong> at <strong>8:35 P.M.</strong>, on <strong>1st May</strong>, arriving at <strong>Vienna</strong> early next morning; should have arrived at 6:46, but train was an hour late. <strong>Buda-Pesth</strong> seems a wonderful place, from the glimpse which I got of it from the train...</p>
+</blockquote>
+<h2 id="schema-object-types"><a class="header" href="#schema-object-types">Schema, object types</a></h2>
+<p>The language used for EdgeDB is called EdgeQL, and is used to define, mutate, and query data. The schema in your database uses {ref}<code>SDL (schema definition language)&lt;docs:ref_eql_sdl&gt;</code> that makes migration easy, and which we will learn in this book. The quote from Jonathan Harker's journal can help us start to think about our database. We'll start with our schema, which needs the following:</p>
+<ul>
+<li>Some kind of <code>City</code> or <code>Location</code> type. These types that we can create are called {ref}<code>object types &lt;docs:ref_datamodel_object_types&gt;</code>, made out of properties and links to other objects. What properties should a <code>City</code> type have? Perhaps a name and a location, and sometimes a different name or spelling. Bistritz for example is in Romania and is now written Bistrița (note the ț - it's Bistrița, not Bistrita), while Buda-Pesth is now written Budapest. But other cities like Munich are written in the same way in the 19th century as they are written today.</li>
+<li>Some kind of <code>NPC</code> type to represent the people in the book. This type could have a name, and also a way to track the places that the person visited.</li>
+</ul>
+<p>To make a type inside a schema, just use the keyword <code>type</code> followed by the type name. Our <code>NPC</code> type will start out like this:</p>
+<pre><code class="language-sdl">type NPC;
+</code></pre>
+<p>That's all you need to create a type!</p>
+<p>Now an <code>NPC</code> type that doesn't hold any properties isn't very useful, so we'll remove the <code>;</code> and replace them with <code>{}</code> curly brackets instead. The <code>NPC</code> type still doesn't have any properties but with the <code>{}</code> it is ready to hold them:</p>
+<pre><code class="language-sdl">type NPC {
+
+}
+</code></pre>
+<p>But hold on, where is our schema and how do you put a schema together? The easiest way to create a schema is to start an EdgeDB project. Here's how to get started:</p>
+<ul>
+<li>First make sure you have <a href="https://www.edgedb.com/install">EdgeDB installed on your computer</a>. You will now have the EdgeDB CLI installed which allows you to make new projects, apply migrations, and do many other things.</li>
+<li>Once you have the EdgeDB CLI installed, make an empty directory where you want to hold your project. Now open up a command line (also known as a Terminal). If you are on Windows and haven't opened a command line before, type the Windows key and <code>cmd</code>, then click on Command Prompt. Then type <code>cd c:/easy-edgedb</code> or whatever the name of your directory is. Or you can right click on a folder inside Windows File Explorer and select <code>Open in Terminal</code>.</li>
+<li>Type <code>edgedb project init</code>. The EdgeDB CLI will now ask you a few questions. The output should look something like this:</li>
+</ul>
+<pre><code>No `edgedb.toml` found in `\\?\C:\easy-edgedb` or above
+Do you want to initialize a new project? [Y/n]
+&gt; Y
+Specify the name of EdgeDB instance to use with this project [default: easy_edgedb]:
+&gt; easy_edgedb
+Checking EdgeDB versions...
+Specify the version of EdgeDB to use with this project [default: 3.0]:
+&gt; 3.0
+┌─────────────────────┬─────────────────────────────────────┐
+│ Project directory   │ \\?\C:\easy-edgedb                  │
+│ Project config      │ \\?\C:\easy-edgedb\edgedb.toml      │
+│ Schema dir (empty)  │ \\?\C:\easy-edgedb\dbschema         │
+│ Installation method │ WSL                                 │
+│ Version             │ 3.0-rc.2+02561bd                    │
+│ Instance name       │ easy_edgedb                         │
+└─────────────────────┴─────────────────────────────────────┘
+Version 3.0-rc.2+02561bd is already downloaded
+Initializing EdgeDB instance...
+Applying migrations...
+Everything is up to date. Revision initial
+Project initialized.
+To connect to easy_edgedb, run `edgedb`
+</code></pre>
+<p>That was easy! Now try typing <code>edgedb</code>, which will take you into the EdgeDB REPL. (You can leave the REPL whenever you like by typing <code>\q</code>.) You can also type <code>edgedb ui</code> if you prefer to use the EdgeDB UI, which includes its own REPL and a lot of other nice tools like a data explorer and a query editor to help you put queries together. See <a href="https://www.youtube.com/watch?v=iwnP_6tkKgc">this short video</a> for an introduction to the EdgeDB UI.</p>
+<p>Now type <code>select 'Jonathan Harker';</code> and hit enter. You should see some output that looks like this, with your folder name instead of <code>db&gt;</code> in the sample below:</p>
+<pre><code>db&gt; select &quot;Jonathan Harker&quot;;
+{'Jonathan Harker'}
+db&gt;
+</code></pre>
+<p>You just made your first query in EdgeDB!</p>
+<p>So now let's take a look at the schema so we can create our <code>NPC</code> type. The CLI has already let us know that the schema is inside the <code>\edgedb\dbschema</code> directory, so go inside there and look for a file called <code>default.esdl</code>. This is your schema. At the moment, all it holds is a module called <code>default</code>:</p>
+<pre><code class="language-sdl">module default {
+
+}
+</code></pre>
+<p>A module is a space containing the types for our database, including our <code>NPC</code> type. Let's give it a try! Add the <code>NPC</code> type that we made above, as follows:</p>
+<pre><code class="language-sdl">module default {
+  type NPC {
+  }
+}
+</code></pre>
+<p>Make sure the file is saved, and then create a migration. You can do this by typing <code>edgedb migration create</code> if you are on the command line, or (even easier) by typing <code>\migration create</code> inside the REPL. Commands that start with <code>edgedb</code> on the command line are done in the same way in the REPL except that you replace <code>edgedb</code> with a backslash.</p>
+<p>You should see some output that looks like the following:</p>
+<pre><code>Created c:\easy-edgedb\dbschema\migrations\00001.edgeql, id: m14c35zu7lzg46r2337nwehaihkv6d4xwcatu6ulogd5kqafjtrnra
+</code></pre>
+<p>Now type <code>edgedb migrate</code> (or <code>\migrate</code> inside the REPL). The CLI will apply the migration with the following output:</p>
+<pre><code>Applied m14c35zu7lzg46r2337nwehaihkv6d4xwcatu6ulogd5kqafjtrnra (00001.edgeql)
+</code></pre>
+<p>And you are done!</p>
+<p>To sum up, an EdgeDB migration simply consists of the following:</p>
+<ul>
+<li>Changing your schema,</li>
+<li>Typing <code>edgedb migration create</code> (or <code>\migration create</code>),</li>
+<li>Typing <code>edgedb migrate</code> (or <code>\migrate</code>).</li>
+</ul>
+<p>We will be doing a lot of that in this book! Even by the second chapter you will be very used to this process.</p>
+<pre><code class="language-{eval-rst}">.. note::
+  The CLI creates a new file upon each migration to generate the commands to change the schema to the one we want. The first file will be called 00001.edgeql, the second will be 00002.edgeql, and so on. These files are quite readable so feel free to take a look at if you are curious. But note that they use a syntax called DDL (Data Definition Language) that gives commands to EdgeDB one at a time, and you do not need to learn it. The language that we are using in the schema is called SDL (Schema Definition Language), which simply declares what a schema will look like. The CLI then automatically creates DDL commands to make it happen.
+</code></pre>
+<p>Now that we know how to do a schema migration, let's add some properties to our <code>NPC</code> type. Use the keyword <code>required</code> if the type needs it, and just the property name if it is optional. Let's give the <code>NPC</code> type a name and an array (a collection) of places visited:</p>
+<pre><code class="language-sdl">type NPC {
+  required name: str;
+  places_visited: array&lt;str&gt;;
+}
+</code></pre>
+<p>With <code>required name</code> our <code>NPC</code> objects are always guaranteed to have a name - you can't make an <code>NPC</code> object without it. Give it a try with this query:</p>
+<pre><code class="language-edgedb">insert NPC;
+</code></pre>
+<p>You should see this error message:</p>
+<pre><code>error: MissingRequiredError: missing value for required property 'name' of object type 'default::NPC'
+  ┌─ &lt;query&gt;:1:1
+  │
+1 │ insert NPC;
+  │ ^^^^^^^^^^ error
+</code></pre>
+<p>The keyword <code>str</code> stands for string, which contains text. A <code>str</code> goes inside either single quotes: <code>select 'Jonathan Harker';</code> or double quotes: <code>select &quot;Jonathan Harker&quot;;</code>.</p>
+<p>If you have a single or double quote inside a string, you can use the <code>\</code> escape character to make EdgeDB treat it like just another letter inside the string. Give the <code>\</code> escape character a try to fix the query below that doesn't work because EdgeDB thinks that the single quote after <code>Harker</code> is the end of the string:</p>
+<pre><code class="language-edgeql">select 'Jonathan Harker's journal';
+</code></pre>
+<p>The next property is an <code>array</code>. An <code>array</code> is a collection of the same type, and our array here is an array of <code>str</code>s. We want it to look like this inside our first <code>NPC</code> object:</p>
+<pre><code>[&quot;Bistritz&quot;, &quot;Munich&quot;, &quot;Buda-Pesth&quot;]
+</code></pre>
+<p>The idea is to easily search later and see which character has visited where.</p>
+<p>Unlike <code>name</code>, <code>places_visited</code> is not a <code>required</code> property because we might later add minor characters that don't go anywhere. Maybe one person will be the &quot;innkeeper_in_bistritz&quot; or something, and we won't know or care about <code>places_visited</code> for him.</p>
+<p>The next type to add to our schema is a <code>City</code>. It look like this:</p>
+<pre><code class="language-sdl">type City {
+  required name: str;
+  modern_name: str;
+}
+</code></pre>
+<p>This type is pretty easy too, and just holds two properties with strings. The <code>modern_name</code> property is because the book Dracula was published in 1897 when spelling for cities was sometimes different. All cities have a name in the book (that's why it's <code>required</code>), and some will need a different modern name. But some don't: Munich in the book is still spelled Munich, for example. With this we could link the city names to their modern names so we can easily place them on a map.</p>
+<h2 id="migration"><a class="header" href="#migration">Migration</a></h2>
+<p>We've now added our first two types, but EdgeDB hasn't processed our changes yet. To make the changes happen we can do our first migration with <code>edgedb migration create</code>. After using this command, you will see a number of questions similar to the one below:</p>
+<pre><code>Did you create object type 'default::City'? [y,n,l,c,b,s,q,?]
+&gt;
+</code></pre>
+<p>The CLI does this to make sure that it is applying the right changes to the schema, and to give us the opportunity to make changes if it has misunderstood anything. Most of the time the CLI guesses correctly and you will just end up clicking <code>y</code> (to mean yes) over and over again for each change. But there are other possible answers we can give. Type <code>?</code> if you want to see what the letters for the other possible answers mean.</p>
+<p>One of those is <code>l</code>, which means:</p>
+<pre><code>l or list - list the DDL statements associated with prompt
+</code></pre>
+<p>Sure, let's be curious and try typing <code>l</code> to see what commands will be generated to create our <code>City</code> type. If we type <code>l</code> we will see the following:</p>
+<pre><code>Did you create object type 'default::City'? [y,n,l,c,b,s,q,?]
+&gt; l
+The following DDL statements will be applied:
+  CREATE TYPE default::City {
+      CREATE PROPERTY modern_name: std::str;
+      CREATE REQUIRED PROPERTY name: std::str;
+  };
+</code></pre>
+<p>Looks good! It's a type called <code>City</code> inside the module <code>default</code>, it has a required property called <code>name</code> and a property called <code>modern_name</code>.</p>
+<p>So why didn't we need to write <code>property</code> inside the <code>City</code> type? Let's look at it again:</p>
+<pre><code class="language-sdl">type City {
+  required name: str;
+  modern_name: str;
+}
+</code></pre>
+<p>There's no <code>property</code> keyword in there.</p>
+<p>In the past you did have to write the <code>property</code> keyword for properties, and EdgeDB used a <code>-&gt;</code> (an arrow) instead of a <code>:</code> (a colon) after properties and links. Since the release of EdgeDB 3.0 in 2023 this is no longer required. So if you see any syntax that looks like the following, just keep in mind that it is pre-3.0 syntax:</p>
+<pre><code class="language-sdl">type City {
+  # required name: str;            &lt;-- Current syntax
+  required property name -&gt; str; # &lt;-- Old syntax
+  # modern name: str;              &lt;-- Current syntax
+  property modern_name -&gt; str;   # &lt;-- Old syntax
+}
+</code></pre>
+<p>Now back to the schema. Let's now just type <code>y</code> for every question that the CLI gives us to see what it does. After typing <code>y</code> two times, the CLI asks us a sudden question:</p>
+<pre><code>Did you create object type 'default::City'? [y,n,l,c,b,s,q,?]
+&gt; y
+Did you alter object type 'default::NPC'? [y,n,l,c,b,s,q,?]
+&gt; y
+Please specify an expression to populate existing objects in order to make
+property 'name' of object type 'default::NPC' required:
+fill_expr&gt;
+</code></pre>
+<p>The CLI is essentially saying: &quot;There might be <code>NPC</code> objects in the database already. But now they all need to have a property called <code>name</code>, which wasn't required before. How should I decide what <code>name</code> to give them?&quot;</p>
+<p>Fortunately, the expression here is pretty simple: let's just give them all an empty string. Type <code>''</code> and hit enter, and the CLI will now be happy with the migration. Don't forget to complete the migration with <code>edgedb migration</code>, and we are done!</p>
+<p>If you are curious, take a look inside the migration file that EdgeDB generated. You can see how it created a command to change the <code>NPC</code> type, including a default value for <code>name</code> for any objects in the database:</p>
+<pre><code>  ALTER TYPE default::NPC {
+      CREATE REQUIRED PROPERTY name: std::str {
+          SET REQUIRED USING (&lt;std::str&gt;{''});
+      };
+      CREATE PROPERTY places_visited: array&lt;std::str&gt;;
+  };
+</code></pre>
+<p>There are a lot of other commands beyond the commands for migration, though we won't need them for this book. You could bookmark these four pages for later use, however:</p>
+<ul>
+<li>{ref}<code>Admin commands &lt;docs:ref_cheatsheet_admin&gt;</code>: Creating user roles, setting passwords, configuring ports, etc.</li>
+<li>{ref}<code>CLI commands &lt;docs:ref_cheatsheet_cli&gt;</code>: Creating databases, roles, setting passwords for roles, connecting to databases, etc.</li>
+<li>{ref}<code>REPL commands &lt;docs:ref_cheatsheet_repl&gt;</code>: Mostly shortcuts for a lot of the commands we'll be using in this book.</li>
+<li>{ref}<code>Various commands &lt;docs:ref_eql_statements_rollback_tx&gt;</code> about rolling back transactions, declaring savepoints, and so on.</li>
+</ul>
+<p>There are also a few places to download packages to highlight your syntax if you like. EdgeDB has these packages available for <a href="https://atom.io/packages/edgedb">Atom</a>, <a href="https://marketplace.visualstudio.com/itemdetails?itemName=magicstack.edgedb">Visual Studio Code</a>, <a href="https://packagecontrol.io/packages/EdgeDB">Sublime Text</a>, and <a href="https://github.com/edgedb/edgedb-vim">Vim</a>.</p>
+<p>And last but not least, here is the command if to use if you want to destroy your project and start again.</p>
+<pre><code>edgedb instance destroy -I instance_name --force
+</code></pre>
+<p>Destroying an instance won't delete any files, so your schema and migration files won't be lost. If you want a completely clean slate, then first delete your instance, then delete the files inside the <code>migrations</code> folder, and then turn your schema back to <code>module default {}</code>.</p>
+<p>Now let's start playing with some data!</p>
+<h2 id="selecting"><a class="header" href="#selecting">Selecting</a></h2>
+<p>The <code>select</code> keyword is the main query command in EdgeDB, and you use it to see results based on the input that comes after it. Keywords in EdgeDB are case insensitive, so <code>select</code>, <code>SELECT</code> and <code>SeLeCT</code> are all the same.</p>
+<p>Let's give a <code>select</code> on a string a deeper look this time. Type <code>edgedb</code> to log into the REPL and give this a try:</p>
+<pre><code class="language-edgeql">select 'Jonathan Harker begins his journey.';
+</code></pre>
+<p>This returns <code>{'Jonathan Harker begins his journey.'}</code>, no surprise there. But did you notice that it is inside a <code>{}</code>? This <code>{}</code> is actually quite important: <code>{}</code> means that it's a set, and in fact {ref}<code>everything in EdgeDB is a set &lt;docs:ref_eql_everything_is_a_set&gt;</code> (make sure to remember that). Thanks to the &quot;everything is a set&quot; philosophy, EdgeDB doesn't have null. Where you would have null in other databases like SQL, EdgeDB just gives you an empty set: <code>{}</code>. The advantage here is that sets always behave the same way even when they are empty, instead of <a href="https://www.edgedb.com/blog/we-can-do-better-than-sql#null-a-bag-of-surprises">all the unwelcome surprises</a> that come with using null.</p>
+<p>For the next <code>select</code> queries, we will use some more operators that use the <code>=</code> sign:</p>
+<ul>
+<li><code>:=</code> is used to declare / assign (to give a value to something),</li>
+<li><code>=</code> is used to check equality (not <code>==</code>),</li>
+<li><code>!=</code> is the opposite of <code>=</code>.</li>
+</ul>
+<p>Let's use <code>:=</code> to assign a variable:</p>
+<pre><code class="language-edgeql">select jonathans_name := 'Jonathan Harker';
+</code></pre>
+<p>This just returns what we gave it: <code>{'Jonathan Harker'}</code>. But this time it's a string that we assigned called <code>jonathans_name</code> that is being returned.</p>
+<p>Now let's do something with this variable. We can use the keyword <code>select</code> to use this variable and then compare it to <code>'Count Dracula'</code>:</p>
+<pre><code class="language-edgeql">select jonathans_name := 'Jonathan Harker' != 'Count Dracula';
+</code></pre>
+<p>You can read this as &quot;Is the variable called jonathans_name, which is a string with the value 'Jonathan Harker', different from the string 'Count Dracula'?&quot;</p>
+<p>They are indeed different strings, so the output is <code>{true}</code>. Of course, you can just write <code>select 'Jonathan Harker' != 'Count Dracula';</code> for the same result. But knowing how to assign in this way with <code>:=</code> will allow us to do more complex operations later on.</p>
+<h2 id="inserting-objects"><a class="header" href="#inserting-objects">Inserting objects</a></h2>
+<p>Our database doesn't have any data in it yet! Time to change that.</p>
+<p>Let's start inserting some <code>City</code> objects with the simple schema we already have by using the <code>insert</code> keyword, followed by the type name and some properties. The property <code>name</code> is required, while <code>modern_name</code> is not required.</p>
+<p>Don't forget to separate each property by a comma, and finish the <code>insert</code> with a semicolon. Indentation isn't relevant in EdgeQL like it is in languages such as Python and F#, but EdgeDB prefers two spaces for indentation. Our first three cities look like this:</p>
+<pre><code class="language-edgeql">insert City { name := 'Munich' };
+
+insert City {
+  name := 'Buda-Pesth',
+  modern_name := 'Budapest'
+};
+
+insert City {
+  name := 'Bistritz',
+  modern_name := 'Bistrița'
+};
+</code></pre>
+<p>Note that a comma after the last parameter (a so-called &quot;trailing comma&quot;) is optional - you can put it in or leave it out. In our three <code>City</code> inserts you can see that one insert has a trailing comma, while the others don't have it.</p>
+<p>Finally, our <code>NPC</code> insert for Jonathan Harker would look like this, but don't insert it yet.</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := 'Jonathan Harker',
+  places_visited := [&quot;Bistritz&quot;, &quot;Munich&quot;, &quot;Buda-Pesth&quot;],
+};
+</code></pre>
+<p>Because hold on a second...that insert won't link our <code>NPC</code> object for Jonathan Harker to any of the <code>City</code> inserts that we already did! The <code>places_visited</code> parameter is just an array of strings. Is there a way to connect Jonathan Harker to our <code>City</code> objects instead?</p>
+<p>Here's where our schema needs some improvement. To sum up:</p>
+<ul>
+<li>We have an <code>NPC</code> type and a <code>City</code> type,</li>
+<li>The <code>NPC</code> type has the property <code>places_visited</code> with the names of the cities, but they are just strings in an array. It would be better to link this property to the <code>City</code> type somehow.</li>
+</ul>
+<p>So let's not do that <code>NPC</code> insert. We'll fix the <code>NPC</code> type soon by changing <code>array&lt;str&gt;</code> to a <code>multi City</code>, which will create a link to one or more <code>City</code> objects. After this change, <code>NPC</code> and <code>City</code> objects will actually be joined together.</p>
+<p>But first let's look a bit closer at what happens when we use <code>insert</code>.</p>
+<p>We saw when inserting our first three <code>City</code> objects that strings (<code>str</code>) are fine with unicode letters like ț. In fact, even emojis and special characters are just fine, so you could even create a <code>City</code> called <code>'🤠'</code> or <code>'(╯°□°)╯︵ ┻━┻'</code> if you wanted to. (Go ahead and insert a <code>City</code> called <code>'(╯°□°)╯︵ ┻━┻'</code> or anything else if you want - you won't break anything!)</p>
+<p>EdgeDB has a somewhat similar type to <code>str</code> called a byte literal, which gives you the bytes of a string. This is mainly for raw data that humans don't need to view when saving to files. They must be characters that are 1 byte long.</p>
+<p>You create byte literals by adding a <code>b</code> in front of the string:</p>
+<pre><code>db&gt; select b'Bistritz';
+{b'Bistritz'}
+</code></pre>
+<p>And because the characters must be 1 byte, only ASCII works for this type. So the name in <code>modern_name</code> as a byte literal will generate an error because of the <code>ț</code>:</p>
+<pre><code>db&gt; select b'Bistrița';
+error: EdgeQLSyntaxError: invalid bytes literal: character 'ț' is unexpected,
+only ascii chars are allowed in bytes literals
+  ┌─ &lt;query&gt;:1:8
+  │
+1 │ select b'Bistrița';
+  │        ^ error
+</code></pre>
+<p>Now let's get to the output we saw from our three <code>City</code> object inserts. Did you notice that the database returned something every time we made an insert? In fact, EdgeDB gives you some information on the objects we work on every time we do an operation on them (such as <code>insert</code>), and the default output is the object's type with its <code>id</code> property, which is a <code>uuid</code>. UUID stands for <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Universally Unique IDentifier</a>, and is used widely to make identifiers that won't be used anywhere else.</p>
+<p>The output from each <code>City</code> insert looked like this:</p>
+<pre><code>{default::City {id: 462b29ea-ff3d-11eb-aeb7-b3cf3ba28fb9}}
+</code></pre>
+<p>This output is also what shows up when you use <code>select</code> to select a type. Just typing <code>select</code> with a type name will show you all the <code>uuid</code>s for the type that are in our database. Let's look at all the cities we have so far with the following <code>select</code> query:</p>
+<pre><code class="language-edgeql">select City;
+</code></pre>
+<p>This gives us three items:</p>
+<pre><code>{
+  default::City {id: 4ba1074e-ff3f-11eb-aeb7-cf15feb714ef},
+  default::City {id: 4bab8188-ff3f-11eb-aeb7-f7b506bd047e},
+  default::City {id: 4bacf860-ff3f-11eb-aeb7-97025b4d95af},
+}
+</code></pre>
+<p>So far so good, but this only tells us that there are three objects of type <code>City</code> and we can't see their names. To see inside them, we need to add property or link names to the query. This is called describing the {ref}<code>shape &lt;docs:ref_eql_shapes&gt;</code> of the data we want. For the next query we will select all <code>City</code> types again, but this time we will display their <code>modern_name</code>:</p>
+<pre><code class="language-edgeql">select City {
+  modern_name,
+};
+</code></pre>
+<p>Do you remember seeing that Munich doesn't have the property <code>modern_name</code>? But <code>modern_name</code> still shows up as an &quot;empty set&quot;, because every value in EdgeDB is a set of elements, even if there's nothing inside. Here is the result:</p>
+<pre><code>{
+  default::City {modern_name: {}},
+  default::City {modern_name: 'Budapest'},
+  default::City {modern_name: 'Bistrița'},
+}
+</code></pre>
+<p>We know that the <code>City</code> object with <code>{}</code> for <code>modern_name</code> is Munich because we only have three objects so far, but to make the query clearer we should add <code>name</code> to the shape so that we can see that it's the city of Munich:</p>
+<pre><code class="language-edgeql">select City {
+  name,
+  modern_name
+};
+</code></pre>
+<p>This gives the following output:</p>
+<pre><code>{
+  default::City {name: 'Munich', modern_name: {}},
+  default::City {name: 'Buda-Pesth', modern_name: 'Budapest'},
+  default::City {name: 'Bistritz', modern_name: 'Bistrița'},
+}
+</code></pre>
+<p>A <code>select</code> query doesn't have to return a full object though. If you just want to return a single property or link of an object, you can use <code>.</code> after the type name. For example, <code>select City.modern_name;</code> will return a set of strings for all of the <code>City</code> objects in the database so far. Note in the output that there is no <code>default::City</code> to be seen anywhere, because the query just returns a set of strings collected from the <code>modern_name</code> properties of every <code>City</code> object in the database.</p>
+<pre><code>{'Budapest', 'Bistrița'}
+</code></pre>
+<p>This type of expression is called a <em>path expression</em> or a <em>path</em>, because it is the direct path to the values inside. And each <code>.</code> moves on to the next path, if there is another one to follow.</p>
+<p>You can also change property names like <code>modern_name</code> to any other name if you want by using <code>:=</code> after the name you want. Those names you choose become the variable names that are displayed. For example:</p>
+<pre><code class="language-edgeql">select City {
+  name_in_dracula := .name,
+  name_today := .modern_name,
+};
+</code></pre>
+<p>This prints:</p>
+<pre><code>{
+  default::City {name_in_dracula: 'Munich', name_today: {}},
+  default::City {name_in_dracula: 'Buda-Pesth', name_today: 'Budapest'},
+  default::City {name_in_dracula: 'Bistritz', name_today: 'Bistrița'},
+}
+</code></pre>
+<p>This will not change anything inside the schema - it's just a quick variable name to use in a query.</p>
+<p>By the way, <code>.name</code> is short for <code>City.name</code>. You can also write <code>City.name</code> each time (that's called the <em>fully qualified name</em>), but it's not required.</p>
+<p>So if you can make a quick <code>name_in_dracula</code> property from <code>.name</code>, can we make other things too? Indeed we can. For the moment we'll just keep it simple but here is one example:</p>
+<pre><code class="language-edgeql">select City {
+  name_in_dracula := .name,
+  name_today := .modern_name,
+  oh_and_by_the_way := 'A city in the book Dracula'
+};
+</code></pre>
+<p>And here is the output:</p>
+<pre><code>{
+  default::City {
+    name_in_dracula: 'Munich',
+    name_today: {},
+    oh_and_by_the_way: 'A city in the book Dracula',
+  },
+  default::City {
+    name_in_dracula: 'Buda-Pesth',
+    name_today: 'Budapest',
+    oh_and_by_the_way: 'A city in the book Dracula',
+  },
+  default::City {
+    name_in_dracula: 'Bistritz',
+    name_today: 'Bistrița',
+    oh_and_by_the_way: 'A city in the book Dracula',
+  },
+}
+</code></pre>
+<p>If you need to give a parameter the same name as a keyword (like <code>insert</code>, <code>select</code>, and so on) you can enclose it in backticks. For example, if you wanted to call a parameter <code>select</code>, you would type `select`:</p>
+<pre><code class="language-edgeql">select City {
+  name,
+  `select` := &quot;I like the word `select`&quot;
+};
+</code></pre>
+<p>The output is nice and clear, showing the word <code>select</code> without any backticks:</p>
+<pre><code>{
+  default::City {name: 'Munich', select: 'I like the word `select`'},
+  default::City {name: 'Buda-Pesth', select: 'I like the word `select`'},
+  default::City {name: 'Bistritz', select: 'I like the word `select`'}
+}
+</code></pre>
+<p>This brings up an interesting discussion about type safety. EdgeDB is strongly typed, meaning that everything needs a type and EdgeDB will not try to mix different types together. So this query will not work: </p>
+<pre><code class="language-edgeql">db&gt; select City {
+  name_in_dracula := .name,
+  name_today := .modern_name,
+  oh_and_by_the_way := 'A city in the book Dracula written in the year' + 1897
+ };
+</code></pre>
+<p>EdgeDB refuses with the following message:</p>
+<pre><code>operator '+' cannot be applied to operands of type 'std::str' and 'std::int64'
+</code></pre>
+<p>But we didn't declare a type for <code>oh_and_by_the_way</code>, so how did EdgeDB know that it was a <code>str</code>?</p>
+<p>EdgeDB uses what is known as &quot;type inference&quot; to guess the type, meaning that it can usually figure out the type itself. That is what happens here: EdgeDB knows that we are creating a <code>str</code> because we enclosed it in quotes. In other words, the type is still a concrete <code>str</code> even if we didn't specify that it was.</p>
+<p>In fact, we can prove that these types are concrete right away: let's just ask EdgeDB.</p>
+<pre><code class="language-edgeql">select 'Jonathan Harker' is str;
+</code></pre>
+<p>This returns <code>{true}</code>. Let's try another:</p>
+<pre><code class="language-edgeql">select 8 is int64;
+</code></pre>
+<p>This returns <code>{true}</code>. Let's try one more!</p>
+<pre><code class="language-edgeql">select 8 is int32;
+</code></pre>
+<p>This time it returns <code>{false}</code>. As you can see, EdgeDB is selecting a concrete type every time even if we don't specify a type.</p>
+<p>In the next chapter we will learn how to change one type to another, but it's well past time for us to change our <code>NPC</code> type to link to <code>City</code>. Let's do that now.</p>
+<h2 id="links"><a class="header" href="#links">Links</a></h2>
+<p>It's finally time to change our property in <code>NPC</code> called <code>places_visited</code> to a link. Right now, <code>places_visited</code> gives us the names we want, but it makes more sense to link <code>NPC</code> and <code>City</code> together. After all, the <code>City</code> type has <code>.name</code> inside it which is a <code>str</code>. If we link <code>NPC</code> to <code>City</code> then we can get the <code>City</code> objects themselves but also access their names! We'll change <code>NPC</code> to look like this:</p>
+<pre><code class="language-sdl">type NPC {
+  required name: str;
+  multi places_visited: City;
+}
+</code></pre>
+<p>We wrote <code>multi</code> in front of <code>places_visited</code> because one <code>NPC</code> should be able to link to more than one <code>City</code>. The opposite of <code>multi</code> is <code>single</code>, which only allows one object to link to it. But <code>single</code> is the default, so if you just write <code>places_visited: City</code> then EdgeDB will treat it as <code>single</code> link.</p>
+<p>And now do a migration with <code>edgedb migration create</code> and <code>edgedb migrate</code>. The CLI questions this time are pretty easy:</p>
+<pre><code>c:\easy-edgedb&gt;edgedb migration create
+Connecting to an EdgeDB instance at localhost:10716...
+Did you drop property 'places_visited' of object type 'default::NPC'?
+[y,n,l,c,b,s,q,?]
+&gt; y
+Did you create link 'places_visited' of object type 'default::NPC'?
+[y,n,l,c,b,s,q,?]
+&gt; y
+</code></pre>
+<p>When we drop a property it also drops all the data for the property, so the CLI doesn't need to ask us for an expression. And adding a <code>multi</code> link just means that an <code>NPC</code> <em>can</em> link to one or more <code>City</code> types, but they don't have to.</p>
+<p>It's finally time to insert our <code>NPC</code> Jonathan Harker, and this time he can be connected to one or more <code>City</code> objects. Don't forget that <code>places_visited</code> is not <code>required</code>, so we could do an <code>insert</code> with just his name to create him. It would look like this:</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := 'Jonathan Harker',
+};
+</code></pre>
+<p>If we were to do that, it would only create an <code>NPC</code> type connected to the <code>City</code> type but with nothing in it. And if we did a query on the <code>NPC</code> type as follows:</p>
+<pre><code class="language-edgeql">select NPC {
+  name,
+  places_visited
+};
+</code></pre>
+<p>Then the output wouldn't show any links to any <code>City</code> objects:</p>
+<pre><code>{default::NPC {name: 'Jonathan Harker', places_visited: {}}}
+</code></pre>
+<p>But we want to have Jonathan be connected to the cities he has traveled to. So instead of just giving him a <code>name</code>, we'll also give him a <code>places_visited</code> multi link when we <code>insert</code> by writing <code>places_visited := City</code>:</p>
+<pre><code class="language-edgeql">insert NPC {
+  name := 'Jonathan Harker',
+  places_visited := City,
+};
+</code></pre>
+<p>Now let's see the places that Jonathan has visited. The query below is almost but not quite what we need:</p>
+<pre><code class="language-edgeql">select NPC {
+  name,
+  places_visited
+};
+</code></pre>
+<p>Here is the output:</p>
+<pre><code>{
+  default::NPC {
+    name: 'Jonathan Harker',
+    places_visited: {
+      default::City {id: 4ba1074e-ff3f-11eb-aeb7-cf15feb714ef},
+      default::City {id: 4bab8188-ff3f-11eb-aeb7-f7b506bd047e},
+      default::City {id: 4bacf860-ff3f-11eb-aeb7-97025b4d95af},
+    },
+  },
+}
+</code></pre>
+<p>Close! But we didn't mention any properties inside <code>City</code> so we just got the object id numbers. Now we just need to let EdgeDB know that we want to see the <code>name</code> property of the <code>City</code> type as well. To do that, add a colon and then put <code>name</code> inside curly brackets.</p>
+<pre><code class="language-edgeql">select NPC {
+  name,
+  places_visited: {
+    name
+  }
+};
+</code></pre>
+<p>Success! Now we get the output we wanted:</p>
+<pre><code>{
+  default::NPC {
+    name: 'Jonathan Harker',
+    places_visited: {
+      default::City {name: 'Munich'},
+      default::City {name: 'Buda-Pesth'},
+      default::City {name: 'Bistritz'},
+    },
+  },
+}
+</code></pre>
+<p>Interestingly, Jonathan Harker has been inserted with a link to every city in the database. In other words, <code>places_visited := City</code> means <code>places_visited := every City type in the database</code>. Right now we only have three <code>City</code> objects and one <code>NPC</code> object, and Jonathan Harker has visited them all. No problem so far. But later on we will have more cities and won't be able to just write <code>places_visited := City</code> for all the other characters. For that we will need the <code>filter</code> keyword, which we will learn to use in the next chapter.</p>
+<p>Note that if you inserted &quot;Jonathan Harker&quot; multiple times (or any other <code>NPC</code> objects with the same name), you will now have multiple <code>NPC</code> objects with that name. The database doesn't give an error for this, because we haven't instructed it to keep an eye out for duplicates. In <a href="../chapter7/index.html">Chapter 7</a> we will learn how to make sure the database doesn't allow multiple copies of <code>NPC</code> with the same name.</p>
+<p>Remember how we saw that &quot;each <code>.</code> in a path expression moves on to the next path, if there is another one to follow&quot;? We can demonstrate that now that <code>NPC</code> links to <code>City</code>. The query below uses <code>.</code> two times. What do you think it will return?</p>
+<pre><code class="language-edgeql">select NPC.places_visited.modern_name;
+</code></pre>
+<p>Exactly, it will return a set of strings:</p>
+<pre><code>{'Budapest', 'Bistrița'}
+</code></pre>
+<p>In other words, it is a query that first follows the <code>places_visited</code> link inside <code>NPC</code>, which takes us to the three <code>City</code> objects, and then proceeds to their <code>modern_name</code> property which is a <code>str</code>. Two out of the three have a <code>modern_name</code> so the result is a set of two strings. You can use <code>.</code> as many times as you like as long as there is still a path to follow!</p>
+<p><a href="code.html">Here is all our code so far up to Chapter 1.</a></p>
+<!-- quiz-start -->
+<h2 id="time-to-practice"><a class="header" href="#time-to-practice">Time to practice</a></h2>
+<ol>
+<li>
+<p>Entering the code below returns an error. Try adding one character to make it return <code>{true}</code>.</p>
+<pre><code class="language-edgeql">with my_name = 'Timothy',
+select my_name != 'Benjamin';
+</code></pre>
+</li>
+<li>
+<p>Try inserting a <code>City</code> called Constantinople, but now known as İstanbul.</p>
+</li>
+<li>
+<p>Try displaying all the names of the cities in the database. (Hint: you can do it in a single line of code and won't need <code>{}</code> to do it)</p>
+</li>
+<li>
+<p>Try selecting all the <code>City</code> types along with their <code>name</code> and <code>modern_name</code> properties, but change <code>.name</code> to say <code>old_name</code> and change <code>modern_name</code> to say <code>name_now</code>.</p>
+</li>
+<li>
+<p>Will typing <code>SelecT City;</code> produce an error?</p>
+</li>
+</ol>
+<p><a href="answers.html">See the answers here.</a></p>
+<!-- quiz-end -->
+<p><strong>Up next:</strong> <em>Jonathan Harker arrives in Romania.</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter2/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter2/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
