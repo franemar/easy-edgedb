@@ -17,7 +17,7 @@ Easy EdgeDB is a bit of a unique book. Here's how it differs from what you might
 
 ## A story to follow
 
-The book is divided into 20 chapters in which we imagine that we are creating a database for a game. The setting for our imaginary game is the scenes and locations from the book Dracula by Bram Stoker, published in 1897. Our job is to think a little about how to represent items like characters, events, locations, and dates in the book in a database used by a role-playing game built separately. In other words, something like {ref}`Python <docs:edgedb-python-intro>`/{ref}`JavaScript <docs:edgedb-js-intro>`/[Go](https://github.com/edgedb/edgedb-go) on the frontend, and EdgeDB as the game's database. (Why Python, JavaScript and Go? Because EdgeDB has client libraries for all three of those languages.)
+The book is divided into 20 chapters in which we imagine that we are creating a database for a game. The setting for our imaginary game is the scenes and locations from the book Dracula by Bram Stoker, published in 1897. Our job is to think a little about how to represent items like characters, events, locations, and dates in the book in a database used by a role-playing game built separately. In other words, something like [Python](https://www.edgedb.com/docs/clients/python/index#edgedb-python-intro)/[JavaScript](https://www.edgedb.com/docs/clients/js/index#edgedb-js-intro)/[Go](https://github.com/edgedb/edgedb-go) on the frontend, and EdgeDB as the game's database. (Why Python, JavaScript and Go? Because EdgeDB has client libraries for all three of those languages.)
 
 Bram Stoker's Dracula was the perfect choice for this textbook for a few reasons:
 

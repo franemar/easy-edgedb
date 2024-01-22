@@ -1,6 +1,6 @@
 # Summary
 
-[Introduction](README.md)
+- [Welcome - Easy EdgeDB](chapter0/index.md)
 - [Chapter 1 - Jonathan Harker travels to Transylvania](chapter1/index.md)
 - [Chapter 2 - At the Hotel in Bistritz](chapter2/index.md)
 - [Chapter 3 - Jonathan goes to Castle Dracula](chapter3/index.md)
@@ -21,4 +21,3 @@
 - [Chapter 18 - Using Dracula's own weapon against him](chapter18/index.md)
 - [Chapter 19 - Dracula escapes](chapter19/index.md)
 - [Chapter 20 - The final battle](chapter20/index.md)
-
