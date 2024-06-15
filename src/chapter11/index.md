@@ -22,9 +22,9 @@ type Event {
   required multi place: Place;
   required multi people: Person;
   location: tuple<float64, float64>;
-  property ns_suffix := '_N_' if .location.0 > 0.0 else '_S_';
-  property ew_suffix := '_E' if .location.1 > 0.0 else '_W';
-  property url := 'https://geohack.toolforge.org/geohack.php?params=' 
+  ns_suffix := '_N_' if .location.0 > 0.0 else '_S_';
+  ew_suffix := '_E' if .location.1 > 0.0 else '_W';
+  url := 'https://geohack.toolforge.org/geohack.php?params=' 
     ++ <str>(math::abs(.location.0)) ++ .ns_suffix 
     ++ <str>(math::abs(.location.1)) ++ .ew_suffix;
 }
@@ -129,7 +129,7 @@ A function that takes an `int16` and returns a `float64` for example would have 
 function does_something(input: int16) -> float64
 ```
 
-The `->` skinny arrow is used to show the return value.
+The `->` (skinny arrow) is used to show the return value.
 
 For the body of the function we do the following:
 
@@ -159,9 +159,9 @@ type Event {
   required multi place: Place;
   required multi people: Person;
   location: tuple<float64, float64>;
-  property ns_suffix := '_N_' if .location.0 > 0.0 else '_S_';
-  property ew_suffix := '_E' if .location.1 > 0.0 else '_W';
-  property url := get_url() 
+  ns_suffix := '_N_' if .location.0 > 0.0 else '_S_';
+  ew_suffix := '_E' if .location.1 > 0.0 else '_W';
+  url := get_url() 
     ++ <str>(math::abs(.location.0)) ++ .ns_suffix 
     ++ <str>(math::abs(.location.1)) ++ .ew_suffix;
 }
@@ -169,7 +169,7 @@ type Event {
 
 Next, let's write a function that's less useful but more fun and which will teach us some interesting concepts in EdgeDB. The function will have two `Person` objects fight each other, so we'll call it `fight()`. We will make it as simple as possible: the character with more strength wins, and if their strength is the same then the second player wins.
 
-You might be tempted to write this function as follows, but it doesn't quite work!
+You might be tempted to write this function as follows, but it doesn't quite work yet!
 
 ```sdl
 function fight(one: Person, two: Person) -> str
@@ -577,7 +577,7 @@ Abraham van Helsing, however, is single because he is a widower. Our schema does
 
 ## Time to practice
 
-1. How would you write a function called `lucy()` that just returns all the `NPC` types matching the name 'Lucy Westenra'?
+1. How would you write a function called `get_lucies()` that just returns all the `Person` types matching the name 'Lucy Westenra'?
 
 2. How would you write a function that takes two strings and returns `Person` objects with names that match each string?
 

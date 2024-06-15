@@ -11,7 +11,7 @@ In this chapter we encounter a vampire for the first time - or rather, _the_ vam
 
 Now we are completely inside Dracula's castle, so this is a good time to create a `Vampire` type. We can extend it from `abstract type Person` because that type has `name` and `places_visited`, which are good for `Vampire` too.
 
-One possibility is adding `age` to `Person` so that all the other types can use it too. Then `Person' would look like this:
+One possibility is adding `age` to `Person` so that all the other types can use it too. Then `Person` would look like this:
 
 ```sdl
 abstract type Person {
@@ -219,7 +219,7 @@ Finally, let's insert Hungary and Romania again to finish the section on deletin
 
 ## The splat operator
 
-Sometimes a query can take some time to type. Let's say we want to look up all of our `PC` objects and their properties, plus check whether their name has changed since Bram Stoker's book Dracula was published. Such a query would look like this:
+Sometimes a query can take some time to type. Let's say we want to look up all of our `City` objects and their properties, plus check whether their name has changed since Bram Stoker's book Dracula was published. Such a query would look like this:
 
 ```edgeql
 select City {
@@ -437,8 +437,10 @@ delete City;
 The problem here is that Jonathan Harker is standing in our way. He is an `NPC` object with a link to the other `City` objects, and by default you can't delete an object that is being linked to by another one.
 
 ```
-edgedb error: ConstraintViolationError: deletion of default::City (f801a034-387c-11ee-95af-87dfbf43e85c) is prohibited by link target policy
-  Detail: Object is still referenced in link places_visited of default::Person (fc6522d6-387c-11ee-95af-f750f3ca3b62).
+edgedb error: ConstraintViolationError: deletion of default::City
+(f801a034-387c-11ee-95af-87dfbf43e85c) is prohibited by link target policy
+Detail: Object is still referenced in link places_visited of 
+default::Person (fc6522d6-387c-11ee-95af-f750f3ca3b62).
 ```
 
 Within the limitations of what we know at the moment, the only thing we can do is to temporarily delete Jonathan Harker. We'll `insert` him again shortly, but in the meantime let's just get him out of the way:

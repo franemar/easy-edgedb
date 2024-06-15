@@ -45,17 +45,17 @@ Do you want to initialize a new project? [Y/n]
 Specify the name of EdgeDB instance to use with this project [default: easy_edgedb]:
 > easy_edgedb
 Checking EdgeDB versions...
-Specify the version of EdgeDB to use with this project [default: 3.0]:
-> 3.0
+Specify the version of EdgeDB to use with this project [default: 4.5]:
+> 4.5
 ┌─────────────────────┬─────────────────────────────────────┐
 │ Project directory   │ \\?\C:\easy-edgedb                  │
 │ Project config      │ \\?\C:\easy-edgedb\edgedb.toml      │
 │ Schema dir (empty)  │ \\?\C:\easy-edgedb\dbschema         │
 │ Installation method │ WSL                                 │
-│ Version             │ 3.0-rc.2+02561bd                    │
+│ Version             │ 4.5-rc.2+02561bd                    │
 │ Instance name       │ easy_edgedb                         │
 └─────────────────────┴─────────────────────────────────────┘
-Version 3.0-rc.2+02561bd is already downloaded
+Version 4.5-rc.2+02561bd is already downloaded
 Initializing EdgeDB instance...
 Applying migrations...
 Everything is up to date. Revision initial
@@ -118,7 +118,7 @@ We will be doing a lot of that in this book! Even by the second chapter you will
 
 ```{eval-rst}
 .. note::
-  The CLI creates a new file upon each migration to generate the commands to change the schema to the one we want. The first file will be called 00001.edgeql, the second will be 00002.edgeql, and so on. These files are quite readable so feel free to take a look at if you are curious. But note that they use a syntax called DDL (Data Definition Language) that gives commands to EdgeDB one at a time, and you do not need to learn it. The language that we are using in the schema is called SDL (Schema Definition Language), which simply declares what a schema will look like. The CLI then automatically creates DDL commands to make it happen.
+  The CLI creates a new file upon each migration to generate the commands to change the schema to the one we want. The first file will be called 00001.edgeql, the second will be 00002.edgeql, and so on. These files are quite readable so feel free to take a look at them if you are curious. But note that they use a syntax called DDL (Data Definition Language) that gives commands to EdgeDB one at a time, and you do not need to learn it. The language that we are using in the schema is called SDL (Schema Definition Language), which simply declares what a schema will look like. The CLI then automatically creates DDL commands to make it happen.
 ```
 
 Now that we know how to do a schema migration, let's add some properties to our `NPC` type. Use the keyword `required` if the type needs it, and just the property name if it is optional. Let's give the `NPC` type a name and an array (a collection) of places visited:
@@ -139,7 +139,8 @@ insert NPC;
 You should see this error message:
 
 ```
-error: MissingRequiredError: missing value for required property 'name' of object type 'default::NPC'
+error: MissingRequiredError: missing value for required property 
+  'name' of object type 'default::NPC'
   ┌─ <query>:1:1
   │
 1 │ insert NPC;
@@ -242,7 +243,7 @@ fill_expr>
 
 The CLI is essentially saying: "There might be `NPC` objects in the database already. But now they all need to have a property called `name`, which wasn't required before. How should I decide what `name` to give them?"
 
-Fortunately, the expression here is pretty simple: let's just give them all an empty string. Type `''` and hit enter, and the CLI will now be happy with the migration. Don't forget to complete the migration with `edgedb migration`, and we are done!
+Fortunately, the expression here is pretty simple: let's just give them all an empty string. Type `''` and hit enter, and the CLI will now be happy with the migration. Don't forget to complete the migration with `edgedb migrate`, and we are done!
 
 If you are curious, take a look inside the migration file that EdgeDB generated. You can see how it created a command to change the `NPC` type, including a default value for `name` for any objects in the database:
 
@@ -264,7 +265,7 @@ There are a lot of other commands beyond the commands for migration, though we w
 
 There are also a few places to download packages to highlight your syntax if you like. EdgeDB has these packages available for [Atom](https://atom.io/packages/edgedb), [Visual Studio Code](https://marketplace.visualstudio.com/itemdetails?itemName=magicstack.edgedb), [Sublime Text](https://packagecontrol.io/packages/EdgeDB), and [Vim](https://github.com/edgedb/edgedb-vim).
 
-And last but not least, here is the command if to use if you want to destroy your project and start again.
+And last but not least, here is the command to use if you want to destroy your project and start again.
 
 ```
 edgedb instance destroy -I instance_name --force
@@ -328,7 +329,7 @@ insert City {
 
 insert City {
   name := 'Bistritz',
-  modern_name := 'Bistrița'
+  modern_name := 'Bistrița',
 };
 ```
 

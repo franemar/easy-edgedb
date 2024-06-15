@@ -170,7 +170,7 @@ If the first `Person` type returned from the database is Count Dracula, then we 
 {default::Vampire {name: 'Count Dracula', is_single: true}}
 ```
 
-Now this time we did want to use `limit 1` instead of `assert_single()` because we want just up to one result, even if there are multiple objects that fit our `filter`. Using `assert_single()` would cause the database give us an error in case of multiple results. Similarly, `limit 2`, `limit 3` and any other number will work just fine if we only want a certain maximum number of objects.
+Now this time we did want to use `limit 1` instead of `assert_single()` because we want just up to one result, even if there are multiple objects that fit our `filter`. Using `assert_single()` would cause the database to give us an error in case of multiple results. Similarly, `limit 2`, `limit 3` and any other number will work just fine if we only want a certain maximum number of objects.
 
 We could also put the computed property in the type itself, so let's do that. Here's the same computed property except now it's inside the `Person` type:
 
@@ -179,11 +179,9 @@ abstract type Person {
   required name: str;
   multi places_visited: Place;
   lover: Person;
-  property is_single := not exists .lover;
+  is_single := not exists .lover;
 }
 ```
-
-Notice that we have written `property is_single` this time instead of just `is_single`. With computed properties and links we need to give EdgeDB a little bit more help by letting it know whether the computed expression will result in a `property` or a `link`. So if you are working on your schema and the property or link uses a `:=` to make it computed, don't forget to choose between `property` or `link`!
 
 You might be curious about how computed links and properties are represented in databases on the back end. They are interesting because they {ref}`don't show up in the actual database <docs:ref_datamodel_computed>`, and only appear when you query them. Computed links also don't specify the type because the expression itself determines the type. You can kind of imagine this when you look at a query with a quick computed variable like `select country_name := 'Romania'`. Here, `country_name` is computed every time we do a query, and the type is determined to be a string. A computed link or property on a type does the same thing. But nevertheless, they still work in the same way as all other links and properties because the instructions for the computed ones are part of the type itself and do not change. In other words, they are a bit different on the back but mostly the same up front.
 
@@ -222,8 +220,8 @@ We will imagine that our game engine has a clock that sends the database the tim
 ```sdl
 type Time { 
   required clock: str; 
-  property clock_time := <cal::local_time>.clock; 
-  property hour := .clock[0:2]; 
+  clock_time := <cal::local_time>.clock; 
+  hour := .clock[0:2]; 
 } 
 ```
 
@@ -277,9 +275,9 @@ scalar type SleepState extending enum <Asleep, Awake>;
 
 type Time {
   required clock: str;
-  property clock_time := <cal::local_time>.clock;
-  property hour := .clock[0:2];
-  property vampires_are := SleepState.Asleep if <int16>.hour > 7 and <int16>.hour < 19
+  clock_time := <cal::local_time>.clock;
+  hour := .clock[0:2];
+  vampires_are := SleepState.Asleep if <int16>.hour > 7 and <int16>.hour < 19
     else SleepState.Awake;
 }
 ```
@@ -309,15 +307,37 @@ We then get this output:
 }
 ```
 
-One more note on `else`: you can keep on using `else` as many times as you like in the format `(result) if (condition) else`. Here's an example showing how this could work if we had more values on the `SleepState` enum:
+Note that you can keep on using `else` as many times as you like in the format `(expression) if (condition) else`. Here's an example showing how this could work if we had more values on the `SleepState` enum:
 
 ```sdl
-property vampires_are := 
+vampires_are := 
   SleepState.JustWakingUp if <int16>.hour = 19 else
   SleepState.GoingToBed if <int16>.hour = 6 else
   SleepState.Asleep if <int16>.hour > 7 and <int16>.hour < 19 else
   SleepState.Awake;
 ```
+
+And one more note to finish off this section: As of EdgeDB 4.0, you now have two choices when using `else` in expressions like the `vampires_are` computable above. The following simple example shows the `(expression) if (condition) else (expression)` syntax that you will see throughout this book:
+
+```edgeql
+with num := 10,
+select
+  'Big' if num > 50
+  else 'Medium' if num > 20
+  else 'Small';
+```
+
+This is similar to the syntax you see when using Python. But another option now available to you is the order `if (condition) then (expression) else (expression)`, which is similar to a number of other programming languages and was requested by many EdgeDB users over the years. This next example is identical to the one above, except written using the new syntax. You can use the syntax you prefer.
+
+```edgeql
+with num := 10,
+select
+  if num > 50 then 'Big'
+  else if num > 20 then 'Medium'
+  else 'Small';
+```
+
+Both examples will output `{'Small'}`, by the way, because `num` is lesser than both 50 and 20.
 
 ## Selecting what you just inserted
 
