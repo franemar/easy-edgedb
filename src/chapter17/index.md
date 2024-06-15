@@ -13,7 +13,11 @@ tags: Aliases, Named Tuples, Mutation Rewrites
 Renfield is no longer alive, so to start the chapter we need to use `update` to give him a `last_appearance`. Let's do a fancy one where we grab the output from `update` to display some interesting properties, including one where we use `last_appearance` minus `first_appearance` to show how long the character Renfield appears in the book:
 
 ```edgeql
-with updated := (update NPC filter .name = 'Renfield' set { last_appearance := <cal::local_date>'1893-10-03' })
+with updated := (
+  update NPC filter .name = 'Renfield' set { 
+    last_appearance := <cal::local_date>'1893-10-03' 
+    }
+  )
   select updated {
     name,
    first_appearance,
@@ -43,7 +47,7 @@ Wherever there are vampires, there are vampire hunters. Sometimes they will dest
 - places that can have coffins are `Place` and all the types from it, plus `Ship`,
 - the best way to filter is by `.name`, but `HasCoffins` doesn't have this property.
 
-So maybe it's time to turn this abstract type into a larger one called `HasNameAndCoffins`, and put the `name` and `coffins` properties inside there. This won't be a problem because every place needs a name and a number of coffins in our game. Remember, 0 coffins means that vampires can't stay in a place for long: just quick trips in at night before the sun rises. It's essentially a "Has name and can vampires terrorize it" property. And that will let us do queries on `HasNameAndCoffins` which is guaranteed to have these two properties.
+So maybe it's time to turn this abstract type into a larger one called `HasNameAndCoffins`, and put the `name` and `coffins` properties inside there. This won't be a problem because every place needs a name and a number of coffins in our game. Remember, 0 coffins means that vampires can't stay in a place for long, because all they can do is make quick trips during the middle of the night when the sun is down. It's essentially a "What is the name and can vampires terrorize it" property. And that will let us do queries on `HasNameAndCoffins` which is guaranteed to have these two properties.
 
 Here is the type with its new property. We'll give it two constraints: `exclusive` and `max_len_value` to keep names from being too long.
 
@@ -82,7 +86,7 @@ Finally, we can change our `can_enter()` function. This one needed a `HasCoffins
 ```sdl
 function can_enter(person_name: str, place: HasCoffins) -> optional str
   using (
-    with vampire := (select Person filter .name = person_name),
+    with vampire := assert_single((select Person filter .name = person_name)),
     has_coffins := place.coffins > 0,
       select vampire.name ++ ' can enter.'
         if has_coffins else vampire.name ++ ' cannot enter.'
@@ -106,7 +110,7 @@ function can_enter(person_name: str, place: str) -> optional str
   );
 ```
 
-And now let's do a migration. The migration questions this time have some interesting ones, which are:
+And now let's do a migration. The migration has some interesting questions this time, which are:
 
 ```
 did you drop function 'default::can_enter'? [y,n,l,c,b,s,q,?]
@@ -670,7 +674,7 @@ db> select PC { name, class, bonus_item, last_updated } filter .name = 'Sypha';
 
 2. The query in 1. showed a lot of numbers without any context. What should we do?
 
-3. How would you create an alias that contains all the months of the year?
+3. How would you create an alias that contains all the seasons of the year?
 
 4. How do you make sure that no data is lost when changing a type's properties from owned properties to properties extended from abstract types?
 

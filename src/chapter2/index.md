@@ -373,7 +373,7 @@ So a good rule of thumb is to not use raw indexes when filtering unless you are 
 So what if you want to make sure that you won't get an error with an index number that might be too high? Here you can use `like` or `ilike` instead. If you replace the `.name[0]` part in the query above with `.name ilike 'B%'` we don't get an error, and the query still checks to see if there is a 'B' at index 0.
 
 ```edgeql
-db> select City {
+select City {
   name,
   modern_name,
  } filter .name ilike 'B%';
@@ -448,14 +448,14 @@ db> select 'Jonathan'[1:-1];
 
 Let's end the chapter with a quick note. Did you notice one of the queries used `#` to add a comment? Comments in EdgeDB are simple: anything to the right of `#` on a line gets ignored.
 
-So this:
+So this...
 
 ```edgeql
 select 1893#0503 is the first day of the book Dracula when...
 ;
 ```
 
-returns `{1893}`.
+...returns `{1893}`.
 
 [Here is all our code so far up to Chapter 2.](code.md)
 
