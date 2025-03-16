@@ -1,8 +1,11 @@
+---
+---
+
 # Summary
 
 - [Welcome - Easy EdgeDB](chapter0/index.md)
 - [Chapter 1 - Jonathan Harker travels to Transylvania](chapter1/index.md)
-- [Chapter 2 - At the Hotel in Bistritz](chapter2/index.md)
+- [Chapter 2 - At the Hotel in Bistritz](chapter2/index.html)
 - [Chapter 3 - Jonathan goes to Castle Dracula](chapter3/index.md)
 - [Chapter 4 - "What a strange man this Count Dracula is."](chapter4/index.md)
 - [Chapter 5 - Jonathan tries to leave the castle](chapter5/index.md)

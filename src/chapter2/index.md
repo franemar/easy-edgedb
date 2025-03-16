@@ -3,6 +3,8 @@ tags: Scalar Types, Abstract Types, Filtering, Slicing
 leadImage: illustration_02.jpg
 ---
 
+<div>{{ tags }}{{ leadImage }}</div>
+
 # Chapter 2 - At the Hotel in Bistritz
 
 We continue to read the story as we think about the database we need to store the information. The important information is in bold:
