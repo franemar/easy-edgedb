@@ -1,4 +1,4 @@
-![leadImage](illustration_00.jpg)
+![leadImage_00](./src/chapter0/illustration_00.jpg)
 
 # Welcome - Easy EdgeDB
 

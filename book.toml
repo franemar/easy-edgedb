@@ -1,5 +1,9 @@
 [book]
-authors = []
+authors = ["geldata.com"]
+title = "Easy Gel (EdgeDB)"
 language = "en"
 multilingual = false
 src = "src"
+
+[output.epub]
+additional-resources = ["./src/chapter1/illustration_01.jpg"]
