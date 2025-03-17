@@ -14,4 +14,13 @@ documentation for details.
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   chapter0/index,md
+   chapter1/index.md
+   chapter2/index.md
 
+% it works only on markdown
+%```{admonition} Here's my title
+%:class: warning
+%
+%Here's my admonition content
+%```
