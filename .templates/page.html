@@ -1,0 +1,7 @@
+{# Master template for simple pages. #}
+{%- extends "layout.html" %}
+{% block body %}
+  {% warning("Testing from page sub-template.") %}
+  <li><a text={% warning("Testing from page sub-template.") %}</a> &raquo;</li>:x
+  {{ body }}
+{% endblock %}
