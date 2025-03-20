@@ -4,3 +4,4 @@ book/
 build/
 _posts/
 _site/
+.log/

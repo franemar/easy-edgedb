@@ -15,8 +15,8 @@ author = 'Gel'
 
 extensions = ["myst_parser"]
 
-templates_path = ['.templates']
-exclude_patterns = []
+templates_path = ['templates']
+exclude_patterns = ['*/translations']
 
 
 
