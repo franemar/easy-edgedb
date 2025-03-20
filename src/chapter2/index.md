@@ -1,7 +1,17 @@
 ---
-tags: Scalar Types, Abstract Types, Filtering, Slicing
-leadImage: illustration_02.jpg
+tags:
+- Scalar Types
+- Abstract Types
+- Filtering
+- Slicing
+#leadImage: illustration_02.jpg
 ---
+
+```{image} illustration_02.jpg
+:alt: image02
+:class: bg-primary
+:align: center
+```
 
 # Chapter 2 - At the Hotel in Bistritz
 

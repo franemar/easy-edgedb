@@ -1,7 +1,5 @@
 **/.vscode
 **/.DS_Store
-book/
-build/
-_posts/
-_site/
 .log/
+.ipynb_checkpoints
+_build
